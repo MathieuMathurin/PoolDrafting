@@ -41,6 +41,8 @@ function mapAllDataToPlayers(teams, players, predictions, stats) {
 
         player.Team = _.find(teams, function(team){return team.TeamID === player.TeamID});      
 
+        player.IsSelected = false;
+
         return player;
     });
     fs.writeFile('./DB/players.json', JSON.stringify(players), 'utf8', function(err){
