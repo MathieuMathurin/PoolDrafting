@@ -74,7 +74,11 @@ writeToFile(JSON.stringify(playersPrediction));
 
 function writeToFile(data) {
     fs.appendFile('./predictions/2016-2017.json', data, function (err) {
-        if (err) console.log(err);
+        if (err){
+             console.log(err);
+             process.exit(1);
+        }
         console.log('done');
+        process.exit();
     });
 }

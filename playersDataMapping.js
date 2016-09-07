@@ -46,8 +46,12 @@ function mapAllDataToPlayers(teams, players, predictions, stats) {
         return player;
     });
     fs.writeFile('./DB/players.json', JSON.stringify(players), 'utf8', function(err){
-        if(err) console.log(err);
+        if(err){
+            console.log(err);
+            process.exit(1);
+        }
         console.log('Done');
+        process.exit();
     });
 }
 
