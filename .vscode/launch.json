@@ -5,7 +5,7 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/playersDataMapping.js",
+            "program": "${workspaceRoot}/apps/elasticBulkIndex.js",
             "stopOnEntry": false,
             "args": [],
             "cwd": "${workspaceRoot}",
