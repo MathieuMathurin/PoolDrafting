@@ -27,7 +27,7 @@ function getPlayerStats(stats, keys, name){
 function mapAllDataToPlayers(teams, players, predictions, stats) {
     players = _.map(players, function (player) {
         
-        var playerPrediction = findPlayerPrediction(player.Name);
+        var playerPrediction = findPlayerPrediction(predictions, player.Name);
         player.Prediction = playerPrediction;
 
         var keys = _.keys(stats);

@@ -11,6 +11,7 @@
     "cookie-parser": "~1.4.3",
     "csvtojson": "^1.0.0",
     "debug": "~2.2.0",
+    "elasticsearch": "^11.0.1",
     "express": "~4.13.4",
     "htmlparser": "^1.7.7",
     "jade": "~1.11.0",
