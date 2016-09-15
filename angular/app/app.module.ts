@@ -14,7 +14,8 @@ import { RulesComponent } from './rules/rules.component';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdIconModule } from '@angular2-material/icon';
-import { MdInputModule } from '@angular2-material/input'
+import { MdInputModule } from '@angular2-material/input';
+import { MdCardModule } from '@angular2-material/card'
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import { MdInputModule } from '@angular2-material/input'
         MdToolbarModule,
         MdSidenavModule,
         MdIconModule,
-        MdInputModule
+        MdInputModule,
+        MdCardModule
     ],
     declarations: [
         MainAppComponent,

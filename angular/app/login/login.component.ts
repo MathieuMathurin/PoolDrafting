@@ -13,13 +13,13 @@ import { MdInput } from '@angular2-material/input/input';
         LocalStorageService
     ]
 })
-export class LoginComponent implements OnInit {
-    constructor(private localStorageService: LocalStorageService, private router: Router){}  
-
-    userName: string;  
+export class LoginComponent implements OnInit{
+    constructor(private localStorageService: LocalStorageService, private router: Router){}      
+    userName: string;
+    isValid: boolean;
 
     ngOnInit(): void {
-
+        this.isValid = false;
     }
 
     saveUser(name): void {

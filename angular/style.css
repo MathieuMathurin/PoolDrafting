@@ -37,6 +37,11 @@ md-sidenav {
     color: white;
 }
 
+.formSubmit button:disabled{
+    background-color: #FAFAFA !important;
+    color: black;
+}
+
 .imageContainer{
     width: 100%;
     height: 350px;

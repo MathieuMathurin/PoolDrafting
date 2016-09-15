@@ -23,7 +23,8 @@
     'toolbar',
     'sidenav',
     'icon',
-    'input'
+    'input',
+    'card'
   ];
 
   materialPackages.forEach(function (pkgName) {    
