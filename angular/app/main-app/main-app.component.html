@@ -1,0 +1,17 @@
+<md-toolbar color="primary"><button md-icon-button *ngIf="isLoggedIn" class="menuButton" (click)="start.toggle()"><i class="material-icons">menu</i></button><span>Pool à vie</span></md-toolbar>
+<md-sidenav-layout>
+    <md-sidenav #start>
+        <div class="navButtonGroup">
+            <div>
+                <button class="navButton" md-raised-button routerLink="/search" routerLinkActive="active" (click)="start.close()">Rechercher</button>
+            </div>
+            <div>
+                <button class="navButton" md-raised-button routerLink="/team" routerLinkActive="active" (click)="start.close()">Ma Team</button>
+            </div>
+            <div>
+                <button class="navButton" md-raised-button routerLink="/rules" routerLinkActive="active" (click)="start.close()">Règlements</button>
+            </div>
+        </div>
+    </md-sidenav>
+    <router-outlet></router-outlet>
+</md-sidenav-layout>

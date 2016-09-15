@@ -11,6 +11,11 @@
     margin-bottom: 10px !important;
 }
 
+.navButton.active{
+    background-color: #009688;
+    color: white;
+}
+
 md-sidenav {
   width: 300px;
 }

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing } from './app.routing';
 
 //Import custom components
-import { MainAppComponent } from './mainApp/mainApp.component';
+import { MainAppComponent } from './main-app/main-app.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { TeamComponent } from './team/team.component';
