@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //Import services
-import {LocalStorageService} from '../services/local-storage.service';
+import { LocalStorageService } from '../services/local-storage.service';
+
+import { MdInput } from '@angular2-material/input/input';
 
 @Component({
     selector: 'login',
@@ -12,14 +14,16 @@ import {LocalStorageService} from '../services/local-storage.service';
     ]
 })
 export class LoginComponent implements OnInit {
-    constructor(private localStorageService: LocalStorageService, private router: Router){}    
+    constructor(private localStorageService: LocalStorageService, private router: Router){}  
+
+    userName: string;  
 
     ngOnInit(): void {
 
     }
 
-    saveUser(): void {
-        this.localStorageService.save('test');        
+    saveUser(name): void {
+        this.localStorageService.save(name);        
         this.router.navigate(['/search']);
     }
  }

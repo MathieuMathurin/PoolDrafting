@@ -1,4 +1,10 @@
+<div class="imageContainer"></div>
 <div class="viewContent">
-    <h1>Login component view</h1>
-    <button md-raised-button (click)="saveUser()">Save</button>
+    <h1>Inscrivez-vous!</h1>
+    <div>
+        <md-input [(ngModel)]="userName" placeholder="Nom"></md-input>
+    </div>
+    <div class="formSubmit">
+        <button md-raised-button color="primary" (click)="saveUser(userName)">Save</button>
+    </div>
 </div>

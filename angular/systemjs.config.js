@@ -18,16 +18,16 @@
   };
 
   var materialPackages = [
-    '@angular2-material/core',
-    '@angular2-material/button',
-    '@angular2-material/toolbar',
-    '@angular2-material/sidenav',
-    '@angular2-material/icon'
+    'core',
+    'button',
+    'toolbar',
+    'sidenav',
+    'icon',
+    'input'
   ];
 
-  materialPackages.forEach(function (pkgName) {
-    var pkg = pkgName.split('/');
-    packages[pkgName] = {  main: pkg[1] + '.umd.js'};
+  materialPackages.forEach(function (pkgName) {    
+    packages['@angular2-material/' + pkgName] = {  main: pkgName + '.umd.js'};
   });
 
   System.config({

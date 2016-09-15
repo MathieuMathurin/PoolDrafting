@@ -17,16 +17,30 @@ import { MdSidenav } from '@angular2-material/sidenav/sidenav';
     ]
 })
 export class MainAppComponent implements OnInit {
-    constructor(private localStorageService: LocalStorageService, private router: Router){}
+    constructor(private localStorageService: LocalStorageService, private router: Router) { }
     isLoggedIn: boolean;
 
-    ngOnInit():void{
+    scrollTo = function scrollTo(element, to, duration) {
+        if (duration <= 0) return;
+        var difference = to - element.scrollTop;
+        var perTick = difference / duration * 10;
+
+        setTimeout(function () {
+            element.scrollTop = element.scrollTop + perTick;
+            if (element.scrollTop === to) return;
+            scrollTo(element, to, duration - 10);
+        }, 10);
+    };
+
+    ngOnInit(): void {
         this.isLoggedIn = this.localStorageService.isLoggedIn();
 
         this.router.events.subscribe(event => {
             this.isLoggedIn = this.localStorageService.isLoggedIn();
+
+            this.scrollTo(document.body, 0, 600);
         });
 
-    }    
+    }
 
- }
+}

@@ -11,6 +11,7 @@ export class LocalStorageService{
     }
 
     save(name: string): void {
+        //Send info to server by http
         localStorage.setItem(this.localStorageKey, name);
     }
 
