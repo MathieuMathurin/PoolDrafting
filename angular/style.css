@@ -1,6 +1,7 @@
 .menuButton {
     background-color: transparent;
     border: none;
+    outline: none;
 }
 
 .navButton {
