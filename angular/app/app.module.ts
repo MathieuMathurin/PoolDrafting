@@ -2,17 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing } from './app.routing';
 
-import { AppComponent } from './app.component';
-import { SearchComponent } from './search.component';
-import { LoginComponent } from './login.component';
+//Import custom components
+import { MainAppComponent } from './mainApp/mainApp.component';
+import { SearchComponent } from './search/search.component';
+import { LoginComponent } from './login/login.component';
+import { TeamComponent } from './team/team.component';
+import { RulesComponent } from './rules/rules.component';
+
+//Import material Modules
+import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdSidenavModule } from '@angular2-material/sidenav';
+import {MdIconModule} from '@angular2-material/icon';
 
 @NgModule({
-    imports: [BrowserModule, routing],
+    imports: [BrowserModule, routing, MdToolbarModule, MdSidenavModule, MdIconModule],
     declarations: [
-        AppComponent,
+        MainAppComponent,
+        LoginComponent,
         SearchComponent,
-        LoginComponent
+        TeamComponent,
+        RulesComponent
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [MainAppComponent]
 })
 export class AppModule { }

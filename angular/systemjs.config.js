@@ -3,7 +3,35 @@
  * Adjust as necessary for your application needs.
  */
 (function (global) {
+  var packages = {
+    app: {
+      main: './appBootstrap.js',
+      defaultExtension: 'js'      
+    },
+    rxjs: {
+      defaultExtension: 'js'
+    },
+    'angular2-in-memory-web-api': {
+      main: './index.js',
+      defaultExtension: 'js'
+    }
+  };
+
+  var materialPackages = [
+    '@angular2-material/core',
+    '@angular2-material/button',
+    '@angular2-material/toolbar',
+    '@angular2-material/sidenav',
+    '@angular2-material/icon'
+  ];
+
+  materialPackages.forEach(function (pkgName) {
+    var pkg = pkgName.split('/');
+    packages[pkgName] = {  main: pkg[1] + '.umd.js'};
+  });
+
   System.config({
+    transpiler: 'typescript',
     paths: {
       // paths serve as alias
       'npm:': 'node_modules/'
@@ -22,22 +50,11 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       // other libraries
-      'rxjs':                       'npm:rxjs',
+      'rxjs': 'npm:rxjs',
       'angular2-in-memory-web-api': 'npm:angular2-in-memory-web-api',
+      '@angular2-material': 'npm:@angular2-material'
     },
-    // packages tells the System loader how to load when no filename and/or no extension
-    packages: {
-      app: {
-        main: './main.js',
-        defaultExtension: 'js'
-      },
-      rxjs: {
-        defaultExtension: 'js'
-      },
-      'angular2-in-memory-web-api': {
-        main: './index.js',
-        defaultExtension: 'js'
-      }
-    }
+    packages: packages
   });
+
 })(this);

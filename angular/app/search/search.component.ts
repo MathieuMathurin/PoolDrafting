@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'search',
-    template: '<h1>Search component view</h1>'
+    templateUrl: 'app/search/search.component.html'
 })
 export class SearchComponent { }

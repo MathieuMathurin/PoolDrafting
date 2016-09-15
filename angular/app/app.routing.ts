@@ -1,8 +1,10 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchComponent } from './search.component';
-import { LoginComponent } from './login.component';
+import { SearchComponent } from './search/search.component';
+import { LoginComponent } from './login/login.component';
+import { TeamComponent } from './team/team.component';
+import { RulesComponent } from './rules/rules.component';
 
 const appRoutes : Routes = [
     {
@@ -17,6 +19,14 @@ const appRoutes : Routes = [
         path: '',
         redirectTo: '/login',
         pathMatch: 'full'
+    },
+    {
+        path: 'team',
+        component: TeamComponent
+    },
+    {
+        path: 'rules',
+        component: RulesComponent
     }
 ];
 

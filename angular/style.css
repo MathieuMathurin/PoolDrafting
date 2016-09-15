@@ -1,0 +1,27 @@
+.menuButton {
+    background-color: transparent;
+    border: none;
+}
+
+.navButton {
+    width: 200px;    
+    margin-left: 50px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+md-sidenav {
+  width: 300px;
+}
+
+.viewContent{
+    text-align: center;
+    display: block;
+    max-width: 98rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navButtonGroup{
+    margin-top: 10px;
+}
