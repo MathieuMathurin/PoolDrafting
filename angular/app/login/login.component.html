@@ -5,6 +5,7 @@
         <md-input [(ngModel)]="userName" placeholder="Nom"></md-input>
     </div>
     <div class="formSubmit">
-        <button md-raised-button color="primary" (click)="saveUser(userName)">Save</button>
+        <button md-raised-button color="primary" *ngIf="userName" (click)="saveUser(userName)">Save</button>
+        <button md-raised-button color="primary" *ngIf="!userName" disabled>Save</button>
     </div>
 </div>
