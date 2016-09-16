@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit{
         this.router.navigate(['/search']);
     }
 
-    validateUser(value): void{
-        this.isValid = Boolean(value);
+    validateUser(): void{
+        this.isValid = Boolean(this.userName);
     }
  }

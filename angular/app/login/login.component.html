@@ -2,7 +2,7 @@
 <div class="viewContent">
     <h1>Inscrivez-vous!</h1>
     <div>
-        <md-input [(ngModel)]="userName" placeholder="Nom" (keyup)="validateUser(userName)"></md-input>
+        <md-input [(ngModel)]="userName" placeholder="Nom" (keyup)="validateUser()"></md-input>
     </div>
     <div class="formSubmit">
         <button md-raised-button color="primary" (click)="saveUser(userName)" [disabled]="!isValid">Save</button>        
