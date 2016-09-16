@@ -26,4 +26,8 @@ export class LoginComponent implements OnInit{
         this.localStorageService.save(name);        
         this.router.navigate(['/search']);
     }
+
+    validateUser(value): void{
+        this.isValid = Boolean(value);
+    }
  }
