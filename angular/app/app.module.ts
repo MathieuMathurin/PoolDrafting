@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { routing } from './app.routing';
+import { JsonpModule }    from '@angular/http';
 
 //Import custom components
 import { MainAppComponent } from './main-app/main-app.component';
@@ -21,6 +22,7 @@ import { MdCardModule } from '@angular2-material/card'
     imports: [
         BrowserModule,
         FormsModule,
+        JsonpModule,
         routing,
         MdToolbarModule,
         MdSidenavModule,

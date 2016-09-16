@@ -1,24 +1,53 @@
 var express = require('express'),
     router = express.Router(),
-    elasticsearch = require('elasticsearch'),
-    _ = require('lodash');
+    request = require('request-promise'),
+    _ = require('lodash'),
+    baseUrl = "http://localhost:9200/players/player/_search?";
 
+function addFilter(query, filters) {
+    //Position filter
+    if (filters.position) {
+        query = query + " AND Position:" + filters.position;
+    }
 
-var client = new elasticsearch.Client({
-    host: 'localhost:9200',
-    log: 'trace'
-});
+    //Team filter
+    if (filters.teamID) {
+        query = query + " AND TeamID:" + filters.teamID;
+    }
 
-/* GET all players */
+    //Salary filter
+    if (filters.salary) {
+        var bounds = filters.salary.split("-");
+        var min = bounds[0];
+        var max = bounds[1];
+
+        query = query + " AND Prediction.SAL: [" + min + " TO " + max + "]"; //[ ] is inclusive, { } is exclusive
+    }
+
+    //Points filter
+    if (filters.points) {
+        var bounds = filters.points.split("-");
+        var min = bounds[0];
+        var max = bounds[1];
+
+        query = query + " AND Prediction.PTS: [" + min + " TO " + max + "]"; //[ ] is inclusive, { } is exclusive
+    }
+
+    return query;
+}
+
+/* GET 100 players sorted by prediction points */
 router.get('/players', function (req, res, next) {
-    client.search({
-        index: 'players',
-        type: 'player'
-    }).then(function (data) {
+    var query = "q=IsSelected:false";
+
+    query = addFilter(query, req.query);
+
+    request(baseUrl + query + "&sort=Prediction.PTS:desc&size=100").then(function (data) {
+        data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.send(data.hits.hits);
+            res.jsonp(data.hits.hits);
         } else {
-            res.send([]);
+            res.jsonp([]);
         }
     });
 });
@@ -26,78 +55,22 @@ router.get('/players', function (req, res, next) {
 /* GET players which name match and filter by position */
 /* Other filter will be done in JS because of the types and I don't want to re-index everything' */
 router.get('/players/:searchTerm', function (req, res, next) {
-     var searchTerm = '*' + req.params.searchTerm + '*';
-    var query = {
-        wildcard: {
-            Name: searchTerm
-        }
-    };
-    var queryStringKeys = _.keys(req.query);
-    if (queryStringKeys.length > 0 && queryStringKeys.Position || queryStringKeys.position) {
-        query = {
-            filtered: {
-                query: query,
-                filter: {
-                    term: { "Position": value }
-                }
-            }
-        };
-    }
 
-    client.search({
-        index: 'players',
-        type: 'player',
-        body: {
-            query: query
-        }
-    }).then(function (data) {
+    var searchTerms = req.params.searchTerm.split(" ").map(function (term) {
+        return req.query.fuzzy ? term + "~*" : term + "*";
+    }); //Adds wildcard to each word and fuzzyness when specified
+
+    var formatedSearchTerm = searchTerms.join(" ");
+    var query = "q=IsSelected:false AND Name:" + formatedSearchTerm;
+
+    query = addFilter(query, req.query);
+
+    request(baseUrl + query).then(function (data) {
+        data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.send(data.hits.hits);
+            res.jsonp(data.hits.hits);
         } else {
-            res.send([]);
-        }
-    });
-});
-
-/* GET players by team which name match and filters by position */
-/* Other filter will be done in JS because of the types and I don't want to re-index everything' */
-router.get('/team/:teamID/players/:searchTerm', function (req, res, next) {
-    var query = { exists: { field: "Name" } };
-
-    if (req.params && req.params.searchTerm && req.params.searchTerm !== '*') {
-        var searchTerm = '*' + req.params.searchTerm + '*';
-        query = { wildcard: { Name: searchTerm } };
-    }
-
-    query = {
-        filtered: {
-            query: query,
-            filter: {
-                or: [
-                    {
-                        term: { TeamID: req.params && req.params.teamID }
-                    }
-                ]
-            }
-        }
-    };
-
-    var queryStringKeys = _.keys(req.query);
-    if (queryStringKeys.length > 0 && queryStringKeys.Position || queryStringKeys.position) {
-        query.filtered.filter.or.push({ term: { Position: req.params && req.params.searchTerm } })
-    }
-
-    client.search({        
-        index: 'players',
-        type: 'player',
-        body: {
-            query: query
-        }
-    }).then(function (data) {
-        if (data && data.hits && data.hits.hits) {
-            res.send(data.hits.hits);
-        } else {
-            res.send([]);
+            res.jsonp([]);
         }
     });
 });

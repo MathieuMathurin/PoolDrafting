@@ -1,3 +1,7 @@
 <div class="viewContent">
     <md-input placeholder="Recherche"></md-input>
+    <button (click)="load()">Load</button>
+    <div *ngFor="let player of players">
+        <p>{{player._source.Name}}</p>
+    </div>
 </div>
