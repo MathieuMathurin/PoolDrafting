@@ -28,17 +28,17 @@
                 </tr>
                 <tr *ngFor="let year of stats">
                     <td>{{year.displayValue}}</td>
-                    <td>{{year.value.GP | number:'1.0-0'}}</td>
-                    <td>{{year.value.G}}</td>
-                    <td>{{year.value.A}}</td>
-                    <td *ngIf="player.Position != 'G'">.</td>
-                    <td *ngIf="player.Position == 'G'">{{year.value.W}}</td>
-                    <td *ngIf="player.Position != 'G'">.</td>
-                    <td *ngIf="player.Position == 'G'">{{year.value.L}}</td>
-                    <td *ngIf="player.Position != 'G'">.</td>
-                    <td *ngIf="player.Position == 'G'">{{year.value.OT}}</td>
-                    <td *ngIf="player.Position != 'G'">.</td>
-                    <td *ngIf="player.Position == 'G'">{{year.value.SOW + year.value.SOL}}</td>
+                    <td *ngIf="year.value">{{year.value.GP | number:'1.0-0'}}</td>
+                    <td *ngIf="year.value">{{year.value.G}}</td>
+                    <td *ngIf="year.value">{{year.value.A}}</td>
+                    <td *ngIf="player.Position != 'G' && year.value">.</td>
+                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.W}}</td>
+                    <td *ngIf="player.Position != 'G' && year.value">.</td>
+                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.L}}</td>
+                    <td *ngIf="player.Position != 'G' && year.value">.</td>
+                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.OT}}</td>
+                    <td *ngIf="player.Position != 'G' && year.value">.</td>
+                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.SOW + year.value.SOL}}</td>
                 </tr>
             </table>
         </div>
