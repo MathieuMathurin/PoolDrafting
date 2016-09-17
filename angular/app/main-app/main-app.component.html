@@ -1,6 +1,6 @@
 <md-toolbar color="primary"><button md-icon-button *ngIf="isLoggedIn" class="menuButton" (click)="start.toggle()"><i class="material-icons">menu</i></button><span>Pool à vie</span></md-toolbar>
 <md-sidenav-layout>
-    <md-sidenav #start>
+    <md-sidenav class="menuSideNav" #start>
         <div class="navButtonGroup">
             <div>
                 <button class="navButton" md-raised-button routerLink="/search" routerLinkActive="active" (click)="start.close()">Rechercher</button>

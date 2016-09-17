@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+//Solution to watch objects
+//http://juristr.com/blog/2016/04/angular2-change-detection/
+
+import { Component, OnInit, Input, DoCheck, KeyValueDiffers } from '@angular/core';
+
+import { IDictionary, Dictionary  } from '../models/dictionary';
+import { Filter } from '../models/filter';
 
 import { MdInput } from '@angular2-material/input/input';
 import { MdCard, MdCardHeader, MdCardTitleGroup, MdCardContent, MdCardTitle, MdCardSubtitle, MdCardActions } from '@angular2-material/card/card'
@@ -13,13 +19,26 @@ import { SearchPlayersService } from '../services/search-players.service';
         SearchPlayersService
     ]
 })
-export class SearchComponent implements OnInit {
-    constructor(private searchPlayerService: SearchPlayersService){ } 
-    searchTerm: string;
+export class SearchComponent implements OnInit, DoCheck {
+    constructor(private searchPlayerService: SearchPlayersService, private differs: KeyValueDiffers){ 
+        this.differ = differs.find({}).create(null);
+    } 
+    searchTerm: string = "";
     players: any[];
+    @Input() filters: Dictionary;
+    differ: any;
+
+    
 
     ngOnInit(): void {
         this.load();
+    }
+
+    ngDoCheck() {
+        var changes = this.differ.diff(this.filters);
+        if(changes){
+            this.analyseSearchTerm();
+        }
     }
 
     analyseSearchTerm(): void{
@@ -32,18 +51,18 @@ export class SearchComponent implements OnInit {
     }
 
     load(): void {
-        this.searchPlayerService.getPlayers().then(
+        this.searchPlayerService.getPlayers(this.filters).then(
             results => {
                 this.players = results
             });
     }
 
     search(): void {
-        this.searchPlayerService.searchPlayers(this.searchTerm, false).then(results => {
+        this.searchPlayerService.searchPlayers(this.searchTerm, false, this.filters).then(results => {
             if(results.length > 0){
                 this.players = results;
             }else{
-                this.searchPlayerService.searchPlayers(this.searchTerm, true).then(results => {
+                this.searchPlayerService.searchPlayers(this.searchTerm, true, this.filters).then(results => {
                     this.players = results;
                 });
             }

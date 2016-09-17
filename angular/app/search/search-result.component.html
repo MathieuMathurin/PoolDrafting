@@ -1,0 +1,47 @@
+<div class="searchResult">
+    <md-card (click)="expanded = !expanded">
+        <div class="playersSection">
+            <div class="playersDescription">
+            <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
+                <p>{{player.Team.Key}}</p>
+                <p>{{player.Name}}</p>
+                <p class="points" *ngIf="player.Prediction && player.Position != 'G'">{{player.Prediction.PTS}} <span>PTS</span></p>
+                <p class="points" *ngIf="player.Prediction && player.Position == 'G'">{{player.Prediction.VIC * 2}}<span>PTS</span></p>
+                <p class="points" *ngIf="!player.Prediction">N/A</p>
+                <p class="salaire" *ngIf="player.Prediction">{{player.Prediction.SAL}}<span>M $</span></p>
+                <p class="salaire" *ngIf="!player.Prediction">N/A</p>
+            </div>
+        </div>
+    </md-card>
+    <div class="playerDetails" *ngIf="expanded">
+        <div *ngIf="player.Stats">
+            <table class="table">
+                <tr>
+                    <th>Année</th>
+                    <th>PJ</th>
+                    <th>BTS</th>
+                    <th>PAS</th>
+                    <th>VIC</th>
+                    <th>DEF</th>
+                    <th>DP</th>
+                    <th>BL</th>
+                </tr>
+                <tr *ngFor="let year of stats">
+                    <td>{{year.displayValue}}</td>
+                    <td>{{year.value.GP | number:'1.0-0'}}</td>
+                    <td>{{year.value.G}}</td>
+                    <td>{{year.value.A}}</td>
+                    <td *ngIf="player.Position != 'G'">.</td>
+                    <td *ngIf="player.Position == 'G'">{{year.value.W}}</td>
+                    <td *ngIf="player.Position != 'G'">.</td>
+                    <td *ngIf="player.Position == 'G'">{{year.value.L}}</td>
+                    <td *ngIf="player.Position != 'G'">.</td>
+                    <td *ngIf="player.Position == 'G'">{{year.value.OT}}</td>
+                    <td *ngIf="player.Position != 'G'">.</td>
+                    <td *ngIf="player.Position == 'G'">{{year.value.SOW + year.value.SOL}}</td>
+                </tr>
+            </table>
+        </div>
+        <p class="summary" *ngIf="player.Prediction">{{player.Prediction.Summary}}</p>
+    </div>
+</div>

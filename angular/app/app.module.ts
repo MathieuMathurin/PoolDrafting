@@ -10,6 +10,8 @@ import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
 import { TeamComponent } from './team/team.component';
 import { RulesComponent } from './rules/rules.component';
+import { FilterComponent } from './search/filter.component';
+import { SearchResultComponent } from './search/search-result.component'
 import { ReplaceAccentsPipe } from './pipes/replace-accents.pipe';
 
 //Import material Modules
@@ -37,6 +39,8 @@ import { MdCardModule } from '@angular2-material/card'
         SearchComponent,
         TeamComponent,
         RulesComponent,
+        FilterComponent,
+        SearchResultComponent,
         ReplaceAccentsPipe
     ],
     bootstrap: [MainAppComponent]

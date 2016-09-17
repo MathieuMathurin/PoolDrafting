@@ -1,7 +1,7 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SearchComponent } from './search/search.component';
+import { FilterComponent } from './search/filter.component';
 import { LoginComponent } from './login/login.component';
 import { TeamComponent } from './team/team.component';
 import { RulesComponent } from './rules/rules.component';
@@ -9,7 +9,7 @@ import { RulesComponent } from './rules/rules.component';
 const appRoutes : Routes = [
     {
         path: 'search',
-        component: SearchComponent
+        component: FilterComponent
     },
     {
         path: 'login',

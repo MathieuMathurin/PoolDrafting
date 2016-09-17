@@ -1,0 +1,31 @@
+<md-sidenav-layout>
+    <button md-icon-button class="menuButton" *ngIf="!opened" (click)="start.toggle(); toggle();"><i class="material-icons">chevron_right</i></button>
+    <button md-icon-button class="menuButton" *ngIf="opened" (click)="start.toggle(); toggle()"><i class="material-icons">chevron_left</i></button>
+    <md-sidenav class="filterSideNav" mode="side" #start>
+        <div>
+            <h2 class="filterCategorie">Positions</h2>
+            <div class="filterButtonGroup">
+                <button class="filterButton" *ngFor="let forwardFilter of forwardPositionFilters" [ngClass]="{selected: forwardFilter.selected}"
+                    (click)="managePositionFilters(forwardFilter)" ngClass md-icon-button>{{forwardFilter.name}}
+                </button>
+            </div>
+            <div class="filterButtonGroup">
+                <button class="filterButton" *ngFor="let defenseFilter of defensePositionFilters" [ngClass]="{selected: defenseFilter.selected}"
+                    (click)="managePositionFilters(defenseFilter)" ngClass md-icon-button>{{defenseFilter.name}}
+                </button>
+            </div>
+        </div>
+        <!--<div>
+            <h2 class="filterCategorie">Salaire</h2>
+            <div class="minMax">
+                <span class="input">
+                    <md-input [(ngModel)]="salaryFilter.min" (ngModelChange)="manageSalaryFilter()" type="number" min="0" max="12" step="1" placeholder="min"></md-input>
+                </span>
+                <span class="input">
+                    <md-input [(ngModel)]="salaryFilter.max" (ngModelChange)="manageSalaryFilter()" type="number" min="0" max="12" step="1" placeholder="max"></md-input>
+                </span>
+            </div>
+        </div>-->
+    </md-sidenav>
+    <search [filters]="activeFilters"></search>
+</md-sidenav-layout>

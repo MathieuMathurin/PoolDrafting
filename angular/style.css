@@ -20,8 +20,110 @@ body{
     color: white;
 }
 
-md-sidenav {
+.searchInput {
+    width: 60%;
+    font-size: 30px;
+}
+
+.menuSideNav {
   width: 300px;
+}
+
+.filterSideNav {
+    width: 250px;
+}
+
+.filterButton {    
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.filterButton.selected {
+    background-color: #009688;
+    color: white;
+}
+
+.filterButtonGroup {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around
+}
+
+.filterCategorie{
+    text-align: center;
+}
+
+.playersHeading {
+    color: #CCC;
+    font-weight: bold;
+    font-size: 15;
+}
+
+.playersDescription {    
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+.points {
+    font-size: 30px;    
+    position: relative;
+    top: -10px;  
+}
+
+.points span {
+    font-size: 20px; 
+    color: #AAA;
+    display: block 
+}
+
+.salaire {
+    font-size: 30px;    
+    position: relative;
+    top: -10px;
+}
+
+.salaire span {
+font-size: 20px; 
+    color: #AAA; 
+    margin-left: 6px;
+    display: block;
+}
+
+.searchResult {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.searchResult p{
+    padding-top: 40px;
+}
+
+.playerDetails {
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid rgba(230, 230, 230, 0.6);
+}
+
+.summary { 
+    position: relative;
+    top: -30px;
+    text-align: left;
+    font-size: 15px;
+}
+
+.playerDetails p {
+    text-align: left;
+}
+
+.minMax {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.minMax .input {
+    width: 30% !important;
 }
 
 .viewContent{
@@ -65,10 +167,18 @@ md-sidenav {
     .imageContainer{        
         background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=1000&h=700&fit=crop');
     }
+    
+    .filterSideNav {
+        width: 250px;
+    }
 }
 
 @media (max-width: 579px) {
     .imageContainer{        
         background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=1000&h=700&fit=crop');
+    }
+
+    .filterSideNav {
+        width: 200px;
     }
 }
