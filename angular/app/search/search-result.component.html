@@ -1,8 +1,8 @@
-<div class="searchResult">
-    <md-card (click)="expanded = !expanded">
+<div *ngIf="!added" class="searchResult">
+    <md-card (click)="expanded = !expanded;">
         <div class="playersSection">
             <div class="playersDescription">
-            <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
+                <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
                 <p>{{player.Team.Key}}</p>
                 <p>{{player.Name}}</p>
                 <p class="points" *ngIf="player.Prediction && player.Position != 'G'">{{player.Prediction.PTS}} <span>PTS</span></p>
@@ -41,7 +41,12 @@
                     <td *ngIf="player.Position == 'G' && year.value">{{year.value.SOW + year.value.SOL}}</td>
                 </tr>
             </table>
+            <p class="summary" *ngIf="player.Prediction">{{player.Prediction.Summary}}</p>
+            <button *ngIf="!wantsToAdd" md-raised-button (click)="wantsToAdd = !wantsToAdd">Add Player</button>
+            <div class="buttonGroup" *ngIf="wantsToAdd">
+                <button md-raised-button (click)="addPlayer(player)">Confirm</button>
+                <button md-raised-button (click)="wantsToAdd = !wantsToAdd">Cancel</button>
+            </div>
         </div>
-        <p class="summary" *ngIf="player.Prediction">{{player.Prediction.Summary}}</p>
     </div>
 </div>

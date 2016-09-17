@@ -45,9 +45,9 @@ router.get('/players', function (req, res, next) {
     request(baseUrl + query + "&sort=Prediction.PTS:desc&size=100").then(function (data) {
         data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.jsonp(data.hits.hits);
+            res.send(data.hits.hits);
         } else {
-            res.jsonp([]);
+            res.send([]);
         }
     });
 });
@@ -68,11 +68,87 @@ router.get('/players/:searchTerm', function (req, res, next) {
     request(baseUrl + query).then(function (data) {
         data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.jsonp(data.hits.hits);
+            res.send(data.hits.hits);
         } else {
-            res.jsonp([]);
+            res.send([]);
         }
     });
+});
+
+router.get("/user/create/:name", function (req, res, next) {
+    var data = { name: req.params.name, players: [] };
+    var option = {
+        method: 'POST',
+        uri: "http://localhost:9200/poolers/user",
+        body: data,
+        json: true
+    }
+    request.post(option).then(function (data) {
+        var userModel = {
+            id: data._id,
+            user: {
+                name: req.params.name,
+                players: []
+            }
+        }
+        res.send(userModel);
+    }).catch(function (err) {
+        console.log(err);
+    });
+});
+
+router.post("/user/update", function (req, res, next) {
+
+    var userData = {
+        name: req.body.name,
+        players: req.body.players        
+    };
+
+    var modifiedPlayer = req.body.player;
+    modifiedPlayer.IsSelected = false;
+
+    var deleteUserOptions = {
+        method: 'DELETE',
+        uri: "http://localhost:9200/poolers/user/" + req.body.id,
+    }        
+
+    var addUserOptions = {
+        
+        method: 'POST',
+        uri: "http://localhost:9200/poolers/user/" + req.body.id,
+        body: userData,
+        json: true
+    }
+
+    var deletePlayerOptions = {
+        method: 'DELETE',
+        uri: "http://localhost:9200/players/player/" + req.body.player_id,
+    }
+
+    var addPlayerOptions = {
+        
+        method: 'POST',
+        uri: "http://localhost:9200/players/player/" + req.body.player_id,
+        body: modifiedPlayer,
+        json: true
+    }
+
+    var deleteUser = request(deleteUserOptions);
+    var addUser = request(addUserOptions);
+    var deletePlayer = request(deletePlayerOptions);
+    var addPlayer = request(addPlayerOptions);
+
+    deleteUser
+    .then(addUser)
+    .then(deletePlayer)
+    .then(addPlayer)
+    .then(function(data){
+        res.send("ok");
+    }).catch(function (err) {
+        console.log(err);
+    })
+
+
 });
 
 module.exports = router;

@@ -23,8 +23,10 @@ export class LoginComponent implements OnInit{
     }
 
     saveUser(name): void {
-        this.localStorageService.save(name);        
-        this.router.navigate(['/search']);
+        var router = this.router;
+        var callback = function(){router.navigate(['/search'])};
+        this.localStorageService.save(name, callback);        
+        
     }
 
     validateUser(): void{

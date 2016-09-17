@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Headers, Jsonp } from '@angular/http';
+import { Headers, Http } from '@angular/http';
 
 import { IDictionary, Dictionary } from '../models/dictionary';
 import { Filter } from '../models/filter';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class SearchPlayersService {
-    constructor(private jsonp: Jsonp) { }
+    constructor(private http: Http) { }
 
     private apiUrl = "http://" + window.location.hostname + ":3000";
 
@@ -60,24 +60,24 @@ export class SearchPlayersService {
     }
 
     getPlayers(filters: Dictionary): Promise<any[]> {
-        let url = this.apiUrl + '/players?callback=JSONP_CALLBACK';
+        let url = this.apiUrl + '/players?test=true';
 
         url = this.addFilters(url, filters);
 
-        return this.jsonp.get(url)
+        return this.http.get(url)
             .toPromise()
             .then(response => response.json())
             .catch(this.handleError);
     }
 
     searchPlayers(searchTerm: string, fuzzy: boolean, filters: Dictionary): Promise<any[]> {
-        let url = this.apiUrl + '/players/' + searchTerm + '?callback=JSONP_CALLBACK';
+        let url = this.apiUrl + '/players/' + searchTerm + '?test=true';
 
         url = fuzzy ? url + "&fuzzy=true" : url;
 
         url = this.addFilters(url, filters);
 
-        return this.jsonp.get(url)
+        return this.http.get(url)
             .toPromise()
             .then(response => response.json())
             .catch(this.handleError);
