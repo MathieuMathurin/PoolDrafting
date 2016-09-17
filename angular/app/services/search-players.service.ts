@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 export class SearchPlayersService {
     constructor(private jsonp: Jsonp) { }
 
-    private apiUrl = "http://localhost:3000";
+    private apiUrl = "http://" + window.location.hostname + ":3000";
 
     private handleError(error: any): Promise<any> {
         console.error('An error occurred', error); // for demo purposes only
