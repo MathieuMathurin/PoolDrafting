@@ -2,6 +2,7 @@
     <md-card (click)="expanded = !expanded;">
         <div class="playersSection">
             <div class="playersDescription">
+                <p>{{player.Position}}</p>
                 <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
                 <p>{{player.Team.Key}}</p>
                 <p>{{player.Name}}</p>
@@ -44,7 +45,7 @@
             <p class="summary" *ngIf="player.Prediction">{{player.Prediction.Summary}}</p>
             <button *ngIf="!wantsToAdd" md-raised-button (click)="wantsToAdd = !wantsToAdd">Add Player</button>
             <div class="buttonGroup" *ngIf="wantsToAdd">
-                <button md-raised-button (click)="addPlayer(player)">Confirm</button>
+                <button md-raised-button (click)="added = true; addPlayer(player);">Confirm</button>
                 <button md-raised-button (click)="wantsToAdd = !wantsToAdd">Cancel</button>
             </div>
         </div>

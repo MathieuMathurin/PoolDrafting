@@ -57,9 +57,9 @@ export class LocalStorageService {
         this.http.post(url, postModel)
             .toPromise()
             .then(response => {
-                
+                callback();
             })
-            .catch(this.handleError);
+            .catch(this.handleError);        
     }
 
     isLoggedIn(): boolean {

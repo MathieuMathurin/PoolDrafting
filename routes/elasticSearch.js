@@ -45,9 +45,9 @@ router.get('/players', function (req, res, next) {
     request(baseUrl + query + "&sort=Prediction.PTS:desc&size=100").then(function (data) {
         data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.send(data.hits.hits);
+            res.jsonp(data.hits.hits);
         } else {
-            res.send([]);
+            res.jsonp([]);
         }
     });
 });
@@ -68,9 +68,9 @@ router.get('/players/:searchTerm', function (req, res, next) {
     request(baseUrl + query).then(function (data) {
         data = JSON.parse(data);
         if (data && data.hits && data.hits.hits) {
-            res.send(data.hits.hits);
+            res.jsonp(data.hits.hits);
         } else {
-            res.send([]);
+            res.jsonp([]);
         }
     });
 });
@@ -91,7 +91,7 @@ router.get("/user/create/:name", function (req, res, next) {
                 players: []
             }
         }
-        res.send(userModel);
+        res.jsonp(userModel);
     }).catch(function (err) {
         console.log(err);
     });
@@ -105,7 +105,7 @@ router.post("/user/update", function (req, res, next) {
     };
 
     var modifiedPlayer = req.body.player;
-    modifiedPlayer.IsSelected = false;
+    modifiedPlayer.IsSelected = true;
 
     var deleteUserOptions = {
         method: 'DELETE',
