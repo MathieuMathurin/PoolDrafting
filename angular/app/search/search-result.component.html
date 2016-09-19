@@ -4,50 +4,47 @@
             <div class="playersDescription">
                 <p>{{player.Position}}</p>
                 <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
-                <p>{{player.Team.Key}}</p>
+                <!--<p>{{player.Team.Key}}</p>-->
                 <p>{{player.Name}}</p>
-                <p class="points" *ngIf="player.Prediction && player.Position != 'G'">{{player.Prediction.PTS}} <span>PTS</span></p>
-                <p class="points" *ngIf="player.Prediction && player.Position == 'G'">{{player.Prediction.VIC * 2}}<span>PTS</span></p>
-                <p class="points" *ngIf="!player.Prediction">N/A</p>
-                <p class="salaire" *ngIf="player.Prediction">{{player.Prediction.SAL}}<span>M $</span></p>
-                <p class="salaire" *ngIf="!player.Prediction">N/A</p>
+                <p class="points" *ngIf="player.Points">{{player.Points}} <span>PTS</span></p>
+                <p class="points" *ngIf="!player.Points">N/A</p>
+                <p class="salaire" *ngIf="player.Salary">{{player.Salary}}<span>M $</span></p>
+                <p class="salaire" *ngIf="!player.Salary">N/A</p>
             </div>
         </div>
     </md-card>
     <div class="playerDetails" *ngIf="expanded">
-        <div *ngIf="player.Stats">
-            <table class="table">
-                <tr>
-                    <th>Année</th>
-                    <th>PJ</th>
-                    <th>BTS</th>
-                    <th>PAS</th>
-                    <th>VIC</th>
-                    <th>DEF</th>
-                    <th>DP</th>
-                    <th>BL</th>
-                </tr>
-                <tr *ngFor="let year of stats">
-                    <td>{{year.displayValue}}</td>
-                    <td *ngIf="year.value">{{year.value.GP | number:'1.0-0'}}</td>
-                    <td *ngIf="year.value">{{year.value.G}}</td>
-                    <td *ngIf="year.value">{{year.value.A}}</td>
-                    <td *ngIf="player.Position != 'G' && year.value">.</td>
-                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.W}}</td>
-                    <td *ngIf="player.Position != 'G' && year.value">.</td>
-                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.L}}</td>
-                    <td *ngIf="player.Position != 'G' && year.value">.</td>
-                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.OT}}</td>
-                    <td *ngIf="player.Position != 'G' && year.value">.</td>
-                    <td *ngIf="player.Position == 'G' && year.value">{{year.value.SOW + year.value.SOL}}</td>
-                </tr>
-            </table>
-            <p class="summary" *ngIf="player.Prediction">{{player.Prediction.Summary}}</p>
-            <button *ngIf="!wantsToAdd" md-raised-button (click)="wantsToAdd = !wantsToAdd">Add Player</button>
-            <div class="buttonGroup" *ngIf="wantsToAdd">
-                <button md-raised-button (click)="added = true; addPlayer(player);">Confirm</button>
-                <button md-raised-button (click)="wantsToAdd = !wantsToAdd">Cancel</button>
-            </div>
+        <table class="table">
+            <tr>
+                <th>Année</th>
+                <th>PJ</th>
+                <th>BTS</th>
+                <th>PAS</th>
+                <th>VIC</th>
+                <th>DEF</th>
+                <th>DP</th>
+                <th>BL</th>
+            </tr>
+            <tr *ngFor="let year of player.Stats">
+                <td>{{year.displayValue}}</td>
+                <td *ngIf="year.value">{{year.value.GP | number:'1.0-0'}}</td>
+                <td *ngIf="year.value">{{year.value.G}}</td>
+                <td *ngIf="year.value">{{year.value.A}}</td>
+                <td *ngIf="player.Position != 'G' && year.value">.</td>
+                <td *ngIf="player.Position == 'G' && year.value">{{year.value.W}}</td>
+                <td *ngIf="player.Position != 'G' && year.value">.</td>
+                <td *ngIf="player.Position == 'G' && year.value">{{year.value.L}}</td>
+                <td *ngIf="player.Position != 'G' && year.value">.</td>
+                <td *ngIf="player.Position == 'G' && year.value">{{year.value.OT}}</td>
+                <td *ngIf="player.Position != 'G' && year.value">.</td>
+                <td *ngIf="player.Position == 'G' && year.value">{{year.value.SOW + year.value.SOL}}</td>
+            </tr>
+        </table>
+        <p class="summary" *ngIf="player.Summary">{{player.Summary}}</p>
+        <button *ngIf="!wantsToAdd" md-raised-button (click)="wantsToAdd = !wantsToAdd">Add Player</button>
+        <div class="buttonGroup" *ngIf="wantsToAdd">
+            <button md-raised-button (click)="added = true; addPlayer(player);">Confirm</button>
+            <button md-raised-button (click)="wantsToAdd = !wantsToAdd">Cancel</button>
         </div>
     </div>
 </div>

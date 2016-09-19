@@ -33,26 +33,16 @@ export class UserService {
             .catch(this.handleError);
     }
 
-    update(player: Player, callback): void {
-        let url = this.apiUrl + '/user/update';
-
-        player.IsSelected = true;
+    update(player: Player, isSelected: boolean, callback): void {
+        let url = this.apiUrl + '/user/update';        
 
         var newModel = this.load();
+
         newModel.user.players.push(player);
         localStorage.setItem(this.localStorageKey, JSON.stringify(newModel));
-
-        /* id -> user id
-         * name -> user name
-         * players -> user players
-         * player -> selected player
-         * player_id -> selected player id
-        */
+        
         var postModel = {
-            id: newModel.id,
-            name: newModel.user.name,
-            players: newModel.user.players,
-            player: player,
+            player: player.getSubmitModel(true),
             player_id: player.Id
         };
 

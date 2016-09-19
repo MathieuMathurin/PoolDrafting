@@ -99,26 +99,23 @@ router.get("/user/create/:name", function (req, res, next) {
 
 router.post("/user/update", function (req, res, next) {
 
-    var userData = {
-        name: req.body.name,
-        players: req.body.players        
-    };
+    // var userData = {
+    //     name: req.body.name,
+    //     players: req.body.players        
+    // };
 
-    var modifiedPlayer = req.body.player;
-    modifiedPlayer.IsSelected = true;
+    // var deleteUserOptions = {
+    //     method: 'DELETE',
+    //     uri: "http://localhost:9200/poolers/user/" + req.body.id,
+    // }        
 
-    var deleteUserOptions = {
-        method: 'DELETE',
-        uri: "http://localhost:9200/poolers/user/" + req.body.id,
-    }        
-
-    var addUserOptions = {
+    // var addUserOptions = {
         
-        method: 'POST',
-        uri: "http://localhost:9200/poolers/user/" + req.body.id,
-        body: userData,
-        json: true
-    }
+    //     method: 'POST',
+    //     uri: "http://localhost:9200/poolers/user/" + req.body.id,
+    //     body: userData,
+    //     json: true
+    // }
 
     var deletePlayerOptions = {
         method: 'DELETE',
@@ -129,18 +126,16 @@ router.post("/user/update", function (req, res, next) {
         
         method: 'POST',
         uri: "http://localhost:9200/players/player/" + req.body.player_id,
-        body: modifiedPlayer,
+        body: req.body.player,
         json: true
     }
 
-    var deleteUser = request(deleteUserOptions);
-    var addUser = request(addUserOptions);
+    // var deleteUser = request(deleteUserOptions);
+    // var addUser = request(addUserOptions);
     var deletePlayer = request(deletePlayerOptions);
     var addPlayer = request(addPlayerOptions);
 
-    deleteUser
-    .then(addUser)
-    .then(deletePlayer)
+    deletePlayer
     .then(addPlayer)
     .then(function(data){
         res.send("ok");
