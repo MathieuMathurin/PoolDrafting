@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 //Import services
-import { LocalStorageService } from '../services/local-storage.service';
+import { UserService } from '../services/user.service';
 
 import { MdInput } from '@angular2-material/input/input';
 
@@ -10,11 +10,11 @@ import { MdInput } from '@angular2-material/input/input';
     selector: 'login',
     templateUrl: 'app/login/login.component.html',
     providers: [
-        LocalStorageService
+        UserService
     ]
 })
 export class LoginComponent implements OnInit{
-    constructor(private localStorageService: LocalStorageService, private router: Router){}      
+    constructor(private userService: UserService, private router: Router){}      
     userName: string;
     isValid: boolean;
 
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit{
     saveUser(name): void {
         var router = this.router;
         var callback = function(){router.navigate(['/search'])};
-        this.localStorageService.save(name, callback);        
+        this.userService.save(name, callback);        
         
     }
 

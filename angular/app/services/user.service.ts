@@ -2,8 +2,10 @@ import { Injectable } from '@angular/core';
 
 import { Headers, Http } from '@angular/http';
 
+import { Player } from '../models/player';
+
 @Injectable()
-export class LocalStorageService {
+export class UserService {
     constructor(private http: Http) { }
     localStorageKey = 'poolUser';
 
@@ -31,7 +33,7 @@ export class LocalStorageService {
             .catch(this.handleError);
     }
 
-    update(player: any, playerID: any, callback): void {
+    update(player: Player, callback): void {
         let url = this.apiUrl + '/user/update';
 
         player.IsSelected = true;
@@ -51,7 +53,7 @@ export class LocalStorageService {
             name: newModel.user.name,
             players: newModel.user.players,
             player: player,
-            player_id: playerID
+            player_id: player.Id
         };
 
         this.http.post(url, postModel)

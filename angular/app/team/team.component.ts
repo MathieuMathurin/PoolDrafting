@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 
-import { LocalStorageService } from '../services/local-storage.service'
+import { UserService } from '../services/user.service'
 
 @Component({
     selector: 'team',
     templateUrl: 'app/team/team.component.html',
     providers:[
-        LocalStorageService
+        UserService
     ]
 })
 export class TeamComponent implements OnInit{
-     constructor(private localStorageService: LocalStorageService){ }
+     constructor(private userService: UserService){ }
     players: any[];     
 
     ngOnInit(): void {
-        this.players = this.localStorageService.load().user.players;
+        this.players = this.userService.load().user.players;
     }
 
     totalSalary(): number{

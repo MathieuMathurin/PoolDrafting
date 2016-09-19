@@ -1,6 +1,6 @@
 <div class="viewContent">
     <md-input class="searchInput" placeholder="Recherche" [(ngModel)]="searchTerm" (keyup)="analyseSearchTerm()"></md-input>
     <div *ngFor="let player of players">
-        <result [player]="player._source" [playerID]="player._id"></result>
+        <result [player]="player"></result>
     </div>
 </div>

@@ -5,6 +5,7 @@ import { Component, OnInit, Input, DoCheck, KeyValueDiffers } from '@angular/cor
 
 import { IDictionary, Dictionary  } from '../models/dictionary';
 import { Filter } from '../models/filter';
+import { Player } from '../models/player';
 
 import { MdInput } from '@angular2-material/input/input';
 import { MdCard, MdCardHeader, MdCardTitleGroup, MdCardContent, MdCardTitle, MdCardSubtitle, MdCardActions } from '@angular2-material/card/card'
@@ -24,7 +25,7 @@ export class SearchComponent implements OnInit, DoCheck {
         this.differ = differs.find({}).create(null);
     } 
     searchTerm: string = "";
-    players: any[];
+    players: Player[];
     @Input() filters: Dictionary;
     differ: any;
 
@@ -59,6 +60,7 @@ export class SearchComponent implements OnInit, DoCheck {
 
     search(): void {
         this.searchPlayerService.searchPlayers(this.searchTerm, false, this.filters).then(results => {
+            //Activate fuzzy search only if we have an empty answer
             if(results.length > 0){
                 this.players = results;
             }else{
