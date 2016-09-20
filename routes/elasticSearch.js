@@ -2,6 +2,7 @@ var express = require('express'),
     router = express.Router(),
     request = require('request-promise'),
     _ = require('lodash'),
+    q = require('q'),
     baseUrl = "http://localhost:9200/players/player/_search?";
 
 function addFilter(query, filters) {
@@ -33,7 +34,7 @@ function addFilter(query, filters) {
         query = query + " AND Prediction.PTS: [" + min + " TO " + max + "]"; //[ ] is inclusive, { } is exclusive
     }
 
-    return query;
+    return query + "&sort=Prediction.PTS:desc";
 }
 
 /* GET 100 players sorted by prediction points */
@@ -52,15 +53,14 @@ router.get('/players', function (req, res, next) {
     });
 });
 
-/* GET players which name match and filter by position */
-/* Other filter will be done in JS because of the types and I don't want to re-index everything' */
+/* GET players which name match and by filters */
 router.get('/players/:searchTerm', function (req, res, next) {
 
-    var searchTerms = req.params.searchTerm.split(" ").map(function (term) {
+    var formatedSearchTerm = req.params.searchTerm.split(" ").map(function (term) {
         return req.query.fuzzy ? term + "~*" : term + "*";
-    }); //Adds wildcard to each word and fuzzyness when specified
+    })
+        .join(" "); //Adds wildcard to each word and fuzzyness when specified
 
-    var formatedSearchTerm = searchTerms.join(" ");
     var query = "q=IsSelected:false AND Name:" + formatedSearchTerm;
 
     query = addFilter(query, req.query);
@@ -97,51 +97,60 @@ router.get("/user/create/:name", function (req, res, next) {
     });
 });
 
-router.post("/user/update", function (req, res, next) {
+router.post("/player/update", function (req, res, next) {
+    var baseUrl = "http://localhost:9200/players/player/";
+    var url = baseUrl + req.body.player_id;
 
-    // var userData = {
-    //     name: req.body.name,
-    //     players: req.body.players        
-    // };
-
-    // var deleteUserOptions = {
-    //     method: 'DELETE',
-    //     uri: "http://localhost:9200/poolers/user/" + req.body.id,
-    // }        
-
-    // var addUserOptions = {
-        
-    //     method: 'POST',
-    //     uri: "http://localhost:9200/poolers/user/" + req.body.id,
-    //     body: userData,
-    //     json: true
-    // }
+    var getPlayerOptions = {
+        method: 'GET',
+        uri: url
+    };
 
     var deletePlayerOptions = {
         method: 'DELETE',
-        uri: "http://localhost:9200/players/player/" + req.body.player_id,
+        uri: url
+    };
+
+
+    var getPlayer = request(getPlayerOptions);
+    var modifyAndAddPlayer = function (data) {
+        data = JSON.parse(data);
+
+        var player = data._source;
+        player.IsSelected = req.body.isSelected;
+
+        var addPlayerOptions = {
+            method: 'POST',
+            uri: url,
+            body: player,
+            json: true
+        };
+
+        return request(addPlayerOptions);
+    };
+    var getNewPlayer = function(data){        
+        var options = {
+            method: 'GET',
+            uri: baseUrl + data._id
+        };
+
+        return request(options);
     }
-
-    var addPlayerOptions = {
-        
-        method: 'POST',
-        uri: "http://localhost:9200/players/player/" + req.body.player_id,
-        body: req.body.player,
-        json: true
+    var sendNewPlayer = function(data){
+        return q.fcall(function(){
+            res.send(data);
+        });
     }
+    var deleteInitialPlayer = request(deletePlayerOptions);
 
-    // var deleteUser = request(deleteUserOptions);
-    // var addUser = request(addUserOptions);
-    var deletePlayer = request(deletePlayerOptions);
-    var addPlayer = request(addPlayerOptions);
-
-    deletePlayer
-    .then(addPlayer)
-    .then(function(data){
-        res.send("ok");
-    }).catch(function (err) {
-        console.log(err);
-    })
+    getPlayer
+        .then(modifyAndAddPlayer)
+        .then(getNewPlayer)
+        .then(sendNewPlayer)
+        .then(deleteInitialPlayer)
+        .catch(function (err) {
+            console.log(err);
+        })
 
 
 });

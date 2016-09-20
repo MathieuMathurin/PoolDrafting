@@ -8,6 +8,7 @@ export class Player {
     Salary: number;
     Stats: any[];
     Summary: string;
+    Team: string;
 
     private rawPlayer: any;
 
@@ -16,12 +17,14 @@ export class Player {
         this.Name = playerObject.Name;
         this.Position = playerObject.Position;
         this.IsSelected = playerObject.IsSelected;    
-        this.PhotoUrl = playerObject.PhotoUrl;    
+        this.PhotoUrl = playerObject.PhotoUrl;
+        this.Team = playerObject.Team.Key;    
 
         this.Stats = [];
         if(playerObject.Prediction){            
             this.Points = this.Position == "G" ? playerObject.Prediction.VIC * 2 : playerObject.Prediction.PTS;            
-            this.Salary = playerObject.Prediction.SAL;
+            let salary =  playerObject.Prediction.SAL.replace(/,/g, '.');
+            this.Salary = parseFloat(salary);
             this.Summary = playerObject.Prediction.Summary;  
             
             let pred = playerObject.Prediction;

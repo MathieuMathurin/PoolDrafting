@@ -30,7 +30,7 @@ export class SearchResultComponent {
             self.added = true;
         }
 
-        this.userService.update(this.player, callback);
+        this.userService.update(this.player, true, callback);
     }
 
     

@@ -30,6 +30,7 @@ export class SearchPlayersService {
         let position: string[] = []        
         let salary: { querystring: string, value: string };
         let points: { querystring: string, value: string };
+
         if(filters){
             filters._values.forEach(filter => {
                 let elasticSearchValue: { type: string, value: string } = filter.getElasticSearchValue();
@@ -58,8 +59,12 @@ export class SearchPlayersService {
                     querystringFilters.push(points);
                 }
                 
-                querystringFilters.forEach(f => {
-                    url = url + "&" + f.querystring + "=" + f.value;
+                querystringFilters.forEach(filter => {
+                    
+                    var hasQueryString = url.indexOf("?") !== -1;
+                    var separator = hasQueryString ? '&' : '?'
+                    
+                    url = url + separator + filter.querystring + "=" + filter.value;                    
                 });            
             });
         }
@@ -67,7 +72,7 @@ export class SearchPlayersService {
     }
 
     getPlayers(filters: Dictionary): Promise<Player[]> {
-        let url = this.apiUrl + '/players?test=true';
+        let url = this.apiUrl + '/players';
 
         url = this.addFilters(url, filters);
 
@@ -80,9 +85,9 @@ export class SearchPlayersService {
     }
 
     searchPlayers(searchTerm: string, fuzzy: boolean, filters: Dictionary): Promise<Player[]> {
-        let url = this.apiUrl + '/players/' + searchTerm + '?test=true';
+        let url = this.apiUrl + '/players/' + searchTerm;
 
-        url = fuzzy ? url + "&fuzzy=true" : url;
+        url = fuzzy ? url + "?fuzzy=true" : url;
 
         url = this.addFilters(url, filters);
 

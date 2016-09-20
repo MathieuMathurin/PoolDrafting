@@ -1,18 +1,5 @@
 <div *ngIf="!added" class="searchResult">
-    <md-card (click)="expanded = !expanded;">
-        <div class="playersSection">
-            <div class="playersDescription">
-                <p>{{player.Position}}</p>
-                <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.PhotoUrl}}" />
-                <!--<p>{{player.Team.Key}}</p>-->
-                <p>{{player.Name}}</p>
-                <p class="points" *ngIf="player.Points">{{player.Points}} <span>PTS</span></p>
-                <p class="points" *ngIf="!player.Points">N/A</p>
-                <p class="salaire" *ngIf="player.Salary">{{player.Salary}}<span>M $</span></p>
-                <p class="salaire" *ngIf="!player.Salary">N/A</p>
-            </div>
-        </div>
-    </md-card>
+    <player-description [player]="player" (click)="expanded = !expanded;"></player-description>
     <div class="playerDetails" *ngIf="expanded">
         <table class="table">
             <tr>

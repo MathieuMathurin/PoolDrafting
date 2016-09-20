@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Player } from '../models/player';
 import { UserService } from '../services/user.service'
 
 @Component({
@@ -11,16 +12,19 @@ import { UserService } from '../services/user.service'
 })
 export class TeamComponent implements OnInit{
      constructor(private userService: UserService){ }
-    players: any[];     
+    players: Player[];     
 
     ngOnInit(): void {
-        this.players = this.userService.load().user.players;
+        this.players = this.userService.load().players;
     }
 
     totalSalary(): number{
         let total = 0;
-        this.players.forEach(p => total += p.Prediction.SAL);
-
+        this.players.forEach(p => total += p.Salary);
+        
         return total;
+    }
+    clear(player: Player){
+        this.userService.update(player, false, () => {this.players = this.players.filter(p => p.Id !== player.Id)});
     }
  }

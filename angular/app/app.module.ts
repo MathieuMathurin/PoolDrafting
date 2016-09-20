@@ -11,7 +11,8 @@ import { LoginComponent } from './login/login.component';
 import { TeamComponent } from './team/team.component';
 import { RulesComponent } from './rules/rules.component';
 import { FilterComponent } from './search/filter.component';
-import { SearchResultComponent } from './search/search-result.component'
+import { SearchResultComponent } from './search/search-result.component';
+import { PlayerDescription } from './player/player-description.component';
 import { ReplaceAccentsPipe } from './pipes/replace-accents.pipe';
 
 //Import material Modules
@@ -41,6 +42,7 @@ import { MdCardModule } from '@angular2-material/card'
         RulesComponent,
         FilterComponent,
         SearchResultComponent,
+        PlayerDescription,
         ReplaceAccentsPipe
     ],
     bootstrap: [MainAppComponent]

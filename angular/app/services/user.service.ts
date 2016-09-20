@@ -16,39 +16,51 @@ export class UserService {
         return Promise.reject(error.message || error);
     }
 
-    load(): any {
+    load(): {name: string, players: Player[]} {
         return JSON.parse(localStorage.getItem(this.localStorageKey));
     }
 
     save(name: string, callback: Function): void {
         //Send info to server by http
-        let url = this.apiUrl + '/user/create/' + name;
+        // let url = this.apiUrl + '/user/create/' + name;
 
-        this.http.get(url)
-            .toPromise()
-            .then(response => {
-                localStorage.setItem(this.localStorageKey, JSON.stringify(response.json()));
-                callback();
-            })
-            .catch(this.handleError);
+        // this.http.get(url)
+        //     .toPromise()
+        //     .then(response => {
+        //         localStorage.setItem(this.localStorageKey, JSON.stringify(response.json()));
+        //         callback();
+        //     })
+        //     .catch(this.handleError);
+        var user = {
+            name: name,
+            players: []
+        };
+        localStorage.setItem(this.localStorageKey, JSON.stringify(user));
+        callback();
     }
 
     update(player: Player, isSelected: boolean, callback): void {
-        let url = this.apiUrl + '/user/update';        
+        let url = this.apiUrl + '/player/update';        
 
         var newModel = this.load();
-
-        newModel.user.players.push(player);
-        localStorage.setItem(this.localStorageKey, JSON.stringify(newModel));
+        
+        if(!isSelected){
+            newModel.players = newModel.players.filter(p => p.Id !== player.Id);            
+        }        
         
         var postModel = {
-            player: player.getSubmitModel(true),
+            isSelected: isSelected,
             player_id: player.Id
         };
 
         this.http.post(url, postModel)
             .toPromise()
             .then(response => {
+                if(isSelected){                    
+                    var newPlayer = response.json();
+                    newModel.players.push(new Player(newPlayer._id, newPlayer._source));
+                }
+                localStorage.setItem(this.localStorageKey, JSON.stringify(newModel));
                 callback();
             })
             .catch(this.handleError);        

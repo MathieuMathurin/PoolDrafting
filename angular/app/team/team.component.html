@@ -1,3 +1,7 @@
 <div class="viewContent">    
-    <div *ngFor="let player of players">{{player.Name}}</div>
+    <div>{{totalSalary()}} m$ / 115 m$</div>
+    <div class="searchResult" *ngFor="let player of players">
+        <player-description [player]="player"></player-description>
+        <i *ngIf="player.IsSelected" class="material-icons" (click)="clear(player)">clear</i>
+    </div>
 </div>
