@@ -131,7 +131,18 @@ font-size: 20px;
     display: block;
     max-width: 98rem;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;  
+    margin-bottom: 30px;  
+}
+
+/*
+* http://stackoverflow.com/questions/13471910/css-applying-padding-to-box-with-scroll-bottom-padding-doesnt-work
+*/
+.viewContent:after {
+  content: "";
+  display: block;
+  height: 50px;
+  width: 100%;
 }
 
 .navButtonGroup{

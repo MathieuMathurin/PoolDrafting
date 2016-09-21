@@ -12,7 +12,7 @@ import { TeamComponent } from './team/team.component';
 import { RulesComponent } from './rules/rules.component';
 import { FilterComponent } from './search/filter.component';
 import { SearchResultComponent } from './search/search-result.component';
-import { PlayerDescription } from './player/player-description.component';
+import { PlayerDescriptionComponent } from './player/player-description.component';
 import { ReplaceAccentsPipe } from './pipes/replace-accents.pipe';
 
 //Import material Modules
@@ -20,7 +20,8 @@ import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdSidenavModule } from '@angular2-material/sidenav';
 import { MdIconModule } from '@angular2-material/icon';
 import { MdInputModule } from '@angular2-material/input';
-import { MdCardModule } from '@angular2-material/card'
+import { MdCardModule } from '@angular2-material/card';
+import { MdTabsModule } from '@angular2-material/tabs';
 
 @NgModule({
     imports: [
@@ -32,7 +33,8 @@ import { MdCardModule } from '@angular2-material/card'
         MdSidenavModule,
         MdIconModule,
         MdInputModule,
-        MdCardModule
+        MdCardModule,
+        MdTabsModule
     ],
     declarations: [
         MainAppComponent,
@@ -42,7 +44,7 @@ import { MdCardModule } from '@angular2-material/card'
         RulesComponent,
         FilterComponent,
         SearchResultComponent,
-        PlayerDescription,
+        PlayerDescriptionComponent,        
         ReplaceAccentsPipe
     ],
     bootstrap: [MainAppComponent]

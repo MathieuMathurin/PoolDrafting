@@ -24,7 +24,7 @@ export class SearchPlayersService {
         return Promise.reject(error.message || error);
     }
 
-    private addFilters(url, filters: Dictionary): string {
+    private addFilters(url, filters: Dictionary<Filter>): string {
         let querystringFilters: {querystring: string, value: string}[] = [];
         
         let position: string[] = []        
@@ -71,7 +71,7 @@ export class SearchPlayersService {
         return url;
     }
 
-    getPlayers(filters: Dictionary): Promise<Player[]> {
+    getPlayers(filters: Dictionary<Filter>): Promise<Player[]> {
         let url = this.apiUrl + '/players';
 
         url = this.addFilters(url, filters);
@@ -84,7 +84,7 @@ export class SearchPlayersService {
             .catch(this.handleError);
     }
 
-    searchPlayers(searchTerm: string, fuzzy: boolean, filters: Dictionary): Promise<Player[]> {
+    searchPlayers(searchTerm: string, fuzzy: boolean, filters: Dictionary<Filter>): Promise<Player[]> {
         let url = this.apiUrl + '/players/' + searchTerm;
 
         url = fuzzy ? url + "?fuzzy=true" : url;

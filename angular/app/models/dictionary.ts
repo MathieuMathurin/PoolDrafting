@@ -1,19 +1,19 @@
 //https://gist.github.com/xperiments/5861194
 
-export interface IDictionary {
-    add(key: string, value: any): void;
+export interface IDictionary <T> {
+    add(key: string, value: T): void;
     remove(key: string): void;
     containsKey(key: string): boolean;
     keys(): string[];
-    values(): any[];
+    values(): T[];
 }
 
-export class Dictionary {
+export class Dictionary<T> {
 
     _keys: string[] = [];
-    _values: any[] = [];
+    _values: T[] = [];
 
-    constructor(init: { key: string; value: any; }[]) {
+    constructor(init: { key: string; value: T; }[]) {
 
         for (var x = 0; x < init.length; x++) {
             this[init[x].key] = init[x].value;
@@ -22,7 +22,7 @@ export class Dictionary {
         }
     }
 
-    add(key: string, value: any) {
+    add(key: string, value: T) {
         this[key] = value;
         this._keys.push(key);
         this._values.push(value);
@@ -40,7 +40,7 @@ export class Dictionary {
         return this._keys;
     }
 
-    values(): any[] {
+    values(): T[] {
         return this._values;
     }
 
@@ -52,11 +52,15 @@ export class Dictionary {
         return true;
     }
 
-    toLookup(): IDictionary {
+    toLookup(): IDictionary<T> {
         return this;
     }
+    
+    get(key: string): T {
+        return this[key];
+    }
 
-    equals(other: Dictionary): boolean {
+    equals(other: Dictionary<T>): boolean {
         return this === other;
     }
 }

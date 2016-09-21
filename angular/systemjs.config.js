@@ -24,7 +24,8 @@
     'sidenav',
     'icon',
     'input',
-    'card'
+    'card',
+    'tabs'
   ];
 
   materialPackages.forEach(function (pkgName) {    

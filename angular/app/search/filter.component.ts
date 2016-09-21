@@ -35,7 +35,7 @@ class SalaryFilter implements Filter {
 })
 export class FilterComponent{
     opened = false;
-    activeFilters: Dictionary = new Dictionary([]);
+    activeFilters: Dictionary<Filter> = new Dictionary<Filter>([]);
     forwardPositionFilters: PositionFilter[] = [
         new PositionFilter("AG", "LW"),
         new PositionFilter("C", "C"),

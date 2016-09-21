@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit, DoCheck {
     } 
     searchTerm: string = "";
     players: Player[];
-    @Input() filters: Dictionary;
+    @Input() filters: Dictionary<Filter>;
     differ: any;
 
     

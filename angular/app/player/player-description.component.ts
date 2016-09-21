@@ -9,6 +9,6 @@ import { UserService } from '../services/user.service'
     selector: 'player-description',
     templateUrl: 'app/player/player-description.component.html'
 })
-export class PlayerDescription {
+export class PlayerDescriptionComponent {
     @Input() player: Player;
 }

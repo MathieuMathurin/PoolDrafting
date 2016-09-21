@@ -1,7 +1,12 @@
-<div class="viewContent">    
-    <div>{{totalSalary()}} m$ / 115 m$</div>
-    <div class="searchResult" *ngFor="let player of players">
-        <player-description [player]="player"></player-description>
-        <i *ngIf="player.IsSelected" class="material-icons" (click)="clear(player)">clear</i>
+<div class="viewContent">
+    <div>
+        <div *ngFor="let tab of tabs.values()">
+            <div>{{totalSalary(tab.position)}} m$ / 115 m$</div>
+            <div>{{tab.label}} <span>{{count(tab.position)}}</span></div>
+            <div *ngFor="let player of filter(tab.position)">
+                <player-description [player]="player"></player-description>
+                <i (click)="clear(player)" class="material-icons">clear</i>
+            </div>
+        </div>
     </div>
 </div>
