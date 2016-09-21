@@ -1,12 +1,15 @@
 <div class="viewContent">
-    <div>
+    <div>{{totalSalary("all")}} m$ / 115 m$</div>
+    <md-tab-group>
         <div *ngFor="let tab of tabs.values()">
-            <div>{{totalSalary(tab.position)}} m$ / 115 m$</div>
-            <div>{{tab.label}} <span>{{count(tab.position)}}</span></div>
-            <div *ngFor="let player of filter(tab.position)">
-                <player-description [player]="player"></player-description>
-                <i (click)="clear(player)" class="material-icons">clear</i>
-            </div>
+            <md-tab>
+                <template md-tab-label>{{tab.label}} <span>{{count(tab.position)}}</span>
+                </template>
+                <template md-tab-content *ngFor="let player of filter(tab.position)">
+                    <player-description [player]="player"></player-description>
+                    <i (click)="clear(player)" class="material-icons">clear</i>
+                </template>
+            </md-tab>
         </div>
-    </div>
+    </md-tab-group>
 </div>
