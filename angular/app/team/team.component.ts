@@ -5,6 +5,7 @@ import { Dictionary } from '../models/dictionary';
 import { UserService } from '../services/user.service';
 
 import { MdTab, MdTabGroup, MdTabChangeEvent } from '@angular2-material/tabs/tabs';
+import { MdButton } from '@angular2-material/button/button';
 
 @Component({
     selector: 'team',
@@ -16,17 +17,17 @@ import { MdTab, MdTabGroup, MdTabChangeEvent } from '@angular2-material/tabs/tab
 export class TeamComponent implements OnInit {
     constructor(private userService: UserService) { }
     players: Player[];
-    tabs: Dictionary<{ label: string, position: string }> = new Dictionary<{ label: string, position: string }>([]);
-
+    tabs: Dictionary<{ label: string, position: string, maximum: number }> = new Dictionary<{ label: string, position: string, maximum: number }>([]);
+    totalSalaryLimit: number = 115;
     ngOnInit(): void {
         this.players = this.userService.load().players;
 
-        this.tabs.add("all", { label: "Tous les joueurs", position: "all" });
-        this.tabs.add("LW", { label: "Ailiers gauches", position: "LW" });
-        this.tabs.add("C", { label: "Centres", position: "C" });
-        this.tabs.add("RW", { label: "Ailiers droits", position: "RW" });
-        this.tabs.add("D", { label: "Défenseurs", position: "D" });
-        this.tabs.add("G", { label: "Gardiens", position: "G" });
+        this.tabs.add("all", { label: "Tous les joueurs", position: "all", maximum: 18 });
+        this.tabs.add("LW", { label: "Ailiers gauches", position: "LW", maximum: 4 });
+        this.tabs.add("C", { label: "Centres", position: "C", maximum: 4 });
+        this.tabs.add("RW", { label: "Ailiers droits", position: "RW", maximum: 4 });
+        this.tabs.add("D", { label: "Défenseurs", position: "D", maximum: 6 });
+        this.tabs.add("G", { label: "Gardiens", position: "G", maximum: 2 });
     }
 
     totalSalary(): number {

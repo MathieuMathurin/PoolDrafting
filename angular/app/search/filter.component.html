@@ -6,12 +6,12 @@
             <h2 class="filterCategorie">Positions</h2>
             <div class="filterButtonGroup">
                 <button class="filterButton" *ngFor="let forwardFilter of forwardPositionFilters" [ngClass]="{selected: forwardFilter.selected}"
-                    (click)="managePositionFilters(forwardFilter)" ngClass md-icon-button>{{forwardFilter.name}}
+                    (click)="managePositionFilters(forwardFilter)" md-icon-button>{{forwardFilter.name}}
                 </button>
             </div>
             <div class="filterButtonGroup">
                 <button class="filterButton" *ngFor="let defenseFilter of defensePositionFilters" [ngClass]="{selected: defenseFilter.selected}"
-                    (click)="managePositionFilters(defenseFilter)" ngClass md-icon-button>{{defenseFilter.name}}
+                    (click)="managePositionFilters(defenseFilter)" md-icon-button>{{defenseFilter.name}}
                 </button>
             </div>
         </div>

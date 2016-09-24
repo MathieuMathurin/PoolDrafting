@@ -1,13 +1,13 @@
 <div class="viewContent">
-    <div>{{totalSalary("all")}} m$ / 115 m$</div>
+    <div class="salary" [ngClass]="{invalid: totalSalary() > totalSalaryLimit}">{{totalSalary()}} M$ / {{totalSalaryLimit}} M$</div>
     <md-tab-group>
         <div *ngFor="let tab of tabs.values()">
             <md-tab>
-                <template md-tab-label>{{tab.label}} <span>{{count(tab.position)}}</span>
+                <template md-tab-label>{{tab.label}} <span>{{count(tab.position)}} / {{tab.maximum}}</span>
                 </template>
                 <template md-tab-content *ngFor="let player of filter(tab.position)">
                     <player-description [player]="player"></player-description>
-                    <i (click)="clear(player)" class="material-icons">clear</i>
+                    <button md-fab class="clearButton"><i (click)="clear(player)" class="material-icons">clear</i></button>
                 </template>
             </md-tab>
         </div>

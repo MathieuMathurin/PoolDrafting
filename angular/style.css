@@ -116,6 +116,20 @@ font-size: 20px;
     text-align: left;
 }
 
+.salary {
+    font-size: 40px;
+    color: #AAA;
+}
+
+.salary.invalid {
+    color: rgba(255, 0, 0, 0.6);
+}
+
+.clearButton {
+    background-color: #009688 !important;
+    color: white;
+}
+
 .minMax {
     margin-top: 10px;
     display: flex;
