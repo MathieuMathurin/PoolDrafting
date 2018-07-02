@@ -1,6 +1,7 @@
 var fs = require('fs'),
-    request = require('request-promise'),
+    axios = require('axios'),
     _ = require('lodash');
+    var querystring = require('querystring');
 
 /*
 JSON structure for bulk tasks
@@ -13,17 +14,19 @@ players = JSON.parse(players);
 var elasticIndexTask = '{ "index" : { "_index" : "players", "_type" : "player" } }\n'
 var bulkTask = '';
 
-players.forEach(function(player){
+players.forEach(function (player) {
     bulkTask = bulkTask + elasticIndexTask + JSON.stringify(player) + '\n';
 });
 
-var options = {
-    method: 'POST',
-    uri: 'http://localhost:9200/_bulk',
-    body : bulkTask
-};
-
-request(options).then(function(body){
-    console.log(body);
-    process.exit();
+axios({
+    method: 'post',
+    url:'http://localhost:9200/_bulk',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    data: bulkTask
+})
+.then(() => process.exit())
+.catch(err => {
+    console.error(err);
 });
