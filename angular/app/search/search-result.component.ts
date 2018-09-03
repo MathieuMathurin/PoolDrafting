@@ -32,6 +32,4 @@ export class SearchResultComponent {
 
         this.userService.update(this.player, true, callback);
     }
-
-    
 }

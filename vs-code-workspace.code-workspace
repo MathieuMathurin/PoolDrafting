@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "angular"
+		},
+		{
+			"path": "server"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.git": true,
+			"**/.svn": true,
+			"**/.hg": true,
+			"**/CVS": true,
+			"**/.DS_Store": true,
+			"angular/**/*.js": true,
+			"angular/**/*.js.map": true,
+		}
+	}
+}
