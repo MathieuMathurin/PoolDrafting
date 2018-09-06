@@ -4,6 +4,9 @@
 			"path": "angular"
 		},
 		{
+			"path": "angular-new"
+		},
+		{
 			"path": "server"
 		}
 	],
@@ -14,8 +17,11 @@
 			"**/.hg": true,
 			"**/CVS": true,
 			"**/.DS_Store": true,
-			"angular/**/*.js": true,
-			"angular/**/*.js.map": true,
+			"**/angular/*.js": true,
+			"**/angular/*.js.map": true,
+			"**/angular-new/*.js": true,
+			"**/angular-new/*.js.map": true,
+			"**/dist": true
 		}
 	}
 }

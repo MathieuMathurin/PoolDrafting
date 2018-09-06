@@ -6,6 +6,10 @@ const url = "mongodb+srv://web-app-user:Qwerty1!@pooldraft-tikxc.mongodb.net/tes
 // Database Name
 const dbName = "pool2018-2019";
 
+export const collectionNames = {
+    users: "users"
+};
+
 let _client: MongoClient = null;
 let _db: Db = null;
 // Use connect method to connect to the server

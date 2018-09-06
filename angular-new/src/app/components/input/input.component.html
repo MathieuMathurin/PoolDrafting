@@ -1,0 +1,9 @@
+<mat-form-field>
+    <input matInput [placeholder]="placeHolder" [type]="type" [formControl]="inputControl" />
+    <mat-error *ngIf="inputControl.hasError('required')">
+        {{errorMessages.requiredErrorMessage}}
+    </mat-error>
+    <mat-error *ngIf="inputControl.hasError('maxlength')">
+        {{errorMessages.maxLengthErrorMessage}}
+    </mat-error>
+</mat-form-field>

@@ -8,6 +8,7 @@
   "author": "Mathieu Mathurin",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.3",
@@ -15,6 +16,7 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "@types/bcrypt": "^2.0.0",
     "@types/express": "^4.16.0",
     "@types/mongodb": "^3.1.4",
     "@types/node": "^10.9.4",

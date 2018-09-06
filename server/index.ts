@@ -2,6 +2,10 @@ import * as express from "express";
 import * as cookieParser from "cookie-parser";
 import * as bodyParser from "body-parser";
 import * as logger from "morgan";
+import * as path from "path";
+import * as http from "http";
+import * as https from "https";
+import * as fs from "fs";
 
 import { router } from "./controllers";
 import { mongoClient } from "./mongoClient";
@@ -15,7 +19,11 @@ app.use(logger('dev'));
 
 app.use(router);
 
-app.listen(80, () => console.log("Server started at port 80"));
+const frontendRoot = "../angular-new/dist/pool-draft/";
+app.use(express.static(path.join(__dirname, frontendRoot)));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, `${frontendRoot}index.html`));
+});
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -45,6 +53,17 @@ app.use(function (err, req, res, next) {
     });
 });
 
+// app.set('view engine', 'html');
+
 app.on("end", () => {
     mongoClient.closeClient();
 })
+
+if(process.env.CERTPATH && process.env.CERTPASSWORD) {
+    https.createServer({
+        pfx: fs.readFileSync(process.env.CERTPATH),
+        passphrase: process.env.CERTPASSWORD
+    }, app).listen(443)
+} else {
+    http.createServer(app).listen(80);
+}
