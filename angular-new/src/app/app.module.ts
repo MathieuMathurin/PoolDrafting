@@ -5,17 +5,24 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { routing } from './app.routing';
+import { CookieService } from 'ngx-cookie-service';
 import { AngularMaterialModule } from "./modules";
 
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
 import { InputComponent } from './components';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LoginComponent } from './landing-page/login/login.component';
+import { ScoreBoardComponent } from './components/score-board/score-board.component';
+import { SignupComponent } from './landing-page/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    InputComponent,
+    LandingPageComponent,
     LoginComponent,
-    InputComponent
+    ScoreBoardComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { InputComponent } from './components';
     ReactiveFormsModule,
     routing
   ],
-  providers: [],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

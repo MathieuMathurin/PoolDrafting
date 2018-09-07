@@ -1,0 +1,21 @@
+@import "../../styles.scss";
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+    // color:white;
+}
+
+.left-action {
+    // float: left;
+    // background-color: map-get($app-primary, 300);
+    flex-grow: 1;
+}
+
+.right-action {
+    // float: right;
+    // background-color: map-get($app-accent, 300);
+    flex-grow: 1;
+}

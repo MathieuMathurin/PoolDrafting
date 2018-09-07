@@ -1,13 +1,14 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 
 // Import services
-import { PoolerService } from "../services/pooler.service";
-import { InputErrorMessages } from "../components/input/input.component";
+import { PoolerService } from "../../services/pooler.service";
+import { InputErrorMessages } from "../../components/input/input.component";
 
 @Component({
-    selector: 'app-login-component',
+    selector: 'app-login',
     templateUrl: './login.component.html',
+    styleUrls: ['./login.component.scss'],
     providers: [
         PoolerService
     ]

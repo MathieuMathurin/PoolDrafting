@@ -1,5 +1,5 @@
 <mat-form-field>
-    <input matInput [placeholder]="placeHolder" [type]="type" [formControl]="inputControl" />
+    <input matInput [placeholder]="placeHolder" [type]="type" [formControl]="inputControl" autocomplete="off" />
     <mat-error *ngIf="inputControl.hasError('required')">
         {{errorMessages.requiredErrorMessage}}
     </mat-error>

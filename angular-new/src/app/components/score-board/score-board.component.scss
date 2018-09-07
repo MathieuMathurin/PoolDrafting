@@ -1,0 +1,25 @@
+@import "./scoreBoard.scss";
+@import "./neon.scss";
+@import "./indelible.scss";
+
+.neon-red {
+    @include neon-red();
+}
+
+.background {
+    background-color: #222222;
+    margin: -8px;
+}
+
+.scoreboard {
+    font-family: "ScoreBoard";
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0px;
+    margin-bottom: 20px;
+    font-family: "indelible";
+    color: #03a9f4;
+}
