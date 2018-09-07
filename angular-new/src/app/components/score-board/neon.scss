@@ -10,17 +10,17 @@
   @mixin neon-red() {
     @include neon();
     color: $red-color;
-    -webkit-animation: neon-red 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon-red 1.5s ease-in-out infinite alternate;
-    animation: neon-red 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neon-red 1.0s ease-in-out infinite alternate;
+    -moz-animation: neon-red 1.0s ease-in-out infinite alternate;
+    animation: neon-red 1.0s ease-in-out infinite alternate;
   }
 
   @mixin neon-blue() {
     @include neon();
     color: $blue-color;
-    -webkit-animation: neon-blue 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon-lue 1.5s ease-in-out infinite alternate;
-    animation: neon-blue 1.5s ease-in-out infinite alternate;
+    -webkit-animation: neon-blue 1.0s ease-in-out infinite alternate;
+    -moz-animation: neon-lue 1.0s ease-in-out infinite alternate;
+    animation: neon-blue 1.0s ease-in-out infinite alternate;
   }
   /*glow for webkit*/
   $red-color: #FF1177;

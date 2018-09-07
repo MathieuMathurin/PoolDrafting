@@ -26,8 +26,22 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 // that you are using.
 @include angular-material-theme($app-theme);
 
-body{
-    overflow: hidden;
+@mixin desktop() {
+    @media (max-width: 979px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media (max-width: 579px) {
+        @content;
+    }
 }
 
 .menuButton {
@@ -189,39 +203,4 @@ font-size: 20px;
 
 .navButtonGroup{
     margin-top: 10px;
-}
-
-.imageContainer{
-    width: 100%;
-    height: 350px;
-    background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=1212&h=700&fit=crop');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
-
-@media (max-width: 979px) {
-    .imageContainer{        
-        background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=2000&h=1400&fit=crop');
-    }
-}
-
-@media (max-width: 767px) {
-    .imageContainer{        
-        background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=1000&h=700&fit=crop');
-    }
-    
-    .filterSideNav {
-        width: 250px;
-    }
-}
-
-@media (max-width: 579px) {
-    .imageContainer{        
-        background-image: url('http://therichest.imgix.net/2013/11/nhl_team_logo_wallpaper_by_666darks-d3g5bpv.jpg?auto=format&q=40&lossless=1&w=1000&h=700&fit=crop');
-    }
-
-    .filterSideNav {
-        width: 200px;
-    }
 }

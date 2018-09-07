@@ -1,6 +1,7 @@
 @import "./scoreBoard.scss";
 @import "./neon.scss";
 @import "./indelible.scss";
+@import "../../../styles.scss";
 
 .neon-red {
     @include neon-red();
@@ -16,10 +17,29 @@
     font-size: 50px;
 }
 
-h1 {
+.one-line {
     font-size: 100px;
     margin: 0px;
     margin-bottom: 20px;
     font-family: "indelible";
     color: #03a9f4;
+
+    @include mobile() {
+        display: none;        
+    }
+}
+
+.multi-line {
+    font-size: 100px;
+    margin: 0px;
+    margin-bottom: 20px;
+    font-family: "indelible";
+    color: #03a9f4;
+
+    display: none;
+
+    @include mobile() {
+        display: initial;    
+        line-height: 100px;    
+    }
 }

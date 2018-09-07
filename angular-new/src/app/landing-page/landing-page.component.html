@@ -1,15 +1,11 @@
 <div>
   <app-score-board></app-score-board>
-  <div *ngIf="!showLogin && !showSignup" class="actions-container">
+  <div class="actions-container">
     <div class="left-action">
       <app-login></app-login>
     </div>
     <div class="right-action">
       <app-signup></app-signup>
     </div>
-  </div>
-  <div *ngIf="showLogin">
-  </div>
-  <div *ngIf="showSignup">
   </div>
 </div>

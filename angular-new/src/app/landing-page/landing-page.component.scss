@@ -3,9 +3,15 @@
 .actions-container {
     display: flex;
     justify-content: space-between;
-
     text-align: center;
-    // color:white;
+
+    @include mobile() {
+        flex-wrap: wrap;
+    }
+}
+
+.centered {
+    text-align: center;
 }
 
 .left-action {
