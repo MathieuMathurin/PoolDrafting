@@ -9,6 +9,7 @@ import * as fs from "fs";
 
 import { router } from "./controllers";
 import { mongoClient } from "./mongoClient";
+import { authTokenMiddleware } from "./middlewares/authTokenMiddleWare";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(logger('dev'));
+app.use(authTokenMiddleware);
 
 app.use(router);
 

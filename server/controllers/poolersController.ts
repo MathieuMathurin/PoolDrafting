@@ -2,6 +2,7 @@ import { Router } from "express";
 import { mongoClient, collectionNames } from "../mongoClient";
 import { ObjectId } from "../node_modules/@types/bson";
 import * as bcrypt from "bcrypt";
+import * as moment from "moment";
 
 export const router = Router();
 const saltRounds = 10;
@@ -28,7 +29,14 @@ router.post("/poolers", async (req, res) => {
             password: await bcrypt.hash(data.password, saltRounds)
         };
         const result = await db.collection<UserModel>(collectionNames.users).insertOne(userData);
-        return res.set({Location: result.insertedId.toHexString()}).sendStatus(201);
+        
+        const userId = result.insertedId.toHexString();
+        
+        res.set({Location: userId});
+        res.cookie("userState", { userId });
+        res.cookie("authToken", userId, {maxAge: moment.duration(1, "day").asMilliseconds()});
+        
+        return res.sendStatus(201);
     }
 
     if(await bcrypt.compare(data.password, user.password)) {
