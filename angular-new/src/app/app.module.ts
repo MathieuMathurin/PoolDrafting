@@ -14,6 +14,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LoginComponent } from './landing-page/login/login.component';
 import { ScoreBoardComponent } from './components/score-board/score-board.component';
 import { SignupComponent } from './landing-page/signup/signup.component';
+import { ControllerComponent } from './components/icons/controller/controller.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SignupComponent } from './landing-page/signup/signup.component';
     LandingPageComponent,
     LoginComponent,
     ScoreBoardComponent,
-    SignupComponent
+    SignupComponent,
+    ControllerComponent
   ],
   imports: [
     BrowserModule,

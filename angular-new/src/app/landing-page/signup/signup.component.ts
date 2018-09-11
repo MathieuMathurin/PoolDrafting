@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from "@angular/router";
 import { PoolerService } from "../../services/pooler.service";
 import { InputErrorMessages } from "../../components/input/input.component";
+import { MatSnackBar } from "@angular/material";
 
 @Component({
   selector: 'app-signup',
@@ -9,28 +10,38 @@ import { InputErrorMessages } from "../../components/input/input.component";
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-  constructor(private poolerService: PoolerService, private router: Router) {
+  constructor(private poolerService: PoolerService, private router: Router, private snackBar: MatSnackBar) {
     this.userNameModel = {};
     this.passwordModel = {};
+    this.passwordConfirmationModel = {};
   }
 
   private userNameModel: {
     userName?: string,
     isValid?: boolean
   };
+
   private passwordModel: {
     password?: string,
     isValid?: boolean
   };
 
-  errorMessages: InputErrorMessages = {
-    requiredErrorMessage: "Ce champs est requis",
-    maxLengthErrorMessage: "Le nom d'utilisateur ne doit pas dépasser 12 caractères"
+  private passwordConfirmationModel: {
+    password?: string,
+    isValid?: boolean
   };
 
-  async saveUser(): Promise<void> {
-    await this.poolerService.save(this.userNameModel.userName, this.passwordModel.password);
-    this.router.navigate(['/search']);
+  errorMessages: InputErrorMessages = {
+    requiredErrorMessage: "Ce champs est requis"
+  };
+
+  async signup(): Promise<void> {
+    const isSuccess = await this.poolerService.signup(this.userNameModel.userName, this.passwordModel.password);
+    if (isSuccess) {
+      this.router.navigate(['/home']);
+    } else {
+      this.snackBar.open("Votre équipe existe déjà. Veuillez-vous connecter.", "OK", { duration: 3000 });
+    }
   }
 
   onUserNameChanged = userName => this.userNameModel.userName = userName;
@@ -39,5 +50,13 @@ export class SignupComponent {
   onPasswordChanged = password => this.passwordModel.password = password;
   onPasswordStatusChanged = isValid => this.passwordModel.isValid = isValid;
 
-  isValid = () => this.userNameModel.isValid && this.passwordModel.isValid;
+  onPasswordConfirmationChanged = password => this.passwordConfirmationModel.password = password;
+  onPasswordConfirmationStatusChanged = isValid => this.passwordConfirmationModel.isValid = isValid;
+
+  isValid = () => {
+    const areFieldsValid = this.userNameModel.isValid && this.passwordModel.isValid && this.passwordConfirmationModel.isValid;
+    const arePasswordEqual = this.passwordModel.password === this.passwordConfirmationModel.password;
+
+    return areFieldsValid && arePasswordEqual;
+  }
 }

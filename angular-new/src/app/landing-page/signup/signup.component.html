@@ -1,16 +1,17 @@
 <div class="viewContent">
     <form>
-        <h1>Connexion</h1>
         <div>
             <div>
                 <app-input placeHolder="Nom d'équipe" [errorMessages]="errorMessages" (valueChanged)="onUserNameChanged($event)" (statusChanged)="onNameStatusChanged($event)"></app-input>
             </div>
             <div>
-                <app-input placeHolder="Mot de passe" type="password" [errorMessages]="errorMessages" (valueChanged)="onPasswordChanged($event)"
-                    (statusChanged)="onPasswordStatusChanged($event)"></app-input>
+                <app-input placeHolder="Mot de passe" type="password" [errorMessages]="errorMessages" (valueChanged)="onPasswordChanged($event)" (statusChanged)="onPasswordStatusChanged($event)"></app-input>
             </div>
             <div>
-                <button mat-raised-button color="accent" (click)="saveUser()" [disabled]="!isValid()">Save</button>
+                <app-input placeHolder="Confirmation" type="password" [errorMessages]="errorMessages" (valueChanged)="onPasswordConfirmationChanged($event)" (statusChanged)="onPasswordConfirmationStatusChanged($event)"></app-input>
+            </div>
+            <div>
+                <button mat-raised-button color="accent" (click)="signup()" [disabled]="!isValid()">Créer</button>
             </div>
         </div>
     </form>

@@ -1,6 +1,5 @@
 <div class="viewContent">
     <form>
-        <h1>Inscription</h1>
         <div class="background-white">
             <div>
                 <app-input placeHolder="Nom d'équipe" [errorMessages]="errorMessages" (valueChanged)="onUserNameChanged($event)" (statusChanged)="onNameStatusChanged($event)"></app-input>
@@ -9,8 +8,11 @@
                 <app-input placeHolder="Mot de passe" type="password" [errorMessages]="errorMessages" (valueChanged)="onPasswordChanged($event)"
                     (statusChanged)="onPasswordStatusChanged($event)"></app-input>
             </div>
+            <div class="padding">
+                <app-input placeHolder="Mot de passe" type="password" [errorMessages]="errorMessages"></app-input>
+            </div>
             <div>
-                <button mat-raised-button color="accent" (click)="saveUser()" [disabled]="!isValid()">Save</button>
+                <button mat-raised-button color="accent" (click)="login()" [disabled]="!isValid()">Se connecter</button>
             </div>
         </div>
     </form>

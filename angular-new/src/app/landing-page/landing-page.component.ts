@@ -1,18 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.scss']
+    selector: 'app-landing-page',
+    templateUrl: './landing-page.component.html',
+    styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent implements OnInit {
+export class LandingPageComponent {
+    isSignUpSelected = false;
+    isLoginSelected = false;
 
-  constructor() { }
+    onSignupMouseEnter = () => {
+        this.isSignUpSelected = true;
+    }
 
-  showLogin = false;
-  showSignup = false;
+    onSignupMouseOut = () => {
+        this.isSignUpSelected = false;
+    }
 
-  ngOnInit() {
-  }
+    onLoginMouseEnter = () => {
+        this.isLoginSelected = true;
+    }
 
+    onLoginMouseOut = () => {
+        this.isLoginSelected = false;
+    }
 }

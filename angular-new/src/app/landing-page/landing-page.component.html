@@ -1,11 +1,32 @@
 <div>
   <app-score-board></app-score-board>
-  <div class="actions-container">
-    <div class="left-action">
-      <app-login></app-login>
+  <div class="desktop">
+    <div class="icon-container" [ngClass]="{'left': isSignUpSelected, 'right': isLoginSelected}">
+      <app-controller-icon class="controller-icon" [height]="50" [width]="50"></app-controller-icon>
     </div>
-    <div class="right-action">
-      <app-signup></app-signup>
+    <div class="actions-container">
+      <div class="left-action" [ngClass]="{'disabled': isLoginSelected}" (mouseover)="onSignupMouseEnter()"
+        (mouseleave)="onSignupMouseOut()">
+        <h2>Créer une équipe</h2>
+        <app-signup></app-signup>
+      </div>
+      <div class="right-action" [ngClass]="{'disabled': isSignUpSelected}" (mouseover)="onLoginMouseEnter()"
+        (mouseleave)="onLoginMouseOut()">
+        <h2>Se connecter</h2>
+        <app-login></app-login>
+      </div>
     </div>
+  </div>
+  <div class="mobile centered">
+    <mat-tab-group>
+      <mat-tab label="Créer une équipe">
+        <h2>Créer une équipe</h2>
+        <app-signup></app-signup>
+      </mat-tab>
+      <mat-tab label="Se connecter">
+        <h2>Se connecter</h2>
+        <app-login></app-login>
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </div>

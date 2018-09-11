@@ -27,7 +27,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 @include angular-material-theme($app-theme);
 
 @mixin desktop() {
-    @media (max-width: 979px) {
+    @media (min-width: 979px) {
         @content;
     }
 }

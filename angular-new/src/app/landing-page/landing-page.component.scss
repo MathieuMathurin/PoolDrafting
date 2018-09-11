@@ -2,11 +2,41 @@
 
 .actions-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
 
     @include mobile() {
         flex-wrap: wrap;
+    }
+
+    .left-action, .right-action {
+        transition: opacity 0.5s;
+    }
+
+    .disabled {
+        opacity: 0.4;
+    }
+}
+
+.icon-container {
+    position: relative;
+    transform: translateX(50%);
+    transition: transform 0.75s;
+
+    .controller-icon {
+        opacity: 0.7;
+    }
+
+    &.left {
+        transform: translateX(25%);
+    }
+    
+    &.right {
+        transform: translateX(75%)
+    }
+
+    @include mobile() {
+        display: none;
     }
 }
 
@@ -14,14 +44,30 @@
     text-align: center;
 }
 
-.left-action {
-    // float: left;
-    // background-color: map-get($app-primary, 300);
-    flex-grow: 1;
+.desktop {
+    @include desktop {
+        display: initial;
+    }
+
+    @include tablet {
+        display: initial;
+    }
+
+    @include mobile {
+        display: none;
+    }
 }
 
-.right-action {
-    // float: right;
-    // background-color: map-get($app-accent, 300);
-    flex-grow: 1;
+.mobile {
+    @include desktop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: initial;
+    }
 }
