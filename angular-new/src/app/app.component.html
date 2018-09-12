@@ -1,2 +1,14 @@
-<router-outlet></router-outlet>
-
+<mat-drawer-container class="drawer-container" *ngIf="isAuthenticated" [class.drawer-opened]="drawer.opened">
+    <mat-drawer #drawer class="drawer" mode="over">
+        <app-drawer [teamName]="teamName"></app-drawer>
+    </mat-drawer>
+    <mat-drawer-content class="mainContent">
+        <app-score-board [showMenu]="true"></app-score-board>
+        <div>
+            <icon-menu class="mobileNavigation" (click)="drawer.open()"></icon-menu>
+            <div class=""></div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>
+<router-outlet *ngIf="!isAuthenticated"></router-outlet>

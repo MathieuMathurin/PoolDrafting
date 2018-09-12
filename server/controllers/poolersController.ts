@@ -33,7 +33,7 @@ router.post("/poolers/signup", async (req, res) => {
         const userId = result.insertedId.toHexString();
 
         res.set({ Location: userId });
-        res.cookie("userState", { userId });
+        res.cookie("userState", JSON.stringify({ userId, teamName: data.userName }));
         res.cookie("authToken", userId, { maxAge: moment.duration(1, "day").asMilliseconds() });
 
         return res.sendStatus(201);
@@ -53,7 +53,7 @@ router.post("/poolers/login", async (req, res) => {
     const user = await db.collection<UserModel>(collectionNames.users).findOne({ userName: data.userName });
 
     if (user && await bcrypt.compare(data.password, user.password)) {
-        res.cookie("userState", { userId: user._id });
+        res.cookie("userState", JSON.stringify({ userId: user._id, teamName: user.userName }));
         res.cookie("authToken", user._id, { maxAge: moment.duration(1, "day").asMilliseconds() });
 
         return res.sendStatus(200);

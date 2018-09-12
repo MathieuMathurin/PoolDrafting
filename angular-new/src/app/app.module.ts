@@ -15,6 +15,13 @@ import { LoginComponent } from './landing-page/login/login.component';
 import { ScoreBoardComponent } from './components/score-board/score-board.component';
 import { SignupComponent } from './landing-page/signup/signup.component';
 import { ControllerComponent } from './components/icons/controller/controller.component';
+import { MenuComponent } from './components/icons/menu/menu.component';
+import { RinkComponent } from './components/icons/rink/rink.component';
+import { DrawerComponent } from './components/drawer/drawer.component';
+import { GamePlanComponent } from './components/icons/game-plan/game-plan.component';
+import { PlayerIconComponent } from './components/icons/player-icon/player-icon.component';
+import { WhistleComponent } from './components/icons/whistle/whistle.component';
+import { CloseComponent } from './components/icons/close/close.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,14 @@ import { ControllerComponent } from './components/icons/controller/controller.co
     LoginComponent,
     ScoreBoardComponent,
     SignupComponent,
-    ControllerComponent
+    ControllerComponent,
+    MenuComponent,
+    RinkComponent,
+    DrawerComponent,
+    GamePlanComponent,
+    PlayerIconComponent,
+    WhistleComponent,
+    CloseComponent
   ],
   imports: [
     BrowserModule,

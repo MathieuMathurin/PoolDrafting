@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 // @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin-bottom: 0px;
+}
+
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
@@ -33,7 +39,7 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
 }
 
 @mixin tablet() {
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
         @content;
     }
 }
@@ -187,19 +193,18 @@ font-size: 20px;
     display: block;
     max-width: 98rem;
     margin-left: auto;
-    margin-right: auto;  
-    margin-bottom: 30px;  
+    margin-right: auto;
 }
 
 /*
 * http://stackoverflow.com/questions/13471910/css-applying-padding-to-box-with-scroll-bottom-padding-doesnt-work
 */
-.viewContent:after {
-  content: "";
-  display: block;
-  height: 50px;
-  width: 100%;
-}
+// .viewContent:after {
+//   content: "";
+//   display: block;
+//   height: 50px;
+//   width: 100%;
+// }
 
 .navButtonGroup{
     margin-top: 10px;

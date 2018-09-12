@@ -3,19 +3,16 @@ import { Router } from "@angular/router";
 import { MatSnackBar } from "@angular/material";
 
 // Import services
-import { PoolerService } from "../../services/pooler.service";
+import { AccountService } from "../../services/account.service";
 import { InputErrorMessages } from "../../components/input/input.component";
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss'],
-    providers: [
-        PoolerService
-    ]
+    styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-    constructor(private poolerService: PoolerService, private router: Router, private snackBar: MatSnackBar) {
+    constructor(private accountService: AccountService, private router: Router, private snackBar: MatSnackBar) {
         this.userNameModel = {};
         this.passwordModel = {};
      }
@@ -35,7 +32,7 @@ export class LoginComponent {
     };
 
     async login(): Promise<void> {
-        const isSuccess = await this.poolerService.login(this.userNameModel.userName, this.passwordModel.password);
+        const isSuccess = await this.accountService.login(this.userNameModel.userName, this.passwordModel.password);
 
         if (isSuccess) {
             this.router.navigate(['/home']);

@@ -1,0 +1,45 @@
+@import "../styles.scss";
+
+.drawer {
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid #ccc;
+    min-width: 25%;
+
+    @include mobile {
+        min-width: 50%;
+    }
+  }
+
+  .mainContent {
+      overflow: visible;
+      background-color: #fff;
+      height: 100vh;
+  }
+
+  .drawer-container {
+      margin: -8px;
+  }
+
+  .mobileNavigation {
+    @include desktop {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include mobile {
+        display: inherit;
+    }
+
+    svg {
+        height: 32px;
+        width: 32px;
+    }
+    
+    margin-left: 8px;
+}
+  
+  

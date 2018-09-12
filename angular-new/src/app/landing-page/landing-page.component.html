@@ -2,7 +2,7 @@
   <app-score-board></app-score-board>
   <div class="desktop">
     <div class="icon-container" [ngClass]="{'left': isSignUpSelected, 'right': isLoginSelected}">
-      <app-controller-icon class="controller-icon" [height]="50" [width]="50"></app-controller-icon>
+      <icon-controller class="controller-icon"></icon-controller>
     </div>
     <div class="actions-container">
       <div class="left-action" [ngClass]="{'disabled': isLoginSelected}" (mouseover)="onSignupMouseEnter()"

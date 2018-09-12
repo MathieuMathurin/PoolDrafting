@@ -1,0 +1,25 @@
+<div class="drawer-container">
+  <div class="drawer-header">
+    Bienvenue
+    <span class="title">{{teamName | titlecase}}!</span>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="drawer-contents">
+    <div class="drawer-item">
+      <icon-game-plan></icon-game-plan>
+      <button mat-button (click)="navigate('myTeam')">Mon équipe</button>
+    </div>
+    <div class="drawer-item">
+      <icon-player></icon-player>
+      <button mat-button (click)="navigate('search')">Rechercher des joueurs</button>
+    </div>
+    <div class="drawer-item">
+      <icon-whistle></icon-whistle>
+      <button mat-button (click)="navigate('rules')">Règlements</button>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="drawer-footer">
+      <button mat-raised-button color="accent" (click)="accountService.logout()">Déconnecter</button>
+  </div>
+</div>

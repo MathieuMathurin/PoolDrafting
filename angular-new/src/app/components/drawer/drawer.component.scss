@@ -1,0 +1,27 @@
+.drawer-container {
+  .drawer-header {
+    text-align: center;
+    margin: 16px;
+    position: relative;
+    text-overflow: ellipsis;
+  }
+  
+  .drawer-contents {
+      margin: 16px;
+  
+      .drawer-item {
+        svg {
+          height: 32px;
+          width: 32px;
+          vertical-align: middle;
+        }
+  
+        margin-bottom: 16px;
+      }
+    }
+  
+  .drawer-footer {
+    text-align: center;
+    margin: 16px;
+  }
+}

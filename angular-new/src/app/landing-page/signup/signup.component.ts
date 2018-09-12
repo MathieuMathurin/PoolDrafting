@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from "@angular/router";
-import { PoolerService } from "../../services/pooler.service";
+import { AccountService } from "../../services/account.service";
 import { InputErrorMessages } from "../../components/input/input.component";
 import { MatSnackBar } from "@angular/material";
 
@@ -10,7 +10,7 @@ import { MatSnackBar } from "@angular/material";
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent {
-  constructor(private poolerService: PoolerService, private router: Router, private snackBar: MatSnackBar) {
+  constructor(private accountService: AccountService, private router: Router, private snackBar: MatSnackBar) {
     this.userNameModel = {};
     this.passwordModel = {};
     this.passwordConfirmationModel = {};
@@ -36,9 +36,9 @@ export class SignupComponent {
   };
 
   async signup(): Promise<void> {
-    const isSuccess = await this.poolerService.signup(this.userNameModel.userName, this.passwordModel.password);
+    const isSuccess = await this.accountService.signup(this.userNameModel.userName, this.passwordModel.password);
     if (isSuccess) {
-      this.router.navigate(['/home']);
+      this.router.navigate(["/home"]);
     } else {
       this.snackBar.open("Votre équipe existe déjà. Veuillez-vous connecter.", "OK", { duration: 3000 });
     }

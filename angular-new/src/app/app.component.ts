@@ -1,17 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { CookieService } from 'ngx-cookie-service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { AccountService } from "./services/account.service";
+import { Subject } from "rxjs";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  constructor(private cookieService: CookieService) {  }
+export class AppComponent implements OnInit, OnDestroy {
+  constructor(private accountService: AccountService) { }
 
-  isLoggedIn = false;
+  isAuthenticated = false;
+  teamName: string;
+  private _subscriptions: Subject<{}>[] = [];
 
   ngOnInit() {
-    this.isLoggedIn = !!this.cookieService.get("authToken");
+    this.isAuthenticated = this.accountService.isAuthenticated;
+    this._subscriptions.push(this.accountService.authenticationChanges.subscribe(isAuthenticated => {
+      this.isAuthenticated = isAuthenticated;
+    }));
+
+    this.teamName = this.accountService.userState.teamName;
+    this._subscriptions.push(this.accountService.userStateChanges.subscribe(userState => {
+      this.teamName = userState.teamName;
+    }));
+  }
+
+  ngOnDestroy() {
+    this._subscriptions.map(sub => sub.unsubscribe());
   }
 }
