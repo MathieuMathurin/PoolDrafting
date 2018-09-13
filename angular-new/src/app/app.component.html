@@ -3,10 +3,12 @@
         <app-drawer [teamName]="teamName"></app-drawer>
     </mat-drawer>
     <mat-drawer-content class="mainContent">
-        <app-score-board [showMenu]="true"></app-score-board>
-        <div>
+        <app-menu class="navigation"></app-menu>
+        <div class="header">
+            <app-score-board></app-score-board>
             <icon-menu class="mobileNavigation" (click)="drawer.open()"></icon-menu>
-            <div class=""></div>
+        </div>
+        <div class="content">
             <router-outlet></router-outlet>
         </div>
     </mat-drawer-content>

@@ -1,0 +1,33 @@
+.menu-container {
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: white;
+    position: relative;
+    transition: width 0.5s;
+
+    .menu-contents .menu-item {
+        margin-bottom: 32px;
+    }
+
+    .menu-item {
+        padding: 16px;
+        svg {
+            height: 32px;
+            width: 32px;
+            vertical-align: middle;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .link {
+        margin-left: 16px;
+    }
+}

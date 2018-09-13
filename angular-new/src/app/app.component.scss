@@ -12,13 +12,31 @@
   }
 
   .mainContent {
-      overflow: visible;
       background-color: #fff;
-      height: 100vh;
+      height: 100%;
   }
 
   .drawer-container {
       margin: -8px;
+      height: 100%;
+  }
+
+  .navigation {
+      position: fixed;
+      height: 100%;
+      margin: 0 auto;
+      
+      @include desktop {
+          display: inherit;
+      }
+
+      @include tablet {
+          display: inherit;
+      }
+
+      @include mobile {
+          display: none;
+      }
   }
 
   .mobileNavigation {

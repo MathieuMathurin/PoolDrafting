@@ -1,0 +1,23 @@
+<div class="menu-container" [ngClass]="{'opened': isOpened}">
+  <div class="header menu-item">
+    <icon-menu (click)="toggle()"></icon-menu>
+  </div>
+  <div class="menu-contents">
+    <div class="menu-item">
+      <icon-game-plan (click)="navigate('myTeam')"></icon-game-plan>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('myTeam')">Mon équipe</button>
+    </div>
+    <div class="menu-item">
+      <icon-player (click)="navigate('search')"></icon-player>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('search')">Rechercher des joueurs</button>
+    </div>
+    <div class="menu-item">
+      <icon-whistle (click)="navigate('rules')"></icon-whistle>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('rules')">Règlements</button>
+    </div>
+  </div>
+  <div class="footer menu-item">
+    <icon-logout (click)="accountService.logout()"></icon-logout>
+    <button mat-raised-button class="link" [ngClass]="{'hidden': !isOpened}" color="accent" (click)="accountService.logout()">Se déconnecter</button>
+  </div>
+</div>
