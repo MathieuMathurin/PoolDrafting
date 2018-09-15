@@ -8,6 +8,21 @@
 		},
 		{
 			"path": "server"
+		},
+		{
+			"path": "apps"
+		},
+		{
+			"path": "predictions"
+		},
+		{
+			"path": "roster"
+		},
+		{
+			"path": "teams"
+		},
+		{
+			"path": "DB"
 		}
 	],
 	"settings": {

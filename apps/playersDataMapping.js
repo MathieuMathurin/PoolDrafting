@@ -1,51 +1,38 @@
 var fs = require('fs'),
-    _ = require('lodash'),
-    Converter = require('csvtojson').Converter;
+    _ = require('lodash')
 
 function findPlayerPrediction(predictions, name) {
     var prediction = _.find(predictions, function (prediction) {
-        return prediction.Joueurs === name;
+        return prediction.name === name;
     });
     return prediction;
 }
 
-function getPlayerStats(stats, keys, name){
-    var playerStats = {};
-    keys.forEach(function(key){
-        var currentStats = stats[key];
-        var currentPlayerStat = _.find(currentStats, function(player){
-            var playerName = player["First Name"] + " " + player["Last Name"]; 
-            return playerName === name;
-        });
-        var keyFragment = key.split('_');
-        var season = keyFragment[1] + "-" + keyFragment[2];
-        playerStats[season] = currentPlayerStat;
-    });
-    return playerStats;
-}
-
-function mapAllDataToPlayers(teams, players, predictions, stats) {
+function mapAllDataToPlayers(teams, players, predictions) {
     players = _.map(players, function (player) {
         
         var playerPrediction = findPlayerPrediction(predictions, player.Name);
         player.Prediction = playerPrediction;
 
-        var keys = _.keys(stats);
-        if(player.Position === "G"){
-            var goalieKeys = keys.filter(function(key){return key.indexOf("goalies") !== -1});
-            player.Stats = getPlayerStats(stats, goalieKeys, player.Name);
-        }else{
-            var playerKeys = keys.filter(function(key){return key.indexOf("players") !== -1});
-            player.Stats = getPlayerStats(stats, playerKeys, player.Name);
+        player.Team = _.find(teams, function(team){return team.TeamID === player.TeamID});
+
+        const playerData = {
+            name: player.Name,
+            birtDate: player.BirthDate,
+            status: player.Status,
+            team: player.Team,
+            position: player.Position,
+            jersey: player.Jersey,
+            height: player.Height,
+            weight: player.Weight,
+            birtDate: player.BirtDate,
+            photoUrl: player.photoUrl,
+            prediction: player.Prediction
         }
 
-        player.Team = _.find(teams, function(team){return team.TeamID === player.TeamID});      
-
-        player.IsSelected = false;
-
-        return player;
+        return playerData;
     });
-    fs.writeFile('./DB/players.json', JSON.stringify(players), 'utf8', function(err){
+    fs.writeFile('../DB/players-2018-2019.json', JSON.stringify(players), 'utf8', function(err){
         if(err){
             console.log(err);
             process.exit(1);
@@ -55,24 +42,13 @@ function mapAllDataToPlayers(teams, players, predictions, stats) {
     });
 }
 
-var players = fs.readFileSync('./roster/activePlayers.json');
+var players = fs.readFileSync('../roster/activePlayers-2018-2019.json');
 players = JSON.parse(players).map(function (player) { player.Name = player.FirstName + " " + player.LastName; return player; });
 
-var predictions = fs.readFileSync('./predictions/2016-2017.json');
+var predictions = fs.readFileSync('../predictions/2018-2019.json');
 predictions = JSON.parse(predictions);
 
-var teams = fs.readFileSync('./teams/2016-2017.json');
+var teams = fs.readFileSync('../teams/2018-2019.json');
 teams = JSON.parse(teams);
 
-var stats = {};
-var statsFiles = ['goalies_2013_2014', 'goalies_2014_2015', 'goalies_2015_2016', 'players_2013_2014', 'players_2014_2015', 'players_2015_2016'];
-statsFiles.forEach(function (file) {
-    var converter = new Converter({});
-    converter.fromFile('./stats/' + file + '.csv', function (err, result) {
-        stats[file] = result;
-        var allFilesConverted = _.keys(stats).length === statsFiles.length;
-        if (allFilesConverted) {
-            mapAllDataToPlayers(teams, players, predictions, stats);
-        }
-    });
-});
+mapAllDataToPlayers(teams, players, predictions);

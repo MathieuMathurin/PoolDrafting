@@ -302,21 +302,35 @@ var teams = [
         StadiumID: 1,
         Conference: "Western",
         Division: "Pacific"
+    },
+    {
+        TeamID: 35,
+        Key: "VEG",
+        Active: true,
+        City: "Vegas",
+        Name: "Golden Knights",
+        StadiumID: 31,
+        Conference: "Western",
+        Division: "Pacific"
     }
+
 ]
 
-teams.forEach(function(team){
-     var options = {
+teams.forEach(function (team) {
+    var options = {
         uri: 'https://api.fantasydata.net/nhl/v2/JSON/Players/' + team.Key,
         headers: {
             'Ocp-Apim-Subscription-Key': '66ba79ad171845aea1443a42a769917b'
         }
     };
-    request(options).then(function(data){        
-        fs.writeFile("./roster/" + team.Key + ".json", data, function(err) {
-    if(err) {
-        return console.log(err);
-    }
+    request(options).then(function (data) {
+        fs.writeFile("../roster/" + team.Key + "-2018-2019.json", data, function (err) {
+            if (err) {
+                return console.log(err);
+            }
+        })
+    })
+});
 
 //     console.log("The file " + team.Key + " was saved!" );
 // }); 
@@ -356,20 +370,20 @@ teams.forEach(function(team){
 //     });
 
 // var options = {
-//         uri: 'https://api.fantasydata.net/nhl/v2/JSON/Players',
-//         headers: {
-//             'Ocp-Apim-Subscription-Key': '66ba79ad171845aea1443a42a769917b'
-//         }
-//     };
-//     request(options).then(function(data){        
-//         fs.writeFile("./roster/activePlayers.json", data, function(err) {
-//     if(err) {
-//         return console.log(err);
+//     uri: 'https://api.fantasydata.net/nhl/v2/JSON/Players',
+//     headers: {
+//         'Ocp-Apim-Subscription-Key': '66ba79ad171845aea1443a42a769917b'
 //     }
+// };
+// request(options).then(function (data) {
+//     fs.writeFile("../roster/activePlayers-2018-2019.json", data, function (err) {
+//         if (err) {
+//             return console.log(err);
+//         }
 
-//     console.log("The file was saved!" );
-// }); 
+//         console.log("The file was saved!");
 //     });
+// });
 
 // var options = {
 //         uri: 'https://api.fantasydata.net/nhl/v2/JSON/FreeAgents',

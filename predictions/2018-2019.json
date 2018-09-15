@@ -1,0 +1,4069 @@
+[
+    {
+        "name": "Connor McDavid",
+        "gamePlayed": 82,
+        "goals": 43,
+        "passes": 68,
+        "points": 111,
+        "pointPerMatch": "1,354"
+    },
+    {
+        "name": "Nikita Kucherov",
+        "gamePlayed": 79,
+        "goals": 35,
+        "passes": 60,
+        "points": 95,
+        "pointPerMatch": "1,203"
+    },
+    {
+        "name": "Andrei Vasilevski",
+        "gamePlayed": 66,
+        "victories": 45,
+        "defeats": 17,
+        "overtimeDefeats": 4,
+        "blanks": 7,
+        "points": 94,
+        "pointPerMatch": "1,424"
+    },
+    {
+        "name": "Connor Hellebuyck",
+        "gamePlayed": 66,
+        "victories": 44,
+        "defeats": 17,
+        "overtimeDefeats": 5,
+        "blanks": 7,
+        "points": 93,
+        "pointPerMatch": "1,409"
+    },
+    {
+        "name": "Nathan MacKinnon",
+        "gamePlayed": 78,
+        "goals": 36,
+        "passes": 56,
+        "points": 92,
+        "pointPerMatch": "1,179"
+    },
+    {
+        "name": "Sidney Crosby",
+        "gamePlayed": 78,
+        "goals": 29,
+        "passes": 61,
+        "points": 90,
+        "pointPerMatch": "1,154"
+    },
+    {
+        "name": "Anze Kopitar",
+        "gamePlayed": 82,
+        "goals": 34,
+        "passes": 55,
+        "points": 89,
+        "pointPerMatch": "1,085"
+    },
+    {
+        "name": "Steven Stamkos",
+        "gamePlayed": 80,
+        "goals": 33,
+        "passes": 56,
+        "points": 89,
+        "pointPerMatch": "1,113"
+    },
+    {
+        "name": "Taylor Hall",
+        "gamePlayed": 75,
+        "goals": 34,
+        "passes": 54,
+        "points": 88,
+        "pointPerMatch": "1,173"
+    },
+    {
+        "name": "Evgeni Malkin",
+        "gamePlayed": 76,
+        "goals": 39,
+        "passes": 48,
+        "points": 87,
+        "pointPerMatch": "1,145"
+    },
+    {
+        "name": "Auston Matthews",
+        "gamePlayed": 80,
+        "goals": 41,
+        "passes": 45,
+        "points": 86,
+        "pointPerMatch": "1,075"
+    },
+    {
+        "name": "Brad Marchand",
+        "gamePlayed": 77,
+        "goals": 33,
+        "passes": 53,
+        "points": 86,
+        "pointPerMatch": "1,117"
+    },
+    {
+        "name": "Claude Giroux",
+        "gamePlayed": 80,
+        "goals": 32,
+        "passes": 54,
+        "points": 86,
+        "pointPerMatch": "1,075"
+    },
+    {
+        "name": "Frederik Andersen",
+        "gamePlayed": 64,
+        "victories": 40,
+        "defeats": 18,
+        "overtimeDefeats": 6,
+        "blanks": 5,
+        "points": 86,
+        "pointPerMatch": "1,344"
+    },
+    {
+        "name": "John Tavares",
+        "gamePlayed": 82,
+        "goals": 35,
+        "passes": 50,
+        "points": 85,
+        "pointPerMatch": "1,037"
+    },
+    {
+        "name": "Johnny Gaudreau",
+        "gamePlayed": 80,
+        "goals": 26,
+        "passes": 59,
+        "points": 85,
+        "pointPerMatch": "1,063"
+    },
+    {
+        "name": "David Pastrnak",
+        "gamePlayed": 81,
+        "goals": 37,
+        "passes": 47,
+        "points": 84,
+        "pointPerMatch": "1,037"
+    },
+    {
+        "name": "Mark Scheifele",
+        "gamePlayed": 79,
+        "goals": 33,
+        "passes": 51,
+        "points": 84,
+        "pointPerMatch": "1,063"
+    },
+    {
+        "name": "Pekka Rinne",
+        "gamePlayed": 60,
+        "victories": 40,
+        "defeats": 16,
+        "overtimeDefeats": 4,
+        "blanks": 7,
+        "points": 84,
+        "pointPerMatch": "1,400"
+    },
+    {
+        "name": "Tyler Seguin",
+        "gamePlayed": 81,
+        "goals": 39,
+        "passes": 44,
+        "points": 83,
+        "pointPerMatch": "1,025"
+    },
+    {
+        "name": "Braden Holtby",
+        "gamePlayed": 64,
+        "victories": 38,
+        "defeats": 19,
+        "overtimeDefeats": 7,
+        "blanks": 6,
+        "points": 83,
+        "pointPerMatch": "1,297"
+    },
+    {
+        "name": "Jamie Benn",
+        "gamePlayed": 80,
+        "goals": 37,
+        "passes": 44,
+        "points": 81,
+        "pointPerMatch": "1,013"
+    },
+    {
+        "name": "Jack Eichel",
+        "gamePlayed": 80,
+        "goals": 32,
+        "passes": 49,
+        "points": 81,
+        "pointPerMatch": "1,013"
+    },
+    {
+        "name": "Evgeny Kuznetsov",
+        "gamePlayed": 81,
+        "goals": 24,
+        "passes": 57,
+        "points": 81,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Sergei Bobrovsky",
+        "gamePlayed": 66,
+        "victories": 38,
+        "defeats": 23,
+        "overtimeDefeats": 5,
+        "blanks": 7,
+        "points": 81,
+        "pointPerMatch": "1,227"
+    },
+    {
+        "name": "Alexander Ovechkin",
+        "gamePlayed": 82,
+        "goals": 44,
+        "passes": 36,
+        "points": 80,
+        "pointPerMatch": "0,976"
+    },
+    {
+        "name": "Blake Wheeler",
+        "gamePlayed": 82,
+        "goals": 27,
+        "passes": 53,
+        "points": 80,
+        "pointPerMatch": "0,976"
+    },
+    {
+        "name": "Nicklas Backstrom",
+        "gamePlayed": 80,
+        "goals": 20,
+        "passes": 60,
+        "points": 80,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Phil Kessel",
+        "gamePlayed": 82,
+        "goals": 34,
+        "passes": 45,
+        "points": 79,
+        "pointPerMatch": "0,963"
+    },
+    {
+        "name": "Patrick Kane",
+        "gamePlayed": 82,
+        "goals": 30,
+        "passes": 49,
+        "points": 79,
+        "pointPerMatch": "0,963"
+    },
+    {
+        "name": "Artemi Panarin",
+        "gamePlayed": 82,
+        "goals": 28,
+        "passes": 51,
+        "points": 79,
+        "pointPerMatch": "0,963"
+    },
+    {
+        "name": "Aleksander Barkov",
+        "gamePlayed": 78,
+        "goals": 33,
+        "passes": 45,
+        "points": 78,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Mikko Rantanen",
+        "gamePlayed": 82,
+        "goals": 31,
+        "passes": 47,
+        "points": 78,
+        "pointPerMatch": "0,951"
+    },
+    {
+        "name": "Jakub Voracek",
+        "gamePlayed": 78,
+        "goals": 17,
+        "passes": 60,
+        "points": 77,
+        "pointPerMatch": "0,987"
+    },
+    {
+        "name": "Tuukka Rask",
+        "gamePlayed": 55,
+        "victories": 35,
+        "defeats": 14,
+        "overtimeDefeats": 6,
+        "blanks": 4,
+        "points": 76,
+        "pointPerMatch": "1,382"
+    },
+    {
+        "name": "Patrik Laine",
+        "gamePlayed": 82,
+        "goals": 46,
+        "passes": 29,
+        "points": 75,
+        "pointPerMatch": "0,915"
+    },
+    {
+        "name": "Leon Draisaitl",
+        "gamePlayed": 81,
+        "goals": 28,
+        "passes": 47,
+        "points": 75,
+        "pointPerMatch": "0,926"
+    },
+    {
+        "name": "Mathew Barzal",
+        "gamePlayed": 81,
+        "goals": 23,
+        "passes": 52,
+        "points": 75,
+        "pointPerMatch": "0,926"
+    },
+    {
+        "name": "Ryan Getzlaf",
+        "gamePlayed": 74,
+        "goals": 15,
+        "passes": 60,
+        "points": 75,
+        "pointPerMatch": "1,014"
+    },
+    {
+        "name": "Devan Dubnyk",
+        "gamePlayed": 62,
+        "victories": 34,
+        "defeats": 21,
+        "overtimeDefeats": 7,
+        "blanks": 6,
+        "points": 75,
+        "pointPerMatch": "1,210"
+    },
+    {
+        "name": "Filip Forsberg",
+        "gamePlayed": 79,
+        "goals": 30,
+        "passes": 44,
+        "points": 74,
+        "pointPerMatch": "0,937"
+    },
+    {
+        "name": "Jonathan Quick",
+        "gamePlayed": 69,
+        "victories": 33,
+        "defeats": 28,
+        "overtimeDefeats": 8,
+        "blanks": 5,
+        "points": 74,
+        "pointPerMatch": "1,072"
+    },
+    {
+        "name": "Jake Allen",
+        "gamePlayed": 62,
+        "victories": 34,
+        "defeats": 22,
+        "overtimeDefeats": 6,
+        "blanks": 4,
+        "points": 74,
+        "pointPerMatch": "1,194",
+        "warning": "Dos. Au jour le jour."
+    },
+    {
+        "name": "Marc-Andre Fleury",
+        "gamePlayed": 57,
+        "victories": 33,
+        "defeats": 16,
+        "overtimeDefeats": 8,
+        "blanks": 4,
+        "points": 74,
+        "pointPerMatch": "1,298"
+    },
+    {
+        "name": "Vincent Trocheck",
+        "gamePlayed": 82,
+        "goals": 31,
+        "passes": 42,
+        "points": 73,
+        "pointPerMatch": "0,890"
+    },
+    {
+        "name": "Mikael Granlund",
+        "gamePlayed": 81,
+        "goals": 23,
+        "passes": 50,
+        "points": 73,
+        "pointPerMatch": "0,901"
+    },
+    {
+        "name": "Alexander Radulov",
+        "gamePlayed": 78,
+        "goals": 27,
+        "passes": 45,
+        "points": 72,
+        "pointPerMatch": "0,923"
+    },
+    {
+        "name": "Jonathan Huberdeau",
+        "gamePlayed": 82,
+        "goals": 26,
+        "passes": 45,
+        "points": 71,
+        "pointPerMatch": "0,866"
+    },
+    {
+        "name": "Erik Karlsson",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 51,
+        "points": 71,
+        "pointPerMatch": "0,866"
+    },
+    {
+        "name": "Jonathan Marchess…",
+        "gamePlayed": 79,
+        "goals": 31,
+        "passes": 39,
+        "points": 70,
+        "pointPerMatch": "0,886"
+    },
+    {
+        "name": "Sean Couturier",
+        "gamePlayed": 82,
+        "goals": 30,
+        "passes": 40,
+        "points": 70,
+        "pointPerMatch": "0,854"
+    },
+    {
+        "name": "Mitch Marner",
+        "gamePlayed": 81,
+        "goals": 21,
+        "passes": 49,
+        "points": 70,
+        "pointPerMatch": "0,864"
+    },
+    {
+        "name": "Vladimir Tarasenko",
+        "gamePlayed": 82,
+        "goals": 35,
+        "passes": 34,
+        "points": 69,
+        "pointPerMatch": "0,841"
+    },
+    {
+        "name": "Sean Monahan",
+        "gamePlayed": 82,
+        "goals": 33,
+        "passes": 36,
+        "points": 69,
+        "pointPerMatch": "0,841"
+    },
+    {
+        "name": "William Karlsson",
+        "gamePlayed": 82,
+        "goals": 30,
+        "passes": 39,
+        "points": 69,
+        "pointPerMatch": "0,841"
+    },
+    {
+        "name": "Brayden Schenn",
+        "gamePlayed": 82,
+        "goals": 30,
+        "passes": 39,
+        "points": 69,
+        "pointPerMatch": "0,841"
+    },
+    {
+        "name": "Matt Murray",
+        "gamePlayed": 52,
+        "victories": 32,
+        "defeats": 15,
+        "overtimeDefeats": 5,
+        "blanks": 3,
+        "points": 69,
+        "pointPerMatch": "1,327"
+    },
+    {
+        "name": "Rickard Rakell",
+        "gamePlayed": 80,
+        "goals": 33,
+        "passes": 35,
+        "points": 68,
+        "pointPerMatch": "0,850"
+    },
+    {
+        "name": "Mark Stone",
+        "gamePlayed": 76,
+        "goals": 23,
+        "passes": 45,
+        "points": 68,
+        "pointPerMatch": "0,895"
+    },
+    {
+        "name": "Cam Talbot",
+        "gamePlayed": 60,
+        "victories": 31,
+        "defeats": 23,
+        "overtimeDefeats": 6,
+        "blanks": 3,
+        "points": 68,
+        "pointPerMatch": "1,133"
+    },
+    {
+        "name": "Eric Staal",
+        "gamePlayed": 81,
+        "goals": 32,
+        "passes": 35,
+        "points": 67,
+        "pointPerMatch": "0,827"
+    },
+    {
+        "name": "Clayton Keller",
+        "gamePlayed": 82,
+        "goals": 28,
+        "passes": 39,
+        "points": 67,
+        "pointPerMatch": "0,817"
+    },
+    {
+        "name": "Dylan Larkin",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 47,
+        "points": 67,
+        "pointPerMatch": "0,817"
+    },
+    {
+        "name": "Martin Jones",
+        "gamePlayed": 60,
+        "victories": 30,
+        "defeats": 23,
+        "overtimeDefeats": 7,
+        "blanks": 5,
+        "points": 67,
+        "pointPerMatch": "1,117"
+    },
+    {
+        "name": "Sebastian Aho",
+        "gamePlayed": 80,
+        "goals": 31,
+        "passes": 35,
+        "points": 66,
+        "pointPerMatch": "0,825"
+    },
+    {
+        "name": "Teuvo Teravainen",
+        "gamePlayed": 81,
+        "goals": 26,
+        "passes": 40,
+        "points": 66,
+        "pointPerMatch": "0,815"
+    },
+    {
+        "name": "Jaden Schwartz",
+        "gamePlayed": 80,
+        "goals": 25,
+        "passes": 41,
+        "points": 66,
+        "pointPerMatch": "0,825"
+    },
+    {
+        "name": "Victor Hedman",
+        "gamePlayed": 80,
+        "goals": 19,
+        "passes": 47,
+        "points": 66,
+        "pointPerMatch": "0,825"
+    },
+    {
+        "name": "Ben Bishop",
+        "gamePlayed": 58,
+        "victories": 30,
+        "defeats": 22,
+        "overtimeDefeats": 6,
+        "blanks": 5,
+        "points": 66,
+        "pointPerMatch": "1,138"
+    },
+    {
+        "name": "Joe Pavelski",
+        "gamePlayed": 82,
+        "goals": 25,
+        "passes": 40,
+        "points": 65,
+        "pointPerMatch": "0,793"
+    },
+    {
+        "name": "William Nylander",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 45,
+        "points": 65,
+        "pointPerMatch": "0,793"
+    },
+    {
+        "name": "Brent Burns",
+        "gamePlayed": 82,
+        "goals": 13,
+        "passes": 52,
+        "points": 65,
+        "pointPerMatch": "0,793"
+    },
+    {
+        "name": "Mike Smith",
+        "gamePlayed": 55,
+        "victories": 29,
+        "defeats": 19,
+        "overtimeDefeats": 7,
+        "blanks": 4,
+        "points": 65,
+        "pointPerMatch": "1,182"
+    },
+    {
+        "name": "Brock Boeser",
+        "gamePlayed": 80,
+        "goals": 28,
+        "passes": 36,
+        "points": 64,
+        "pointPerMatch": "0,800"
+    },
+    {
+        "name": "Cam Atkinson",
+        "gamePlayed": 79,
+        "goals": 27,
+        "passes": 37,
+        "points": 64,
+        "pointPerMatch": "0,810"
+    },
+    {
+        "name": "Evgeny Dadonov",
+        "gamePlayed": 80,
+        "goals": 26,
+        "passes": 38,
+        "points": 64,
+        "pointPerMatch": "0,800"
+    },
+    {
+        "name": "J.T. Miller",
+        "gamePlayed": 82,
+        "goals": 25,
+        "passes": 39,
+        "points": 64,
+        "pointPerMatch": "0,780"
+    },
+    {
+        "name": "Antti Raanta",
+        "gamePlayed": 55,
+        "victories": 28,
+        "defeats": 19,
+        "overtimeDefeats": 8,
+        "blanks": 4,
+        "points": 64,
+        "pointPerMatch": "1,164"
+    },
+    {
+        "name": "Nikolaj Ehlers",
+        "gamePlayed": 82,
+        "goals": 33,
+        "passes": 30,
+        "points": 63,
+        "pointPerMatch": "0,768"
+    },
+    {
+        "name": "Ilya Kovalchuk",
+        "gamePlayed": 74,
+        "goals": 31,
+        "passes": 32,
+        "points": 63,
+        "pointPerMatch": "0,851"
+    },
+    {
+        "name": "Ryan O'Reilly",
+        "gamePlayed": 78,
+        "goals": 25,
+        "passes": 38,
+        "points": 63,
+        "pointPerMatch": "0,808"
+    },
+    {
+        "name": "John Klingberg",
+        "gamePlayed": 82,
+        "goals": 15,
+        "passes": 48,
+        "points": 63,
+        "pointPerMatch": "0,768"
+    },
+    {
+        "name": "Shayne Gostisbehe…",
+        "gamePlayed": 80,
+        "goals": 14,
+        "passes": 49,
+        "points": 63,
+        "pointPerMatch": "0,788"
+    },
+    {
+        "name": "Jason Zucker",
+        "gamePlayed": 82,
+        "goals": 32,
+        "passes": 30,
+        "points": 62,
+        "pointPerMatch": "0,756"
+    },
+    {
+        "name": "Viktor Arvidsson",
+        "gamePlayed": 81,
+        "goals": 29,
+        "passes": 33,
+        "points": 62,
+        "pointPerMatch": "0,765"
+    },
+    {
+        "name": "Logan Couture",
+        "gamePlayed": 79,
+        "goals": 32,
+        "passes": 29,
+        "points": 61,
+        "pointPerMatch": "0,772"
+    },
+    {
+        "name": "Brayden Point",
+        "gamePlayed": 80,
+        "goals": 29,
+        "passes": 32,
+        "points": 61,
+        "pointPerMatch": "0,763"
+    },
+    {
+        "name": "Gabriel Landeskog",
+        "gamePlayed": 81,
+        "goals": 26,
+        "passes": 35,
+        "points": 61,
+        "pointPerMatch": "0,753"
+    },
+    {
+        "name": "Ryan Nugent-Hopki…",
+        "gamePlayed": 80,
+        "goals": 25,
+        "passes": 36,
+        "points": 61,
+        "pointPerMatch": "0,763"
+    },
+    {
+        "name": "Matthew Tkachuk",
+        "gamePlayed": 75,
+        "goals": 25,
+        "passes": 36,
+        "points": 61,
+        "pointPerMatch": "0,813"
+    },
+    {
+        "name": "Mike Hoffman",
+        "gamePlayed": 80,
+        "goals": 24,
+        "passes": 37,
+        "points": 61,
+        "pointPerMatch": "0,763"
+    },
+    {
+        "name": "P.K. Subban",
+        "gamePlayed": 82,
+        "goals": 18,
+        "passes": 43,
+        "points": 61,
+        "pointPerMatch": "0,744"
+    },
+    {
+        "name": "John Gibson",
+        "gamePlayed": 58,
+        "victories": 28,
+        "defeats": 25,
+        "overtimeDefeats": 5,
+        "blanks": 3,
+        "points": 61,
+        "pointPerMatch": "1,052"
+    },
+    {
+        "name": "Alex DeBrincat",
+        "gamePlayed": 82,
+        "goals": 28,
+        "passes": 32,
+        "points": 60,
+        "pointPerMatch": "0,732"
+    },
+    {
+        "name": "Matt Duchene",
+        "gamePlayed": 81,
+        "goals": 28,
+        "passes": 32,
+        "points": 60,
+        "pointPerMatch": "0,741"
+    },
+    {
+        "name": "Kyle Connor",
+        "gamePlayed": 79,
+        "goals": 28,
+        "passes": 32,
+        "points": 60,
+        "pointPerMatch": "0,759"
+    },
+    {
+        "name": "Patrice Bergeron",
+        "gamePlayed": 70,
+        "goals": 28,
+        "passes": 32,
+        "points": 60,
+        "pointPerMatch": "0,857"
+    },
+    {
+        "name": "Sam Reinhart",
+        "gamePlayed": 79,
+        "goals": 27,
+        "passes": 33,
+        "points": 60,
+        "pointPerMatch": "0,759"
+    },
+    {
+        "name": "Bo Horvat",
+        "gamePlayed": 81,
+        "goals": 22,
+        "passes": 38,
+        "points": 60,
+        "pointPerMatch": "0,741"
+    },
+    {
+        "name": "Seth Jones",
+        "gamePlayed": 82,
+        "goals": 17,
+        "passes": 43,
+        "points": 60,
+        "pointPerMatch": "0,732"
+    },
+    {
+        "name": "Ryan Johansen",
+        "gamePlayed": 82,
+        "goals": 16,
+        "passes": 44,
+        "points": 60,
+        "pointPerMatch": "0,732"
+    },
+    {
+        "name": "Kyle Palmieri",
+        "gamePlayed": 80,
+        "goals": 31,
+        "passes": 28,
+        "points": 59,
+        "pointPerMatch": "0,738"
+    },
+    {
+        "name": "Alex Galchenyuk",
+        "gamePlayed": 70,
+        "goals": 30,
+        "passes": 29,
+        "points": 59,
+        "pointPerMatch": "0,843"
+    },
+    {
+        "name": "Joshua Bailey",
+        "gamePlayed": 80,
+        "goals": 17,
+        "passes": 42,
+        "points": 59,
+        "pointPerMatch": "0,738"
+    },
+    {
+        "name": "Tyson Barrie",
+        "gamePlayed": 80,
+        "goals": 14,
+        "passes": 45,
+        "points": 59,
+        "pointPerMatch": "0,738"
+    },
+    {
+        "name": "Cory Schneider",
+        "gamePlayed": 50,
+        "victories": 26,
+        "defeats": 17,
+        "overtimeDefeats": 7,
+        "blanks": 4,
+        "points": 59,
+        "pointPerMatch": "1,180"
+    },
+    {
+        "name": "James van",
+        "gamePlayed": 81,
+        "goals": 36,
+        "passes": 18,
+        "points": 54,
+        "pointPerMatch": "58"
+    },
+    {
+        "name": "Evander Kane",
+        "gamePlayed": 81,
+        "goals": 31,
+        "passes": 27,
+        "points": 58,
+        "pointPerMatch": "0,716"
+    },
+    {
+        "name": "Elias Lindholm",
+        "gamePlayed": 81,
+        "goals": 21,
+        "passes": 37,
+        "points": 58,
+        "pointPerMatch": "0,716"
+    },
+    {
+        "name": "Reilly Smith",
+        "gamePlayed": 79,
+        "goals": 21,
+        "passes": 37,
+        "points": 58,
+        "pointPerMatch": "0,734"
+    },
+    {
+        "name": "David Perron",
+        "gamePlayed": 75,
+        "goals": 18,
+        "passes": 40,
+        "points": 58,
+        "pointPerMatch": "0,773"
+    },
+    {
+        "name": "Torey Krug",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 44,
+        "points": 58,
+        "pointPerMatch": "0,734"
+    },
+    {
+        "name": "Keith Yandle",
+        "gamePlayed": 81,
+        "goals": 10,
+        "passes": 48,
+        "points": 58,
+        "pointPerMatch": "0,716"
+    },
+    {
+        "name": "Jeff Carter",
+        "gamePlayed": 72,
+        "goals": 24,
+        "passes": 33,
+        "points": 57,
+        "pointPerMatch": "0,792"
+    },
+    {
+        "name": "Derek Stepan",
+        "gamePlayed": 81,
+        "goals": 15,
+        "passes": 42,
+        "points": 57,
+        "pointPerMatch": "0,704"
+    },
+    {
+        "name": "Roman Josi",
+        "gamePlayed": 79,
+        "goals": 15,
+        "passes": 42,
+        "points": 57,
+        "pointPerMatch": "0,722"
+    },
+    {
+        "name": "John Carlson",
+        "gamePlayed": 76,
+        "goals": 12,
+        "passes": 45,
+        "points": 57,
+        "pointPerMatch": "0,750"
+    },
+    {
+        "name": "Brian Elliott",
+        "gamePlayed": 47,
+        "victories": 26,
+        "defeats": 16,
+        "overtimeDefeats": 5,
+        "blanks": 3,
+        "points": 57,
+        "pointPerMatch": "1,213"
+    },
+    {
+        "name": "Pierre-Luc Dubois",
+        "gamePlayed": 82,
+        "goals": 24,
+        "passes": 32,
+        "points": 56,
+        "pointPerMatch": "0,683"
+    },
+    {
+        "name": "Jakob Silfverberg",
+        "gamePlayed": 82,
+        "goals": 23,
+        "passes": 33,
+        "points": 56,
+        "pointPerMatch": "0,683"
+    },
+    {
+        "name": "Nick Schmaltz",
+        "gamePlayed": 80,
+        "goals": 23,
+        "passes": 33,
+        "points": 56,
+        "pointPerMatch": "0,700"
+    },
+    {
+        "name": "Jonathan Toews",
+        "gamePlayed": 78,
+        "goals": 22,
+        "passes": 34,
+        "points": 56,
+        "pointPerMatch": "0,718"
+    },
+    {
+        "name": "Mathew Dumba",
+        "gamePlayed": 81,
+        "goals": 17,
+        "passes": 39,
+        "points": 56,
+        "pointPerMatch": "0,691"
+    },
+    {
+        "name": "Drew Doughty",
+        "gamePlayed": 82,
+        "goals": 12,
+        "passes": 44,
+        "points": 56,
+        "pointPerMatch": "0,683"
+    },
+    {
+        "name": "Jacob Markstrom",
+        "gamePlayed": 60,
+        "victories": 24,
+        "defeats": 28,
+        "overtimeDefeats": 8,
+        "blanks": 2,
+        "points": 56,
+        "pointPerMatch": "0,933"
+    },
+    {
+        "name": "Henrik Lundqvist",
+        "gamePlayed": 55,
+        "victories": 25,
+        "defeats": 24,
+        "overtimeDefeats": 6,
+        "blanks": 4,
+        "points": 56,
+        "pointPerMatch": "1,018"
+    },
+    {
+        "name": "Mika Zibanejad",
+        "gamePlayed": 80,
+        "goals": 25,
+        "passes": 30,
+        "points": 55,
+        "pointPerMatch": "0,688"
+    },
+    {
+        "name": "Jake Guentzel",
+        "gamePlayed": 81,
+        "goals": 24,
+        "passes": 31,
+        "points": 55,
+        "pointPerMatch": "0,679"
+    },
+    {
+        "name": "Nico Hischier",
+        "gamePlayed": 82,
+        "goals": 23,
+        "passes": 32,
+        "points": 55,
+        "pointPerMatch": "0,671"
+    },
+    {
+        "name": "Kevin Hayes",
+        "gamePlayed": 78,
+        "goals": 22,
+        "passes": 33,
+        "points": 55,
+        "pointPerMatch": "0,705"
+    },
+    {
+        "name": "Jonathan Drouin",
+        "gamePlayed": 80,
+        "goals": 20,
+        "passes": 35,
+        "points": 55,
+        "pointPerMatch": "0,688"
+    },
+    {
+        "name": "Ryan Ellis",
+        "gamePlayed": 79,
+        "goals": 17,
+        "passes": 38,
+        "points": 55,
+        "pointPerMatch": "0,696"
+    },
+    {
+        "name": "Alex Pietrangelo",
+        "gamePlayed": 81,
+        "goals": 15,
+        "passes": 40,
+        "points": 55,
+        "pointPerMatch": "0,679"
+    },
+    {
+        "name": "Carter Hutton",
+        "gamePlayed": 58,
+        "victories": 24,
+        "defeats": 27,
+        "overtimeDefeats": 7,
+        "blanks": 3,
+        "points": 55,
+        "pointPerMatch": "0,948"
+    },
+    {
+        "name": "Jeff Skinner",
+        "gamePlayed": 80,
+        "goals": 25,
+        "passes": 29,
+        "points": 54,
+        "pointPerMatch": "0,675"
+    },
+    {
+        "name": "Elias Pettersson",
+        "gamePlayed": 80,
+        "goals": 23,
+        "passes": 31,
+        "points": 54,
+        "pointPerMatch": "0,675"
+    },
+    {
+        "name": "Jordan Eberle",
+        "gamePlayed": 82,
+        "goals": 22,
+        "passes": 32,
+        "points": 54,
+        "pointPerMatch": "0,659"
+    },
+    {
+        "name": "Corey Perry",
+        "gamePlayed": 72,
+        "goals": 22,
+        "passes": 32,
+        "points": 54,
+        "pointPerMatch": "0,750"
+    },
+    {
+        "name": "Doug Hamilton",
+        "gamePlayed": 82,
+        "goals": 15,
+        "passes": 39,
+        "points": 54,
+        "pointPerMatch": "0,659"
+    },
+    {
+        "name": "Carey Price",
+        "gamePlayed": 59,
+        "victories": 23,
+        "defeats": 28,
+        "overtimeDefeats": 8,
+        "blanks": 3,
+        "points": 54,
+        "pointPerMatch": "0,915"
+    },
+    {
+        "name": "Anders Lee",
+        "gamePlayed": 82,
+        "goals": 31,
+        "passes": 22,
+        "points": 53,
+        "pointPerMatch": "0,646"
+    },
+    {
+        "name": "Patric Hornqvist",
+        "gamePlayed": 75,
+        "goals": 28,
+        "passes": 25,
+        "points": 53,
+        "pointPerMatch": "0,707"
+    },
+    {
+        "name": "Anthony Mantha",
+        "gamePlayed": 82,
+        "goals": 27,
+        "passes": 26,
+        "points": 53,
+        "pointPerMatch": "0,646"
+    },
+    {
+        "name": "Thomas Vanek",
+        "gamePlayed": 79,
+        "goals": 23,
+        "passes": 30,
+        "points": 53,
+        "pointPerMatch": "0,671"
+    },
+    {
+        "name": "Kyle Turris",
+        "gamePlayed": 80,
+        "goals": 19,
+        "passes": 34,
+        "points": 53,
+        "pointPerMatch": "0,663"
+    },
+    {
+        "name": "Morgan Rielly",
+        "gamePlayed": 79,
+        "goals": 9,
+        "passes": 44,
+        "points": 53,
+        "pointPerMatch": "0,671"
+    },
+    {
+        "name": "Max Pacioretty",
+        "gamePlayed": 82,
+        "goals": 29,
+        "passes": 23,
+        "points": 52,
+        "pointPerMatch": "0,634"
+    },
+    {
+        "name": "Nazem Kadri",
+        "gamePlayed": 77,
+        "goals": 27,
+        "passes": 25,
+        "points": 52,
+        "pointPerMatch": "0,675"
+    },
+    {
+        "name": "Travis Konecny",
+        "gamePlayed": 82,
+        "goals": 25,
+        "passes": 27,
+        "points": 52,
+        "pointPerMatch": "0,634"
+    },
+    {
+        "name": "Kevin Fiala",
+        "gamePlayed": 80,
+        "goals": 24,
+        "passes": 28,
+        "points": 52,
+        "pointPerMatch": "0,650"
+    },
+    {
+        "name": "Erik Haula",
+        "gamePlayed": 81,
+        "goals": 23,
+        "passes": 29,
+        "points": 52,
+        "pointPerMatch": "0,642"
+    },
+    {
+        "name": "Dustin Brown",
+        "gamePlayed": 80,
+        "goals": 23,
+        "passes": 29,
+        "points": 52,
+        "pointPerMatch": "0,650"
+    },
+    {
+        "name": "Nolan Patrick",
+        "gamePlayed": 72,
+        "goals": 19,
+        "passes": 33,
+        "points": 52,
+        "pointPerMatch": "0,722"
+    },
+    {
+        "name": "Pavel Buchnevich",
+        "gamePlayed": 75,
+        "goals": 17,
+        "passes": 35,
+        "points": 52,
+        "pointPerMatch": "0,693"
+    },
+    {
+        "name": "Ryan Spooner",
+        "gamePlayed": 79,
+        "goals": 15,
+        "passes": 37,
+        "points": 52,
+        "pointPerMatch": "0,658"
+    },
+    {
+        "name": "Joe Thornton",
+        "gamePlayed": 75,
+        "goals": 10,
+        "passes": 42,
+        "points": 52,
+        "pointPerMatch": "0,693"
+    },
+    {
+        "name": "Jake Gardiner",
+        "gamePlayed": 82,
+        "goals": 8,
+        "passes": 44,
+        "points": 52,
+        "pointPerMatch": "0,634"
+    },
+    {
+        "name": "Semyon Varlamov",
+        "gamePlayed": 46,
+        "victories": 24,
+        "defeats": 18,
+        "overtimeDefeats": 4,
+        "blanks": 3,
+        "points": 52,
+        "pointPerMatch": "1,130"
+    },
+    {
+        "name": "Tyler Toffoli",
+        "gamePlayed": 81,
+        "goals": 23,
+        "passes": 28,
+        "points": 51,
+        "pointPerMatch": "0,630"
+    },
+    {
+        "name": "Yanni Gourde",
+        "gamePlayed": 81,
+        "goals": 20,
+        "passes": 31,
+        "points": 51,
+        "pointPerMatch": "0,630"
+    },
+    {
+        "name": "Tomas Hertl",
+        "gamePlayed": 79,
+        "goals": 20,
+        "passes": 31,
+        "points": 51,
+        "pointPerMatch": "0,646"
+    },
+    {
+        "name": "Casey Mittelstadt",
+        "gamePlayed": 81,
+        "goals": 17,
+        "passes": 34,
+        "points": 51,
+        "pointPerMatch": "0,630"
+    },
+    {
+        "name": "Charlie Coyle",
+        "gamePlayed": 77,
+        "goals": 16,
+        "passes": 35,
+        "points": 51,
+        "pointPerMatch": "0,662"
+    },
+    {
+        "name": "Danton Heinen",
+        "gamePlayed": 80,
+        "goals": 15,
+        "passes": 36,
+        "points": 51,
+        "pointPerMatch": "0,638"
+    },
+    {
+        "name": "Paul Stastny",
+        "gamePlayed": 76,
+        "goals": 15,
+        "passes": 36,
+        "points": 51,
+        "pointPerMatch": "0,671"
+    },
+    {
+        "name": "Mats Zuccarello",
+        "gamePlayed": 82,
+        "goals": 14,
+        "passes": 37,
+        "points": 51,
+        "pointPerMatch": "0,622"
+    },
+    {
+        "name": "Alexander Wennberg",
+        "gamePlayed": 78,
+        "goals": 11,
+        "passes": 40,
+        "points": 51,
+        "pointPerMatch": "0,654"
+    },
+    {
+        "name": "Brendan Gallagher",
+        "gamePlayed": 81,
+        "goals": 27,
+        "passes": 23,
+        "points": 50,
+        "pointPerMatch": "0,617"
+    },
+    {
+        "name": "James Neal",
+        "gamePlayed": 76,
+        "goals": 27,
+        "passes": 23,
+        "points": 50,
+        "pointPerMatch": "0,658"
+    },
+    {
+        "name": "Adam Henrique",
+        "gamePlayed": 80,
+        "goals": 25,
+        "passes": 25,
+        "points": 50,
+        "pointPerMatch": "0,625"
+    },
+    {
+        "name": "Nino Niederreiter",
+        "gamePlayed": 80,
+        "goals": 22,
+        "passes": 28,
+        "points": 50,
+        "pointPerMatch": "0,625"
+    },
+    {
+        "name": "Jordan Staal",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 30,
+        "points": 50,
+        "pointPerMatch": "0,610"
+    },
+    {
+        "name": "Oliver Ekman-Lars…",
+        "gamePlayed": 81,
+        "goals": 16,
+        "passes": 34,
+        "points": 50,
+        "pointPerMatch": "0,617"
+    },
+    {
+        "name": "Mikko Koivu",
+        "gamePlayed": 82,
+        "goals": 15,
+        "passes": 35,
+        "points": 50,
+        "pointPerMatch": "0,610"
+    },
+    {
+        "name": "Max Domi",
+        "gamePlayed": 80,
+        "goals": 11,
+        "passes": 39,
+        "points": 50,
+        "pointPerMatch": "0,625"
+    },
+    {
+        "name": "Rasmus Ristolainen",
+        "gamePlayed": 82,
+        "goals": 9,
+        "passes": 41,
+        "points": 50,
+        "pointPerMatch": "0,610"
+    },
+    {
+        "name": "James Reimer",
+        "gamePlayed": 43,
+        "victories": 23,
+        "defeats": 16,
+        "overtimeDefeats": 4,
+        "blanks": 4,
+        "points": 50,
+        "pointPerMatch": "1,163"
+    },
+    {
+        "name": "Chris Kreider",
+        "gamePlayed": 76,
+        "goals": 24,
+        "passes": 25,
+        "points": 49,
+        "pointPerMatch": "0,645"
+    },
+    {
+        "name": "Tomas Tatar",
+        "gamePlayed": 74,
+        "goals": 24,
+        "passes": 25,
+        "points": 49,
+        "pointPerMatch": "0,662"
+    },
+    {
+        "name": "Wayne Simmonds",
+        "gamePlayed": 78,
+        "goals": 23,
+        "passes": 26,
+        "points": 49,
+        "pointPerMatch": "0,628"
+    },
+    {
+        "name": "Craig Smith",
+        "gamePlayed": 82,
+        "goals": 22,
+        "passes": 27,
+        "points": 49,
+        "pointPerMatch": "0,598"
+    },
+    {
+        "name": "T.J. Oshie",
+        "gamePlayed": 79,
+        "goals": 20,
+        "passes": 29,
+        "points": 49,
+        "pointPerMatch": "0,620"
+    },
+    {
+        "name": "Jake DeBrusk",
+        "gamePlayed": 78,
+        "goals": 18,
+        "passes": 31,
+        "points": 49,
+        "pointPerMatch": "0,628"
+    },
+    {
+        "name": "Mikael Backlund",
+        "gamePlayed": 82,
+        "goals": 17,
+        "passes": 32,
+        "points": 49,
+        "pointPerMatch": "0,598"
+    },
+    {
+        "name": "Conor Sheary",
+        "gamePlayed": 82,
+        "goals": 17,
+        "passes": 32,
+        "points": 49,
+        "pointPerMatch": "0,598"
+    },
+    {
+        "name": "Zach Werenski",
+        "gamePlayed": 81,
+        "goals": 14,
+        "passes": 35,
+        "points": 49,
+        "pointPerMatch": "0,605"
+    },
+    {
+        "name": "Dustin Byfuglien",
+        "gamePlayed": 70,
+        "goals": 14,
+        "passes": 35,
+        "points": 49,
+        "pointPerMatch": "0,700"
+    },
+    {
+        "name": "Scott Darling",
+        "gamePlayed": 45,
+        "victories": 20,
+        "defeats": 20,
+        "overtimeDefeats": 5,
+        "blanks": 3,
+        "points": 49,
+        "pointPerMatch": "1,089"
+    },
+    {
+        "name": "Ryan Dzingel",
+        "gamePlayed": 82,
+        "goals": 23,
+        "passes": 25,
+        "points": 48,
+        "pointPerMatch": "0,585"
+    },
+    {
+        "name": "Anthony Beauvilli…",
+        "gamePlayed": 81,
+        "goals": 23,
+        "passes": 25,
+        "points": 48,
+        "pointPerMatch": "0,593"
+    },
+    {
+        "name": "Tyler Johnson",
+        "gamePlayed": 80,
+        "goals": 23,
+        "passes": 25,
+        "points": 48,
+        "pointPerMatch": "0,600"
+    },
+    {
+        "name": "Gustav Nyquist",
+        "gamePlayed": 81,
+        "goals": 22,
+        "passes": 26,
+        "points": 48,
+        "pointPerMatch": "0,593"
+    },
+    {
+        "name": "Nick Bjugstad",
+        "gamePlayed": 81,
+        "goals": 20,
+        "passes": 28,
+        "points": 48,
+        "pointPerMatch": "0,593"
+    },
+    {
+        "name": "Alexander Kerfoot",
+        "gamePlayed": 80,
+        "goals": 20,
+        "passes": 28,
+        "points": 48,
+        "pointPerMatch": "0,600"
+    },
+    {
+        "name": "Ryan Donato",
+        "gamePlayed": 79,
+        "goals": 20,
+        "passes": 28,
+        "points": 48,
+        "pointPerMatch": "0,608"
+    },
+    {
+        "name": "Alex Tuch",
+        "gamePlayed": 81,
+        "goals": 19,
+        "passes": 29,
+        "points": 48,
+        "pointPerMatch": "0,593"
+    },
+    {
+        "name": "David Krejci",
+        "gamePlayed": 71,
+        "goals": 18,
+        "passes": 30,
+        "points": 48,
+        "pointPerMatch": "0,676"
+    },
+    {
+        "name": "Kristopher Letang",
+        "gamePlayed": 72,
+        "goals": 10,
+        "passes": 38,
+        "points": 48,
+        "pointPerMatch": "0,667"
+    },
+    {
+        "name": "Robby Fabbri",
+        "gamePlayed": 81,
+        "goals": 20,
+        "passes": 27,
+        "points": 47,
+        "pointPerMatch": "0,580"
+    },
+    {
+        "name": "Christian Dvorak",
+        "gamePlayed": 80,
+        "goals": 18,
+        "passes": 29,
+        "points": 47,
+        "pointPerMatch": "0,588"
+    },
+    {
+        "name": "Kevin Labanc",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 32,
+        "points": 47,
+        "pointPerMatch": "0,627"
+    },
+    {
+        "name": "Marcus Johansson",
+        "gamePlayed": 74,
+        "goals": 15,
+        "passes": 32,
+        "points": 47,
+        "pointPerMatch": "0,635"
+    },
+    {
+        "name": "Vladislav Namestn…",
+        "gamePlayed": 80,
+        "goals": 13,
+        "passes": 34,
+        "points": 47,
+        "pointPerMatch": "0,588"
+    },
+    {
+        "name": "Derick Brassard",
+        "gamePlayed": 76,
+        "goals": 21,
+        "passes": 25,
+        "points": 46,
+        "pointPerMatch": "0,605"
+    },
+    {
+        "name": "Ondrej Palat",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 32,
+        "points": 46,
+        "pointPerMatch": "0,582"
+    },
+    {
+        "name": "Oliver Bjorkstrand",
+        "gamePlayed": 80,
+        "goals": 13,
+        "passes": 33,
+        "points": 46,
+        "pointPerMatch": "0,575"
+    },
+    {
+        "name": "Ryan Suter",
+        "gamePlayed": 82,
+        "goals": 8,
+        "passes": 38,
+        "points": 46,
+        "pointPerMatch": "0,561"
+    },
+    {
+        "name": "Patrick Marleau",
+        "gamePlayed": 80,
+        "goals": 23,
+        "passes": 20,
+        "points": 45,
+        "pointPerMatch": "0,563"
+    },
+    {
+        "name": "Andrei Svechnikov",
+        "gamePlayed": 80,
+        "goals": 22,
+        "passes": 23,
+        "points": 45,
+        "pointPerMatch": "0,563"
+    },
+    {
+        "name": "Connor Brown",
+        "gamePlayed": 81,
+        "goals": 19,
+        "passes": 26,
+        "points": 45,
+        "pointPerMatch": "0,556"
+    },
+    {
+        "name": "Kyle Okposo",
+        "gamePlayed": 82,
+        "goals": 18,
+        "passes": 27,
+        "points": 45,
+        "pointPerMatch": "0,549"
+    },
+    {
+        "name": "Vince Hinostroza",
+        "gamePlayed": 78,
+        "goals": 17,
+        "passes": 28,
+        "points": 45,
+        "pointPerMatch": "0,577"
+    },
+    {
+        "name": "Mikkel Boedker",
+        "gamePlayed": 80,
+        "goals": 16,
+        "passes": 29,
+        "points": 45,
+        "pointPerMatch": "0,563"
+    },
+    {
+        "name": "Alexander Steen",
+        "gamePlayed": 80,
+        "goals": 16,
+        "passes": 29,
+        "points": 45,
+        "pointPerMatch": "0,563"
+    },
+    {
+        "name": "Charlie McAvoy",
+        "gamePlayed": 82,
+        "goals": 10,
+        "passes": 35,
+        "points": 45,
+        "pointPerMatch": "0,549"
+    },
+    {
+        "name": "Craig Anderson",
+        "gamePlayed": 55,
+        "victories": 19,
+        "defeats": 29,
+        "overtimeDefeats": 7,
+        "blanks": 2,
+        "points": 45,
+        "pointPerMatch": "0,818"
+    },
+    {
+        "name": "Corey Crawford",
+        "gamePlayed": 45,
+        "victories": 20,
+        "defeats": 20,
+        "overtimeDefeats": 5,
+        "blanks": 4,
+        "points": 45,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Brandon Saad",
+        "gamePlayed": 81,
+        "goals": 21,
+        "passes": 23,
+        "points": 44,
+        "pointPerMatch": "0,543"
+    },
+    {
+        "name": "Andreas Athanasiou",
+        "gamePlayed": 82,
+        "goals": 19,
+        "passes": 25,
+        "points": 44,
+        "pointPerMatch": "0,537"
+    },
+    {
+        "name": "Zach Parise",
+        "gamePlayed": 67,
+        "goals": 19,
+        "passes": 25,
+        "points": 44,
+        "pointPerMatch": "0,657"
+    },
+    {
+        "name": "Bryan Rust",
+        "gamePlayed": 77,
+        "goals": 18,
+        "passes": 26,
+        "points": 44,
+        "pointPerMatch": "0,571"
+    },
+    {
+        "name": "Tom Wilson",
+        "gamePlayed": 75,
+        "goals": 17,
+        "passes": 27,
+        "points": 44,
+        "pointPerMatch": "0,587"
+    },
+    {
+        "name": "Tanner Pearson",
+        "gamePlayed": 82,
+        "goals": 16,
+        "passes": 28,
+        "points": 44,
+        "pointPerMatch": "0,537"
+    },
+    {
+        "name": "Ivan Provorov",
+        "gamePlayed": 82,
+        "goals": 16,
+        "passes": 28,
+        "points": 44,
+        "pointPerMatch": "0,537"
+    },
+    {
+        "name": "Nick Foligno",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 29,
+        "points": 44,
+        "pointPerMatch": "0,587"
+    },
+    {
+        "name": "Ryan Pulock",
+        "gamePlayed": 82,
+        "goals": 14,
+        "passes": 30,
+        "points": 44,
+        "pointPerMatch": "0,537"
+    },
+    {
+        "name": "Justin Williams",
+        "gamePlayed": 78,
+        "goals": 14,
+        "passes": 30,
+        "points": 44,
+        "pointPerMatch": "0,564"
+    },
+    {
+        "name": "Jan Kovar",
+        "gamePlayed": 77,
+        "goals": 12,
+        "passes": 32,
+        "points": 44,
+        "pointPerMatch": "0,571"
+    },
+    {
+        "name": "Ondrej Kase",
+        "gamePlayed": 76,
+        "goals": 19,
+        "passes": 24,
+        "points": 43,
+        "pointPerMatch": "0,566"
+    },
+    {
+        "name": "Zach Hyman",
+        "gamePlayed": 82,
+        "goals": 16,
+        "passes": 27,
+        "points": 43,
+        "pointPerMatch": "0,524"
+    },
+    {
+        "name": "Andre Burakovsky",
+        "gamePlayed": 79,
+        "goals": 16,
+        "passes": 27,
+        "points": 43,
+        "pointPerMatch": "0,544"
+    },
+    {
+        "name": "Jesse Puljujarvi",
+        "gamePlayed": 79,
+        "goals": 16,
+        "passes": 27,
+        "points": 43,
+        "pointPerMatch": "0,544"
+    },
+    {
+        "name": "Tyler Bertuzzi",
+        "gamePlayed": 79,
+        "goals": 15,
+        "passes": 28,
+        "points": 43,
+        "pointPerMatch": "0,544"
+    },
+    {
+        "name": "Henrik Borgstrom",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 28,
+        "points": 43,
+        "pointPerMatch": "0,573"
+    },
+    {
+        "name": "Aaron Ekblad",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 29,
+        "points": 43,
+        "pointPerMatch": "0,544"
+    },
+    {
+        "name": "Philipp Grubauer",
+        "gamePlayed": 40,
+        "victories": 20,
+        "defeats": 17,
+        "overtimeDefeats": 3,
+        "blanks": 3,
+        "points": 43,
+        "pointPerMatch": "1,075"
+    },
+    {
+        "name": "Valeri Nichushkin",
+        "gamePlayed": 76,
+        "goals": 21,
+        "passes": 21,
+        "points": 42,
+        "pointPerMatch": "0,553"
+    },
+    {
+        "name": "Timo Meier",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 22,
+        "points": 42,
+        "pointPerMatch": "0,512"
+    },
+    {
+        "name": "Ryan Strome",
+        "gamePlayed": 80,
+        "goals": 15,
+        "passes": 27,
+        "points": 42,
+        "pointPerMatch": "0,525"
+    },
+    {
+        "name": "Jared Spurgeon",
+        "gamePlayed": 80,
+        "goals": 12,
+        "passes": 30,
+        "points": 42,
+        "pointPerMatch": "0,525"
+    },
+    {
+        "name": "Shea Theodore",
+        "gamePlayed": 79,
+        "goals": 10,
+        "passes": 32,
+        "points": 42,
+        "pointPerMatch": "0,532"
+    },
+    {
+        "name": "Robin Lehner",
+        "gamePlayed": 42,
+        "victories": 18,
+        "defeats": 18,
+        "overtimeDefeats": 6,
+        "blanks": 2,
+        "points": 42,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Michael Grabner",
+        "gamePlayed": 77,
+        "goals": 23,
+        "passes": 18,
+        "points": 41,
+        "pointPerMatch": "0,532"
+    },
+    {
+        "name": "Lars Eller",
+        "gamePlayed": 82,
+        "goals": 17,
+        "passes": 24,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Adrian Kempe",
+        "gamePlayed": 82,
+        "goals": 17,
+        "passes": 24,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Mark Giordano",
+        "gamePlayed": 82,
+        "goals": 15,
+        "passes": 26,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Alex Killorn",
+        "gamePlayed": 82,
+        "goals": 14,
+        "passes": 27,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Bryan Little",
+        "gamePlayed": 82,
+        "goals": 14,
+        "passes": 27,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Jacob Trouba",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 27,
+        "points": 41,
+        "pointPerMatch": "0,519"
+    },
+    {
+        "name": "Phillip Danault",
+        "gamePlayed": 78,
+        "goals": 12,
+        "passes": 29,
+        "points": 41,
+        "pointPerMatch": "0,526"
+    },
+    {
+        "name": "Will Butcher",
+        "gamePlayed": 82,
+        "goals": 6,
+        "passes": 35,
+        "points": 41,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Roberto Luongo",
+        "gamePlayed": 36,
+        "victories": 18,
+        "defeats": 13,
+        "overtimeDefeats": 5,
+        "blanks": 3,
+        "points": 41,
+        "pointPerMatch": "1,139"
+    },
+    {
+        "name": "Boone Jenner",
+        "gamePlayed": 82,
+        "goals": 20,
+        "passes": 20,
+        "points": 40,
+        "pointPerMatch": "0,488"
+    },
+    {
+        "name": "Bobby Ryan",
+        "gamePlayed": 70,
+        "goals": 18,
+        "passes": 22,
+        "points": 40,
+        "pointPerMatch": "0,571"
+    },
+    {
+        "name": "Sven Baertschi",
+        "gamePlayed": 78,
+        "goals": 17,
+        "passes": 23,
+        "points": 40,
+        "pointPerMatch": "0,513"
+    },
+    {
+        "name": "Victor Rask",
+        "gamePlayed": 79,
+        "goals": 16,
+        "passes": 24,
+        "points": 40,
+        "pointPerMatch": "0,506",
+        "warning": "Main. Retour indéfini."
+    },
+    {
+        "name": "Richard Panik",
+        "gamePlayed": 79,
+        "goals": 15,
+        "passes": 25,
+        "points": 40,
+        "pointPerMatch": "0,506"
+    },
+    {
+        "name": "Thomas Chabot",
+        "gamePlayed": 78,
+        "goals": 13,
+        "passes": 27,
+        "points": 40,
+        "pointPerMatch": "0,513"
+    },
+    {
+        "name": "Colton Parayko",
+        "gamePlayed": 82,
+        "goals": 11,
+        "passes": 29,
+        "points": 40,
+        "pointPerMatch": "0,488"
+    },
+    {
+        "name": "Cam Fowler",
+        "gamePlayed": 74,
+        "goals": 8,
+        "passes": 32,
+        "points": 40,
+        "pointPerMatch": "0,541"
+    },
+    {
+        "name": "Joshua Ho-Sang",
+        "gamePlayed": 74,
+        "goals": 8,
+        "passes": 32,
+        "points": 40,
+        "pointPerMatch": "0,541"
+    },
+    {
+        "name": "Keith Kinkaid",
+        "gamePlayed": 35,
+        "victories": 18,
+        "defeats": 13,
+        "overtimeDefeats": 4,
+        "blanks": 2,
+        "points": 40,
+        "pointPerMatch": "1,143"
+    },
+    {
+        "name": "Brock Nelson",
+        "gamePlayed": 81,
+        "goals": 21,
+        "passes": 18,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Josh Anderson",
+        "gamePlayed": 78,
+        "goals": 21,
+        "passes": 18,
+        "points": 39,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Radek Faksa",
+        "gamePlayed": 80,
+        "goals": 19,
+        "passes": 20,
+        "points": 39,
+        "pointPerMatch": "0,488"
+    },
+    {
+        "name": "Jakub Vrana",
+        "gamePlayed": 78,
+        "goals": 19,
+        "passes": 20,
+        "points": 39,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Patrick Maroon",
+        "gamePlayed": 81,
+        "goals": 15,
+        "passes": 24,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Dylan Sikura",
+        "gamePlayed": 73,
+        "goals": 15,
+        "passes": 24,
+        "points": 39,
+        "pointPerMatch": "0,534"
+    },
+    {
+        "name": "Brandon Sutter",
+        "gamePlayed": 69,
+        "goals": 13,
+        "passes": 26,
+        "points": 39,
+        "pointPerMatch": "0,565"
+    },
+    {
+        "name": "Milan Lucic",
+        "gamePlayed": 81,
+        "goals": 12,
+        "passes": 27,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Dmitry Orlov",
+        "gamePlayed": 81,
+        "goals": 10,
+        "passes": 29,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Colin Miller",
+        "gamePlayed": 82,
+        "goals": 9,
+        "passes": 30,
+        "points": 39,
+        "pointPerMatch": "0,476"
+    },
+    {
+        "name": "Kevin Shattenkirk",
+        "gamePlayed": 81,
+        "goals": 9,
+        "passes": 30,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Jake Muzzin",
+        "gamePlayed": 76,
+        "goals": 9,
+        "passes": 30,
+        "points": 39,
+        "pointPerMatch": "0,513"
+    },
+    {
+        "name": "Sami Vatanen",
+        "gamePlayed": 81,
+        "goals": 7,
+        "passes": 32,
+        "points": 39,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Duncan Keith",
+        "gamePlayed": 80,
+        "goals": 6,
+        "passes": 33,
+        "points": 39,
+        "pointPerMatch": "0,488"
+    },
+    {
+        "name": "Petr Mrazek",
+        "gamePlayed": 41,
+        "victories": 17,
+        "defeats": 19,
+        "overtimeDefeats": 5,
+        "blanks": 1,
+        "points": 39,
+        "pointPerMatch": "0,951"
+    },
+    {
+        "name": "Devin Shore",
+        "gamePlayed": 82,
+        "goals": 15,
+        "passes": 23,
+        "points": 38,
+        "pointPerMatch": "0,463"
+    },
+    {
+        "name": "Jason Pominville",
+        "gamePlayed": 79,
+        "goals": 15,
+        "passes": 23,
+        "points": 38,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Brady Tkachuk",
+        "gamePlayed": 78,
+        "goals": 15,
+        "passes": 23,
+        "points": 38,
+        "pointPerMatch": "0,487"
+    },
+    {
+        "name": "Joel Armia",
+        "gamePlayed": 81,
+        "goals": 14,
+        "passes": 24,
+        "points": 38,
+        "pointPerMatch": "0,469"
+    },
+    {
+        "name": "J.T. Compher",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 24,
+        "points": 38,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Sam Gagner",
+        "gamePlayed": 77,
+        "goals": 13,
+        "passes": 25,
+        "points": 38,
+        "pointPerMatch": "0,494"
+    },
+    {
+        "name": "Mathieu Perreault",
+        "gamePlayed": 75,
+        "goals": 13,
+        "passes": 25,
+        "points": 38,
+        "pointPerMatch": "0,507"
+    },
+    {
+        "name": "Noah Hanifin",
+        "gamePlayed": 80,
+        "goals": 11,
+        "passes": 27,
+        "points": 38,
+        "pointPerMatch": "0,475"
+    },
+    {
+        "name": "Brandon Montour",
+        "gamePlayed": 81,
+        "goals": 10,
+        "passes": 28,
+        "points": 38,
+        "pointPerMatch": "0,469"
+    },
+    {
+        "name": "Nick Leddy",
+        "gamePlayed": 79,
+        "goals": 10,
+        "passes": 28,
+        "points": 38,
+        "pointPerMatch": "0,481"
+    },
+    {
+        "name": "Chris Tierney",
+        "gamePlayed": 82,
+        "goals": 4,
+        "passes": 24,
+        "points": 38,
+        "pointPerMatch": "0,463"
+    },
+    {
+        "name": "Artem Anisimov",
+        "gamePlayed": 79,
+        "goals": 20,
+        "passes": 17,
+        "points": 37,
+        "pointPerMatch": "0,468"
+    },
+    {
+        "name": "Paul Byron",
+        "gamePlayed": 82,
+        "goals": 18,
+        "passes": 19,
+        "points": 37,
+        "pointPerMatch": "0,451"
+    },
+    {
+        "name": "Ryan Hartman",
+        "gamePlayed": 72,
+        "goals": 16,
+        "passes": 21,
+        "points": 37,
+        "pointPerMatch": "0,514"
+    },
+    {
+        "name": "Christian Fischer",
+        "gamePlayed": 81,
+        "goals": 15,
+        "passes": 22,
+        "points": 37,
+        "pointPerMatch": "0,457"
+    },
+    {
+        "name": "Calle Jarnkrok",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 22,
+        "points": 37,
+        "pointPerMatch": "0,493"
+    },
+    {
+        "name": "Jean-Gabriel Page…",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 22,
+        "points": 37,
+        "pointPerMatch": "0,493"
+    },
+    {
+        "name": "Pavel Zacha",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 23,
+        "points": 37,
+        "pointPerMatch": "0,468"
+    },
+    {
+        "name": "David Backes",
+        "gamePlayed": 74,
+        "goals": 14,
+        "passes": 23,
+        "points": 37,
+        "pointPerMatch": "0,500"
+    },
+    {
+        "name": "Tyler Bozak",
+        "gamePlayed": 82,
+        "goals": 13,
+        "passes": 24,
+        "points": 37,
+        "pointPerMatch": "0,451"
+    },
+    {
+        "name": "Vladimir Sobotka",
+        "gamePlayed": 82,
+        "goals": 13,
+        "passes": 24,
+        "points": 37,
+        "pointPerMatch": "0,451"
+    },
+    {
+        "name": "Jack Roslovic",
+        "gamePlayed": 73,
+        "goals": 13,
+        "passes": 24,
+        "points": 37,
+        "pointPerMatch": "0,507"
+    },
+    {
+        "name": "Mike Green",
+        "gamePlayed": 70,
+        "goals": 10,
+        "passes": 27,
+        "points": 37,
+        "pointPerMatch": "0,529"
+    },
+    {
+        "name": "Evan Rodrigues",
+        "gamePlayed": 81,
+        "goals": 9,
+        "passes": 28,
+        "points": 37,
+        "pointPerMatch": "0,457"
+    },
+    {
+        "name": "Thomas Greiss",
+        "gamePlayed": 42,
+        "victories": 15,
+        "defeats": 20,
+        "overtimeDefeats": 7,
+        "blanks": 3,
+        "points": 37,
+        "pointPerMatch": "0,881"
+    },
+    {
+        "name": "Anton Khudobin",
+        "gamePlayed": 31,
+        "victories": 17,
+        "defeats": 11,
+        "overtimeDefeats": 3,
+        "blanks": 3,
+        "points": 37,
+        "pointPerMatch": "1,194"
+    },
+    {
+        "name": "Daniel Sprong",
+        "gamePlayed": 74,
+        "goals": 16,
+        "passes": 20,
+        "points": 36,
+        "pointPerMatch": "0,486"
+    },
+    {
+        "name": "Nick Ritchie",
+        "gamePlayed": 79,
+        "goals": 14,
+        "passes": 22,
+        "points": 36,
+        "pointPerMatch": "0,456"
+    },
+    {
+        "name": "Charles Hudon",
+        "gamePlayed": 81,
+        "goals": 12,
+        "passes": 24,
+        "points": 36,
+        "pointPerMatch": "0,444"
+    },
+    {
+        "name": "Jesper Fast",
+        "gamePlayed": 79,
+        "goals": 12,
+        "passes": 24,
+        "points": 36,
+        "pointPerMatch": "0,456"
+    },
+    {
+        "name": "Jordan Weal",
+        "gamePlayed": 74,
+        "goals": 12,
+        "passes": 24,
+        "points": 36,
+        "pointPerMatch": "0,486"
+    },
+    {
+        "name": "Hampus Lindholm",
+        "gamePlayed": 75,
+        "goals": 11,
+        "passes": 25,
+        "points": 36,
+        "pointPerMatch": "0,480"
+    },
+    {
+        "name": "T.J. Brodie",
+        "gamePlayed": 77,
+        "goals": 10,
+        "passes": 26,
+        "points": 36,
+        "pointPerMatch": "0,468"
+    },
+    {
+        "name": "Mikhail Sergachev",
+        "gamePlayed": 82,
+        "goals": 8,
+        "passes": 28,
+        "points": 36,
+        "pointPerMatch": "0,439"
+    },
+    {
+        "name": "Jimmy Howard",
+        "gamePlayed": 42,
+        "victories": 15,
+        "defeats": 21,
+        "overtimeDefeats": 6,
+        "blanks": 1,
+        "points": 36,
+        "pointPerMatch": "0,857"
+    },
+    {
+        "name": "Ty Rattie",
+        "gamePlayed": 78,
+        "goals": 20,
+        "passes": 15,
+        "points": 35,
+        "pointPerMatch": "0,449"
+    },
+    {
+        "name": "Mattias Janmark",
+        "gamePlayed": 82,
+        "goals": 19,
+        "passes": 16,
+        "points": 35,
+        "pointPerMatch": "0,427"
+    },
+    {
+        "name": "Tyson Jost",
+        "gamePlayed": 77,
+        "goals": 16,
+        "passes": 19,
+        "points": 35,
+        "pointPerMatch": "0,455"
+    },
+    {
+        "name": "Carl Soderberg",
+        "gamePlayed": 81,
+        "goals": 14,
+        "passes": 21,
+        "points": 35,
+        "pointPerMatch": "0,432"
+    },
+    {
+        "name": "Andreas Johnsson",
+        "gamePlayed": 77,
+        "goals": 14,
+        "passes": 21,
+        "points": 35,
+        "pointPerMatch": "0,455"
+    },
+    {
+        "name": "Sven Andrighetto",
+        "gamePlayed": 72,
+        "goals": 13,
+        "passes": 22,
+        "points": 35,
+        "pointPerMatch": "0,486"
+    },
+    {
+        "name": "Jesper Bratt",
+        "gamePlayed": 78,
+        "goals": 12,
+        "passes": 23,
+        "points": 35,
+        "pointPerMatch": "0,449"
+    },
+    {
+        "name": "Colin White",
+        "gamePlayed": 74,
+        "goals": 12,
+        "passes": 23,
+        "points": 35,
+        "pointPerMatch": "0,473"
+    },
+    {
+        "name": "Oscar Klefbom",
+        "gamePlayed": 82,
+        "goals": 11,
+        "passes": 24,
+        "points": 35,
+        "pointPerMatch": "0,427"
+    },
+    {
+        "name": "Anthony Cirelli",
+        "gamePlayed": 71,
+        "goals": 11,
+        "passes": 24,
+        "points": 35,
+        "pointPerMatch": "0,493"
+    },
+    {
+        "name": "Rasmus Dahlin",
+        "gamePlayed": 79,
+        "goals": 10,
+        "passes": 25,
+        "points": 35,
+        "pointPerMatch": "0,443"
+    },
+    {
+        "name": "Jason Spezza",
+        "gamePlayed": 73,
+        "goals": 10,
+        "passes": 25,
+        "points": 35,
+        "pointPerMatch": "0,479"
+    },
+    {
+        "name": "Jaccob Slavin",
+        "gamePlayed": 82,
+        "goals": 9,
+        "passes": 26,
+        "points": 35,
+        "pointPerMatch": "0,427"
+    },
+    {
+        "name": "Alex Goligoski",
+        "gamePlayed": 80,
+        "goals": 9,
+        "passes": 26,
+        "points": 35,
+        "pointPerMatch": "0,438"
+    },
+    {
+        "name": "Jaroslav Halak",
+        "gamePlayed": 32,
+        "victories": 16,
+        "defeats": 13,
+        "overtimeDefeats": 3,
+        "blanks": 2,
+        "points": 35,
+        "pointPerMatch": "1,094"
+    },
+    {
+        "name": "Artturi Lehkonen",
+        "gamePlayed": 81,
+        "goals": 17,
+        "passes": 17,
+        "points": 34,
+        "pointPerMatch": "0,420"
+    },
+    {
+        "name": "Brendan Perlini",
+        "gamePlayed": 78,
+        "goals": 17,
+        "passes": 17,
+        "points": 34,
+        "pointPerMatch": "0,436"
+    },
+    {
+        "name": "Marian Gaborik",
+        "gamePlayed": 65,
+        "goals": 16,
+        "passes": 18,
+        "points": 34,
+        "pointPerMatch": "0,523"
+    },
+    {
+        "name": "Derek Ryan",
+        "gamePlayed": 81,
+        "goals": 15,
+        "passes": 19,
+        "points": 34,
+        "pointPerMatch": "0,420"
+    },
+    {
+        "name": "Anthony Duclair",
+        "gamePlayed": 72,
+        "goals": 15,
+        "passes": 19,
+        "points": 34,
+        "pointPerMatch": "0,472"
+    },
+    {
+        "name": "Frans Nielsen",
+        "gamePlayed": 80,
+        "goals": 14,
+        "passes": 20,
+        "points": 34,
+        "pointPerMatch": "0,425"
+    },
+    {
+        "name": "Andrew Cogliano",
+        "gamePlayed": 82,
+        "goals": 13,
+        "passes": 21,
+        "points": 34,
+        "pointPerMatch": "0,415"
+    },
+    {
+        "name": "Joonas Donskoi",
+        "gamePlayed": 78,
+        "goals": 13,
+        "passes": 21,
+        "points": 34,
+        "pointPerMatch": "0,436"
+    },
+    {
+        "name": "Tobias Rieder",
+        "gamePlayed": 78,
+        "goals": 13,
+        "passes": 21,
+        "points": 34,
+        "pointPerMatch": "0,436"
+    },
+    {
+        "name": "Dylan Strome",
+        "gamePlayed": 70,
+        "goals": 13,
+        "passes": 21,
+        "points": 34,
+        "pointPerMatch": "0,486"
+    },
+    {
+        "name": "Joel Eriksson",
+        "gamePlayed": 75,
+        "goals": 6,
+        "passes": 10,
+        "points": 16,
+        "pointPerMatch": "34"
+    },
+    {
+        "name": "Riley Nash",
+        "gamePlayed": 78,
+        "goals": 12,
+        "passes": 22,
+        "points": 34,
+        "pointPerMatch": "0,436"
+    },
+    {
+        "name": "Travis Zajac",
+        "gamePlayed": 80,
+        "goals": 11,
+        "passes": 23,
+        "points": 34,
+        "pointPerMatch": "0,425"
+    },
+    {
+        "name": "Tyler Myers",
+        "gamePlayed": 76,
+        "goals": 8,
+        "passes": 26,
+        "points": 34,
+        "pointPerMatch": "0,447"
+    },
+    {
+        "name": "Alexander Edler",
+        "gamePlayed": 70,
+        "goals": 8,
+        "passes": 26,
+        "points": 34,
+        "pointPerMatch": "0,486"
+    },
+    {
+        "name": "Justin Schultz",
+        "gamePlayed": 74,
+        "goals": 6,
+        "passes": 28,
+        "points": 34,
+        "pointPerMatch": "0,459"
+    },
+    {
+        "name": "Ryan McDonagh",
+        "gamePlayed": 81,
+        "goals": 5,
+        "passes": 29,
+        "points": 34,
+        "pointPerMatch": "0,420"
+    },
+    {
+        "name": "Jonathan Bernier",
+        "gamePlayed": 42,
+        "victories": 15,
+        "defeats": 23,
+        "overtimeDefeats": 4,
+        "blanks": 2,
+        "points": 34,
+        "pointPerMatch": "0,810"
+    },
+    {
+        "name": "Jimmy Vesey",
+        "gamePlayed": 81,
+        "goals": 18,
+        "passes": 15,
+        "points": 33,
+        "pointPerMatch": "0,407"
+    },
+    {
+        "name": "Adam Lowry",
+        "gamePlayed": 75,
+        "goals": 15,
+        "passes": 18,
+        "points": 33,
+        "pointPerMatch": "0,440"
+    },
+    {
+        "name": "Sam Bennett",
+        "gamePlayed": 80,
+        "goals": 14,
+        "passes": 19,
+        "points": 33,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "Loui Eriksson",
+        "gamePlayed": 71,
+        "goals": 14,
+        "passes": 19,
+        "points": 33,
+        "pointPerMatch": "0,465"
+    },
+    {
+        "name": "Jared McCann",
+        "gamePlayed": 79,
+        "goals": 13,
+        "passes": 20,
+        "points": 33,
+        "pointPerMatch": "0,418"
+    },
+    {
+        "name": "Justin Abdelkader",
+        "gamePlayed": 76,
+        "goals": 12,
+        "passes": 21,
+        "points": 33,
+        "pointPerMatch": "0,434"
+    },
+    {
+        "name": "Michael Frolik",
+        "gamePlayed": 74,
+        "goals": 12,
+        "passes": 21,
+        "points": 33,
+        "pointPerMatch": "0,446"
+    },
+    {
+        "name": "Justin Faulk",
+        "gamePlayed": 80,
+        "goals": 11,
+        "passes": 22,
+        "points": 33,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "Riley Sheahan",
+        "gamePlayed": 80,
+        "goals": 11,
+        "passes": 22,
+        "points": 33,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "David Kampf",
+        "gamePlayed": 75,
+        "goals": 10,
+        "passes": 23,
+        "points": 33,
+        "pointPerMatch": "0,440"
+    },
+    {
+        "name": "Esa Lindell",
+        "gamePlayed": 78,
+        "goals": 9,
+        "passes": 24,
+        "points": 33,
+        "pointPerMatch": "0,423"
+    },
+    {
+        "name": "Jeff Petry",
+        "gamePlayed": 79,
+        "goals": 7,
+        "passes": 26,
+        "points": 33,
+        "pointPerMatch": "0,418"
+    },
+    {
+        "name": "Brady Skjei",
+        "gamePlayed": 81,
+        "goals": 6,
+        "passes": 27,
+        "points": 33,
+        "pointPerMatch": "0,407"
+    },
+    {
+        "name": "Matt Niskanen",
+        "gamePlayed": 74,
+        "goals": 6,
+        "passes": 27,
+        "points": 33,
+        "pointPerMatch": "0,446"
+    },
+    {
+        "name": "Nate Schmidt",
+        "gamePlayed": 78,
+        "goals": 5,
+        "passes": 28,
+        "points": 33,
+        "pointPerMatch": "0,423",
+        "warning": "Suspendu 20 matchs. Éligible le 18 novembre."
+    },
+    {
+        "name": "Miles Wood",
+        "gamePlayed": 79,
+        "goals": 17,
+        "passes": 15,
+        "points": 32,
+        "pointPerMatch": "0,405"
+    },
+    {
+        "name": "Ryan Kesler",
+        "gamePlayed": 59,
+        "goals": 16,
+        "passes": 16,
+        "points": 32,
+        "pointPerMatch": "0,542",
+        "warning": "Hanche. Présence incertaine au camp d'entrainement."
+    },
+    {
+        "name": "Denis Malgin",
+        "gamePlayed": 78,
+        "goals": 15,
+        "passes": 17,
+        "points": 32,
+        "pointPerMatch": "0,410"
+    },
+    {
+        "name": "Nikolay Goldobin",
+        "gamePlayed": 75,
+        "goals": 14,
+        "passes": 18,
+        "points": 32,
+        "pointPerMatch": "0,427"
+    },
+    {
+        "name": "Patrik Berglund",
+        "gamePlayed": 70,
+        "goals": 14,
+        "passes": 18,
+        "points": 32,
+        "pointPerMatch": "0,457"
+    },
+    {
+        "name": "Oskar Lindblom",
+        "gamePlayed": 82,
+        "goals": 13,
+        "passes": 19,
+        "points": 32,
+        "pointPerMatch": "0,390"
+    },
+    {
+        "name": "Stefan Noesen",
+        "gamePlayed": 77,
+        "goals": 13,
+        "passes": 19,
+        "points": 32,
+        "pointPerMatch": "0,416"
+    },
+    {
+        "name": "Eeli Tolvanen",
+        "gamePlayed": 67,
+        "goals": 13,
+        "passes": 19,
+        "points": 32,
+        "pointPerMatch": "0,478"
+    },
+    {
+        "name": "Lias Andersson",
+        "gamePlayed": 73,
+        "goals": 12,
+        "passes": 20,
+        "points": 32,
+        "pointPerMatch": "0,438"
+    },
+    {
+        "name": "Matthew Peca",
+        "gamePlayed": 72,
+        "goals": 12,
+        "passes": 20,
+        "points": 32,
+        "pointPerMatch": "0,444"
+    },
+    {
+        "name": "Valentin Zykov",
+        "gamePlayed": 70,
+        "goals": 12,
+        "passes": 20,
+        "points": 32,
+        "pointPerMatch": "0,457"
+    },
+    {
+        "name": "Sonny Milano",
+        "gamePlayed": 65,
+        "goals": 12,
+        "passes": 20,
+        "points": 32,
+        "pointPerMatch": "0,492"
+    },
+    {
+        "name": "Marc-Edouard Vlas…",
+        "gamePlayed": 82,
+        "goals": 11,
+        "passes": 21,
+        "points": 32,
+        "pointPerMatch": "0,390"
+    },
+    {
+        "name": "Valtteri Filppula",
+        "gamePlayed": 77,
+        "goals": 10,
+        "passes": 22,
+        "points": 32,
+        "pointPerMatch": "0,416"
+    },
+    {
+        "name": "Matt Calvert",
+        "gamePlayed": 75,
+        "goals": 10,
+        "passes": 22,
+        "points": 32,
+        "pointPerMatch": "0,427"
+    },
+    {
+        "name": "Mattias Ekholm",
+        "gamePlayed": 81,
+        "goals": 9,
+        "passes": 23,
+        "points": 32,
+        "pointPerMatch": "0,395"
+    },
+    {
+        "name": "Josh Morrissey",
+        "gamePlayed": 82,
+        "goals": 7,
+        "passes": 25,
+        "points": 32,
+        "pointPerMatch": "0,390"
+    },
+    {
+        "name": "John Hayden",
+        "gamePlayed": 74,
+        "goals": 7,
+        "passes": 25,
+        "points": 32,
+        "pointPerMatch": "0,432"
+    },
+    {
+        "name": "Cam Ward",
+        "gamePlayed": 35,
+        "victories": 14,
+        "defeats": 17,
+        "overtimeDefeats": 4,
+        "blanks": 1,
+        "points": 32,
+        "pointPerMatch": "0,914"
+    },
+    {
+        "name": "Patrick Eaves",
+        "gamePlayed": 55,
+        "goals": 16,
+        "passes": 15,
+        "points": 31,
+        "pointPerMatch": "0,564"
+    },
+    {
+        "name": "Adam Gaudette",
+        "gamePlayed": 73,
+        "goals": 15,
+        "passes": 16,
+        "points": 31,
+        "pointPerMatch": "0,425"
+    },
+    {
+        "name": "Mark Jankowski",
+        "gamePlayed": 74,
+        "goals": 14,
+        "passes": 17,
+        "points": 31,
+        "pointPerMatch": "0,419"
+    },
+    {
+        "name": "Kasperi Kapanen",
+        "gamePlayed": 73,
+        "goals": 14,
+        "passes": 17,
+        "points": 31,
+        "pointPerMatch": "0,425"
+    },
+    {
+        "name": "Michael Ferland",
+        "gamePlayed": 75,
+        "goals": 13,
+        "passes": 18,
+        "points": 31,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "Brett Connolly",
+        "gamePlayed": 73,
+        "goals": 13,
+        "passes": 18,
+        "points": 31,
+        "pointPerMatch": "0,425"
+    },
+    {
+        "name": "Jordan Greenway",
+        "gamePlayed": 76,
+        "goals": 12,
+        "passes": 19,
+        "points": 31,
+        "pointPerMatch": "0,408"
+    },
+    {
+        "name": "Brendan Leipsic",
+        "gamePlayed": 77,
+        "goals": 10,
+        "passes": 21,
+        "points": 31,
+        "pointPerMatch": "0,403"
+    },
+    {
+        "name": "Ivan Barbashev",
+        "gamePlayed": 75,
+        "goals": 9,
+        "passes": 22,
+        "points": 31,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "Pontus Aberg",
+        "gamePlayed": 75,
+        "goals": 8,
+        "passes": 23,
+        "points": 31,
+        "pointPerMatch": "0,413"
+    },
+    {
+        "name": "Samuel Girard",
+        "gamePlayed": 82,
+        "goals": 7,
+        "passes": 24,
+        "points": 31,
+        "pointPerMatch": "0,378"
+    },
+    {
+        "name": "Erik Gustafsson",
+        "gamePlayed": 82,
+        "goals": 5,
+        "passes": 26,
+        "points": 31,
+        "pointPerMatch": "0,378"
+    },
+    {
+        "name": "Michal Neuvirth",
+        "gamePlayed": 25,
+        "victories": 14,
+        "defeats": 8,
+        "overtimeDefeats": 3,
+        "blanks": 1,
+        "points": 31,
+        "pointPerMatch": "1,240"
+    },
+    {
+        "name": "Blake Comeau",
+        "gamePlayed": 80,
+        "goals": 13,
+        "passes": 17,
+        "points": 30,
+        "pointPerMatch": "0,375"
+    },
+    {
+        "name": "Andrew Shaw",
+        "gamePlayed": 71,
+        "goals": 13,
+        "passes": 17,
+        "points": 30,
+        "pointPerMatch": "0,423"
+    },
+    {
+        "name": "Darren Helm",
+        "gamePlayed": 81,
+        "goals": 12,
+        "passes": 18,
+        "points": 30,
+        "pointPerMatch": "0,370"
+    },
+    {
+        "name": "Jamie McGinn",
+        "gamePlayed": 81,
+        "goals": 12,
+        "passes": 22,
+        "points": 30,
+        "pointPerMatch": "0,370"
+    },
+    {
+        "name": "Nick Bonino",
+        "gamePlayed": 80,
+        "goals": 12,
+        "passes": 18,
+        "points": 30,
+        "pointPerMatch": "0,375"
+    },
+    {
+        "name": "Daniel Carr",
+        "gamePlayed": 80,
+        "goals": 12,
+        "passes": 18,
+        "points": 30,
+        "pointPerMatch": "0,375"
+    },
+    {
+        "name": "Chris Kunitz",
+        "gamePlayed": 74,
+        "goals": 12,
+        "passes": 18,
+        "points": 30,
+        "pointPerMatch": "0,405"
+    },
+    {
+        "name": "Carl Hagelin",
+        "gamePlayed": 82,
+        "goals": 11,
+        "passes": 19,
+        "points": 30,
+        "pointPerMatch": "0,366"
+    },
+    {
+        "name": "Mike Matheson",
+        "gamePlayed": 80,
+        "goals": 9,
+        "passes": 21,
+        "points": 30,
+        "pointPerMatch": "0,375"
+    },
+    {
+        "name": "Erik Johnson",
+        "gamePlayed": 76,
+        "goals": 9,
+        "passes": 21,
+        "points": 30,
+        "pointPerMatch": "0,395"
+    },
+    {
+        "name": "Darnell Nurse",
+        "gamePlayed": 81,
+        "goals": 8,
+        "passes": 22,
+        "points": 30,
+        "pointPerMatch": "0,370"
+    },
+    {
+        "name": "Vince Dunn",
+        "gamePlayed": 75,
+        "goals": 8,
+        "passes": 22,
+        "points": 30,
+        "pointPerMatch": "0,400"
+    },
+    {
+        "name": "Filip Chytil",
+        "gamePlayed": 65,
+        "goals": 8,
+        "passes": 22,
+        "points": 30,
+        "pointPerMatch": "0,462"
+    },
+    {
+        "name": "Justin Braun",
+        "gamePlayed": 82,
+        "goals": 6,
+        "passes": 24,
+        "points": 30,
+        "pointPerMatch": "0,366"
+    },
+    {
+        "name": "Neal Pionk",
+        "gamePlayed": 75,
+        "goals": 4,
+        "passes": 26,
+        "points": 30,
+        "pointPerMatch": "0,400"
+    },
+    {
+        "name": "Aaron Dell",
+        "gamePlayed": 28,
+        "victories": 13,
+        "defeats": 11,
+        "overtimeDefeats": 4,
+        "blanks": 1,
+        "points": 30,
+        "pointPerMatch": "1,071"
+    },
+    {
+        "name": "Damon Severson",
+        "gamePlayed": 81,
+        "goals": 10,
+        "passes": 19,
+        "points": 29,
+        "pointPerMatch": "0,358"
+    },
+    {
+        "name": "Alec Martinez",
+        "gamePlayed": 79,
+        "goals": 10,
+        "passes": 19,
+        "points": 29,
+        "pointPerMatch": "0,367"
+    },
+    {
+        "name": "Jan Rutta",
+        "gamePlayed": 79,
+        "goals": 10,
+        "passes": 19,
+        "points": 29,
+        "pointPerMatch": "0,367"
+    },
+    {
+        "name": "Miro Heiskanen",
+        "gamePlayed": 77,
+        "goals": 7,
+        "passes": 22,
+        "points": 29,
+        "pointPerMatch": "0,377"
+    },
+    {
+        "name": "Josh Manson",
+        "gamePlayed": 82,
+        "goals": 6,
+        "passes": 23,
+        "points": 29,
+        "pointPerMatch": "0,354"
+    },
+    {
+        "name": "Darcy Kuemper",
+        "gamePlayed": 30,
+        "victories": 13,
+        "defeats": 14,
+        "overtimeDefeats": 3,
+        "blanks": 1,
+        "points": 29,
+        "pointPerMatch": "0,967"
+    },
+    {
+        "name": "Shea Weber",
+        "gamePlayed": 50,
+        "goals": 8,
+        "passes": 20,
+        "points": 28,
+        "pointPerMatch": "0,560",
+        "warning": "Opéré au genou. Retour prévu mi-décembre."
+    },
+    {
+        "name": "Travis Sanheim",
+        "gamePlayed": 76,
+        "goals": 7,
+        "passes": 21,
+        "points": 28,
+        "pointPerMatch": "0,368"
+    },
+    {
+        "name": "Chris Wideman",
+        "gamePlayed": 72,
+        "goals": 7,
+        "passes": 21,
+        "points": 28,
+        "pointPerMatch": "0,389"
+    },
+    {
+        "name": "Travis Dermott",
+        "gamePlayed": 72,
+        "goals": 5,
+        "passes": 23,
+        "points": 28,
+        "pointPerMatch": "0,389"
+    },
+    {
+        "name": "Mikko Koskinen",
+        "gamePlayed": 28,
+        "victories": 13,
+        "defeats": 13,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 28,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Brent Seabrook",
+        "gamePlayed": 77,
+        "goals": 6,
+        "passes": 21,
+        "points": 27,
+        "pointPerMatch": "0,351"
+    },
+    {
+        "name": "Jakob Chychrun",
+        "gamePlayed": 78,
+        "goals": 8,
+        "passes": 18,
+        "points": 26,
+        "pointPerMatch": "0,333"
+    },
+    {
+        "name": "Thomas Hickey",
+        "gamePlayed": 73,
+        "goals": 7,
+        "passes": 19,
+        "points": 26,
+        "pointPerMatch": "0,356"
+    },
+    {
+        "name": "Linus Ullmark",
+        "gamePlayed": 30,
+        "victories": 11,
+        "defeats": 15,
+        "overtimeDefeats": 4,
+        "blanks": 2,
+        "points": 26,
+        "pointPerMatch": "0,867"
+    },
+    {
+        "name": "Alexandar Georgiev",
+        "gamePlayed": 27,
+        "victories": 11,
+        "defeats": 12,
+        "overtimeDefeats": 4,
+        "blanks": null,
+        "points": 26,
+        "pointPerMatch": "0,963"
+    },
+    {
+        "name": "Juuse Saros",
+        "gamePlayed": 26,
+        "victories": 12,
+        "defeats": 12,
+        "overtimeDefeats": 2,
+        "blanks": 2,
+        "points": 26,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Michael Del",
+        "gamePlayed": 82,
+        "goals": 6,
+        "passes": 16,
+        "points": 22,
+        "pointPerMatch": "25"
+    },
+    {
+        "name": "Cody Ceci",
+        "gamePlayed": 81,
+        "goals": 7,
+        "passes": 18,
+        "points": 25,
+        "pointPerMatch": "0,309"
+    },
+    {
+        "name": "Derrick Pouliot",
+        "gamePlayed": 76,
+        "goals": 7,
+        "passes": 18,
+        "points": 25,
+        "pointPerMatch": "0,329"
+    },
+    {
+        "name": "Mike Reilly",
+        "gamePlayed": 75,
+        "goals": 6,
+        "passes": 19,
+        "points": 25,
+        "pointPerMatch": "0,333"
+    },
+    {
+        "name": "Jason Demers",
+        "gamePlayed": 72,
+        "goals": 6,
+        "passes": 19,
+        "points": 25,
+        "pointPerMatch": "0,347"
+    },
+    {
+        "name": "Olli Maatta",
+        "gamePlayed": 82,
+        "goals": 10,
+        "passes": 14,
+        "points": 24,
+        "pointPerMatch": "0,293"
+    },
+    {
+        "name": "Matthew Benning",
+        "gamePlayed": 78,
+        "goals": 8,
+        "passes": 16,
+        "points": 24,
+        "pointPerMatch": "0,308"
+    },
+    {
+        "name": "Zdeno Chara",
+        "gamePlayed": 72,
+        "goals": 8,
+        "passes": 16,
+        "points": 24,
+        "pointPerMatch": "0,333"
+    },
+    {
+        "name": "Dion Phaneuf",
+        "gamePlayed": 80,
+        "goals": 7,
+        "passes": 17,
+        "points": 24,
+        "pointPerMatch": "0,300"
+    },
+    {
+        "name": "Jonas Brodin",
+        "gamePlayed": 78,
+        "goals": 7,
+        "passes": 17,
+        "points": 24,
+        "pointPerMatch": "0,308"
+    },
+    {
+        "name": "Christian Djoos",
+        "gamePlayed": 73,
+        "goals": 6,
+        "passes": 18,
+        "points": 24,
+        "pointPerMatch": "0,329"
+    },
+    {
+        "name": "Adam Larsson",
+        "gamePlayed": 81,
+        "goals": 5,
+        "passes": 19,
+        "points": 24,
+        "pointPerMatch": "0,296"
+    },
+    {
+        "name": "Matt Grzelcyk",
+        "gamePlayed": 76,
+        "goals": 5,
+        "passes": 19,
+        "points": 24,
+        "pointPerMatch": "0,316"
+    },
+    {
+        "name": "Anthony DeAngelo",
+        "gamePlayed": 70,
+        "goals": 4,
+        "passes": 20,
+        "points": 24,
+        "pointPerMatch": "0,343"
+    },
+    {
+        "name": "Ryan Miller",
+        "gamePlayed": 29,
+        "victories": 11,
+        "defeats": 16,
+        "overtimeDefeats": 2,
+        "blanks": 2,
+        "points": 24,
+        "pointPerMatch": "0,828"
+    },
+    {
+        "name": "Louis Domingue",
+        "gamePlayed": 18,
+        "victories": 11,
+        "defeats": 5,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 24,
+        "pointPerMatch": "1,333"
+    },
+    {
+        "name": "Nikita Zadorov",
+        "gamePlayed": 79,
+        "goals": 7,
+        "passes": 16,
+        "points": 23,
+        "pointPerMatch": "0,291"
+    },
+    {
+        "name": "Markus Nutivaara",
+        "gamePlayed": 76,
+        "goals": 7,
+        "passes": 16,
+        "points": 23,
+        "pointPerMatch": "0,303"
+    },
+    {
+        "name": "Jordan Schmaltz",
+        "gamePlayed": 69,
+        "goals": 5,
+        "passes": 18,
+        "points": 23,
+        "pointPerMatch": "0,333"
+    },
+    {
+        "name": "Dylan Demelo",
+        "gamePlayed": 72,
+        "goals": 2,
+        "passes": 21,
+        "points": 23,
+        "pointPerMatch": "0,319"
+    },
+    {
+        "name": "Anton Stralman",
+        "gamePlayed": 78,
+        "goals": 6,
+        "passes": 16,
+        "points": 22,
+        "pointPerMatch": "0,282"
+    },
+    {
+        "name": "Nikita Zaitsev",
+        "gamePlayed": 78,
+        "goals": 6,
+        "passes": 16,
+        "points": 22,
+        "pointPerMatch": "0,282"
+    },
+    {
+        "name": "Filip Hronek",
+        "gamePlayed": 72,
+        "goals": 6,
+        "passes": 16,
+        "points": 22,
+        "pointPerMatch": "0,306"
+    },
+    {
+        "name": "Rasmus Andersson",
+        "gamePlayed": 72,
+        "goals": 5,
+        "passes": 17,
+        "points": 22,
+        "pointPerMatch": "0,306"
+    },
+    {
+        "name": "Andrew MacDonald",
+        "gamePlayed": 72,
+        "goals": 5,
+        "passes": 17,
+        "points": 22,
+        "pointPerMatch": "0,306"
+    },
+    {
+        "name": "Niklas Kronwall",
+        "gamePlayed": 65,
+        "goals": 5,
+        "passes": 17,
+        "points": 22,
+        "pointPerMatch": "0,338"
+    },
+    {
+        "name": "Marco Scandella",
+        "gamePlayed": 80,
+        "goals": 4,
+        "passes": 18,
+        "points": 22,
+        "pointPerMatch": "0,275"
+    },
+    {
+        "name": "Victor Mete",
+        "gamePlayed": 72,
+        "goals": 4,
+        "passes": 18,
+        "points": 22,
+        "pointPerMatch": "0,306"
+    },
+    {
+        "name": "Tim Heed",
+        "gamePlayed": 70,
+        "goals": 4,
+        "passes": 18,
+        "points": 22,
+        "pointPerMatch": "0,314"
+    },
+    {
+        "name": "Alex Stalock",
+        "gamePlayed": 24,
+        "victories": 10,
+        "defeats": 12,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 22,
+        "pointPerMatch": "0,917"
+    },
+    {
+        "name": "Chad Johnson",
+        "gamePlayed": 22,
+        "victories": 10,
+        "defeats": 10,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 22,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Tristan Jarry",
+        "gamePlayed": 20,
+        "victories": 10,
+        "defeats": 8,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 22,
+        "pointPerMatch": "1,100"
+    },
+    {
+        "name": "Johnny Boychuk",
+        "gamePlayed": 73,
+        "goals": 6,
+        "passes": 15,
+        "points": 21,
+        "pointPerMatch": "0,288"
+    },
+    {
+        "name": "John Moore",
+        "gamePlayed": 81,
+        "goals": 5,
+        "passes": 16,
+        "points": 21,
+        "pointPerMatch": "0,259"
+    },
+    {
+        "name": "Brian Dumoulin",
+        "gamePlayed": 78,
+        "goals": 5,
+        "passes": 16,
+        "points": 21,
+        "pointPerMatch": "0,269"
+    },
+    {
+        "name": "Andrej Sekera",
+        "gamePlayed": 71,
+        "goals": 5,
+        "passes": 16,
+        "points": 21,
+        "pointPerMatch": "0,296",
+        "warning": "Pied. Retour indéfini."
+    },
+    {
+        "name": "Sebastian Aho",
+        "gamePlayed": 70,
+        "goals": 5,
+        "passes": 16,
+        "points": 21,
+        "pointPerMatch": "0,300"
+    },
+    {
+        "name": "Nick Holden",
+        "gamePlayed": 77,
+        "goals": 4,
+        "passes": 17,
+        "points": 21,
+        "pointPerMatch": "0,273"
+    },
+    {
+        "name": "Gustav Forsling",
+        "gamePlayed": 55,
+        "goals": 3,
+        "passes": 18,
+        "points": 21,
+        "pointPerMatch": "0,382",
+        "warning": "Poignet. Retour prévu début novembre."
+    },
+    {
+        "name": "Malcolm Subban",
+        "gamePlayed": 24,
+        "victories": 9,
+        "defeats": 12,
+        "overtimeDefeats": 3,
+        "blanks": 1,
+        "points": 21,
+        "pointPerMatch": "0,875"
+    },
+    {
+        "name": "Stephen Johns",
+        "gamePlayed": 79,
+        "goals": 8,
+        "passes": 12,
+        "points": 20,
+        "pointPerMatch": "0,253"
+    },
+    {
+        "name": "Jack Johnson",
+        "gamePlayed": 76,
+        "goals": 7,
+        "passes": 13,
+        "points": 20,
+        "pointPerMatch": "0,263"
+    },
+    {
+        "name": "Kris Russell",
+        "gamePlayed": 68,
+        "goals": 7,
+        "passes": 13,
+        "points": 20,
+        "pointPerMatch": "0,294"
+    },
+    {
+        "name": "David Savard",
+        "gamePlayed": 78,
+        "goals": 5,
+        "passes": 15,
+        "points": 20,
+        "pointPerMatch": "0,256"
+    },
+    {
+        "name": "Jordan Oesterle",
+        "gamePlayed": 70,
+        "goals": 5,
+        "passes": 15,
+        "points": 20,
+        "pointPerMatch": "0,286"
+    },
+    {
+        "name": "Brett Pesce",
+        "gamePlayed": 81,
+        "goals": 4,
+        "passes": 16,
+        "points": 20,
+        "pointPerMatch": "0,247"
+    },
+    {
+        "name": "Alex Petrovic",
+        "gamePlayed": 79,
+        "goals": 4,
+        "passes": 16,
+        "points": 20,
+        "pointPerMatch": "0,253"
+    },
+    {
+        "name": "Connor Murphy",
+        "gamePlayed": 72,
+        "goals": 4,
+        "passes": 16,
+        "points": 20,
+        "pointPerMatch": "0,278"
+    },
+    {
+        "name": "Mike Condon",
+        "gamePlayed": 30,
+        "victories": 8,
+        "defeats": 19,
+        "overtimeDefeats": 3,
+        "blanks": 1,
+        "points": 19,
+        "pointPerMatch": "0,633"
+    },
+    {
+        "name": "Anders Nilsson",
+        "gamePlayed": 25,
+        "victories": 7,
+        "defeats": 14,
+        "overtimeDefeats": 4,
+        "blanks": null,
+        "points": 18,
+        "pointPerMatch": "0,720"
+    },
+    {
+        "name": "Casey DeSmith",
+        "gamePlayed": 16,
+        "victories": 8,
+        "defeats": 6,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 18,
+        "pointPerMatch": "1,125"
+    },
+    {
+        "name": "Laurent Brossoit",
+        "gamePlayed": 15,
+        "victories": 8,
+        "defeats": 5,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 18,
+        "pointPerMatch": "1,200"
+    },
+    {
+        "name": "Jon Gillies",
+        "gamePlayed": 15,
+        "victories": 8,
+        "defeats": 5,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 18,
+        "pointPerMatch": "1,200"
+    },
+    {
+        "name": "Alex Lyon",
+        "gamePlayed": 15,
+        "victories": 8,
+        "defeats": 5,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 18,
+        "pointPerMatch": "1,200"
+    },
+    {
+        "name": "David Rittich",
+        "gamePlayed": 15,
+        "victories": 8,
+        "defeats": 5,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 18,
+        "pointPerMatch": "1,200"
+    },
+    {
+        "name": "Pheonix Copley",
+        "gamePlayed": 20,
+        "victories": 7,
+        "defeats": 10,
+        "overtimeDefeats": 3,
+        "blanks": null,
+        "points": 17,
+        "pointPerMatch": "0,850"
+    },
+    {
+        "name": "Jack Campbell",
+        "gamePlayed": 18,
+        "victories": 7,
+        "defeats": 9,
+        "overtimeDefeats": 2,
+        "blanks": 1,
+        "points": 16,
+        "pointPerMatch": "0,889"
+    },
+    {
+        "name": "Joonas Korpisalo",
+        "gamePlayed": 17,
+        "victories": 6,
+        "defeats": 7,
+        "overtimeDefeats": 4,
+        "blanks": 1,
+        "points": 16,
+        "pointPerMatch": "0,941"
+    },
+    {
+        "name": "Curtis McElhinney",
+        "gamePlayed": 11,
+        "victories": 6,
+        "defeats": 4,
+        "overtimeDefeats": 1,
+        "blanks": null,
+        "points": 13,
+        "pointPerMatch": "1,182"
+    },
+    {
+        "name": "Charlie Lindgren",
+        "gamePlayed": 14,
+        "victories": 5,
+        "defeats": 7,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 12,
+        "pointPerMatch": "0,857"
+    },
+    {
+        "name": "Calvin Pickard",
+        "gamePlayed": 9,
+        "victories": 5,
+        "defeats": 3,
+        "overtimeDefeats": 1,
+        "blanks": null,
+        "points": 11,
+        "pointPerMatch": "1,222"
+    },
+    {
+        "name": "Antti Niemi",
+        "gamePlayed": 14,
+        "victories": 4,
+        "defeats": 8,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 10,
+        "pointPerMatch": "0,714"
+    },
+    {
+        "name": "Oscar Dansk",
+        "gamePlayed": 10,
+        "victories": 4,
+        "defeats": 4,
+        "overtimeDefeats": 2,
+        "blanks": null,
+        "points": 10,
+        "pointPerMatch": "1,000"
+    },
+    {
+        "name": "Anton Forsberg",
+        "gamePlayed": 10,
+        "victories": 4,
+        "defeats": 5,
+        "overtimeDefeats": 1,
+        "blanks": null,
+        "points": 9,
+        "pointPerMatch": "0,900"
+    },
+    {
+        "name": "Marek Mazanec",
+        "gamePlayed": 10,
+        "victories": 3,
+        "defeats": 6,
+        "overtimeDefeats": 1,
+        "blanks": null,
+        "points": 7,
+        "pointPerMatch": "0,700"
+    }
+]

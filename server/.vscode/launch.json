@@ -15,6 +15,14 @@
             "args": [
                 "${workspaceFolder}/index.ts"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Current file",
+            "args": [
+                "${file}"
+            ]
         }
     ]
 }

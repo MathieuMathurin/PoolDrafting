@@ -1,11 +1,11 @@
 var cheerio = require('cheerio'),
     fs = require('fs');
 
-var page1 = './predictions/lePoolPage1.html';
-var page2 = './predictions/lePoolPage2.html';
-var page3 = './predictions/lePoolPage3.html';
-var page4 = './predictions/lePoolPage4.html';
-var page5 = './predictions/lePoolPage5.html';
+var page1 = '../predictions/lePool-2018-2019-page-1.html';
+var page2 = '../predictions/lePool-2018-2019-page-2.html';
+var page3 = '../predictions/lePool-2018-2019-page-3.html';
+var page4 = '../predictions/lePool-2018-2019-page-4.html';
+var page5 = '../predictions/lePool-2018-2019-page-5.html';
 
 var pages = [page1, page2, page3, page4, page5];
 
@@ -29,41 +29,78 @@ pages.forEach(function (htmlPage) {
         } else {
             var stats = $$(this).text().trim().split(" ").filter(function (word) { return word != "" });
             if (stats[1] == "G") {
-                stats[0] = null;
-                stats[1] = null;
-                stats[2] = stats[2] + " " + stats[3];
-                stats[3] = null;
-                stats[4] = null;
-                stats[8] = null;
-                stats[10] = null;
-                stats[12] = null;
-                stats[14] = null;
-                stats[16] = null;
-                stats[17] = '.';
+                const [ 
+                    order, 
+                    position, 
+                    firstName, 
+                    lastName, 
+                    lastYearGP, 
+                    gamePlayed,
+                    goals,
+                    passes,
+                    lastYeatVictories, 
+                    victories,
+                    lastYearDefeats,
+                    defeats, 
+                    lastYearOTDefeats,
+                    overtimeDefeats,
+                    lastYearBlanks,
+                    blanks, 
+                    lastYearPoints,
+                    points, 
+                    pointPerMatch, 
+                    age, 
+                    height, 
+                    weight, 
+                    salary
+                ] = stats;
+                const team = $$(this).find("img").attr("alt")
+                const player = {
+                    name: `${firstName} ${lastName}`,
+                    gamePlayed: gamePlayed * 1,
+                    victories: victories * 1,
+                    defeats: defeats * 1,
+                    overtimeDefeats: overtimeDefeats * 1,
+                    blanks: blanks * 1,
+                    points: points * 1,
+                    pointPerMatch: pointPerMatch * 1
+                };
+                players.push(player);
             } else {
-                stats[0] = null;
-                stats[1] = null;
-                stats[2] = stats[2] + " " + stats[3];
-                stats[3] = null;
-                stats[4] = null;
-                stats[6] = null;
-                stats[8] = null;
-                stats[14] = null;
+                const [ 
+                    order, 
+                    position, 
+                    firstName, 
+                    lastName, 
+                    lastYearGP, 
+                    gamePlayed, 
+                    lastYearGoals, 
+                    goals, 
+                    lastYearPasses, 
+                    passes, 
+                    victories, 
+                    defeats, 
+                    overtimeDefeats,
+                    blanks, 
+                    lastYearPoints,
+                    points, 
+                    pointPerMatch, 
+                    age, 
+                    height, 
+                    weight, 
+                    salary
+                ] = stats;
+                const team = $$(this).find("img").attr("alt")
+                const player = {
+                    name: `${firstName} ${lastName}`,
+                    gamePlayed: gamePlayed * 1,
+                    goals: goals * 1,
+                    passes: passes * 1,
+                    points: points * 1,
+                    pointPerMatch: pointPerMatch * 1
+                };
+                players.push(player);
             }
-            //Removes the null columns
-            stats = stats.filter(function (property) { return property });
-
-            var player = {};
-            for (var i = 0; i < properties.length; ++i) {
-                player[properties[i]] = stats[i];
-            }
-
-            var predictionElement = $$(this).next().find('td');
-            if (predictionElement && predictionElement.attr('colspan') == '16') {
-                player.Summary = predictionElement.text().trim();
-            }
-
-            players.push(player);
         }
     });
 
@@ -73,7 +110,7 @@ pages.forEach(function (htmlPage) {
 writeToFile(JSON.stringify(playersPrediction));
 
 function writeToFile(data) {
-    fs.appendFile('./predictions/2016-2017.json', data, function (err) {
+    fs.appendFile('../predictions/2018-2019.json', data, function (err) {
         if (err){
              console.log(err);
              process.exit(1);
