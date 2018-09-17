@@ -24,6 +24,14 @@ import { WhistleComponent } from './components/icons/whistle/whistle.component';
 import { CloseComponent } from './components/icons/close/close.component';
 import { MenuComponent } from "./components/menu/menu.component";
 import { LogoutComponent } from './components/icons/logout/logout.component';
+import { LockerRoomComponent } from './components/icons/locker-room/locker-room.component';
+import { SearchComponent } from './search/search.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { PositionFilterComponent } from './search/position-filter/position-filter.component';
+import { SalaryFilterComponent } from './search/salary-filter/salary-filter.component';
+import { TeamFilterComponent } from './search/team-filter/team-filter.component';
+import { StatsFilterComponent } from './search/stats-filter/stats-filter.component';
+import { OptionalInputComponent } from './components/optional-input/optional-input.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +50,15 @@ import { LogoutComponent } from './components/icons/logout/logout.component';
     WhistleComponent,
     CloseComponent,
     MenuComponent,
-    LogoutComponent
+    LogoutComponent,
+    LockerRoomComponent,
+    SearchComponent,
+    SearchBarComponent,
+    PositionFilterComponent,
+    SalaryFilterComponent,
+    TeamFilterComponent,
+    StatsFilterComponent,
+    OptionalInputComponent
   ],
   imports: [
     BrowserModule,

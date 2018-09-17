@@ -1,0 +1,10 @@
+<h3 class="filterCategorie">Salaires</h3>
+<div class="salary-input first">
+    <app-optional-input placeHolder="Min" type="number" (valueChanged)="onMinimumChanged($event)" [value]="_minimum"></app-optional-input>
+</div>
+<div class="salary-input">
+    <app-optional-input placeHolder="Max" type="number" (valueChanged)="onMaximumChanged($event)" [value]="_maximum"></app-optional-input>
+</div>
+<div>
+    <button mat-raised-button *ngIf="_minimum || _maximum" color="accent" (click)="clear()">Déselectionner</button>
+</div>

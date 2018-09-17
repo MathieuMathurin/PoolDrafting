@@ -38,7 +38,7 @@ export class SignupComponent {
   async signup(): Promise<void> {
     const isSuccess = await this.accountService.signup(this.userNameModel.userName, this.passwordModel.password);
     if (isSuccess) {
-      this.router.navigate(["/home"]);
+      this.router.navigate(["/search"]);
     } else {
       this.snackBar.open("Votre équipe existe déjà. Veuillez-vous connecter.", "OK", { duration: 3000 });
     }

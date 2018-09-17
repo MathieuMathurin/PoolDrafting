@@ -1,0 +1,22 @@
+@import "../../../styles.scss";
+
+.filterCategorie{
+    text-align: center;
+}
+
+.filterButton {    
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    border: 1px solid black;
+}
+
+.filterButton.selected {
+    background-color: map-get($app-primary, 600);
+    color: white;
+}
+
+.filterButtonGroup {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around
+}

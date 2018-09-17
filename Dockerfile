@@ -13,7 +13,7 @@ WORKDIR ./angular-new
 
 RUN npm install
 RUN npm install -g @angular/cli
-RUN ng build
+RUN ng build --prod --build-optimizer
 
 WORKDIR ..
 COPY ./angular-new/dist/ ./server/dist
@@ -21,4 +21,4 @@ COPY ./angular-new/dist/ ./server/dist
 EXPOSE 80
 
 WORKDIR ../server
-CMD ["node", "-r", "ts-node/register", "index.ts"]
+CMD node -r ts-node/register index.ts

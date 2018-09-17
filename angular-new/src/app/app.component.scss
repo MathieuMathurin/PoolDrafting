@@ -59,3 +59,26 @@
     
     margin-left: 8px;
 }
+
+.bottom-padding {
+    padding-bottom: 16px;
+}
+
+.content {
+
+    @include desktop {
+        margin-left: 65px;
+    }
+
+    @include tablet {
+        margin-left: 0px;
+    }
+
+    @include mobile {
+        margin-left: 0px;
+    }
+
+    &.navigation-opened {
+        margin-left: 260px;
+    }
+}

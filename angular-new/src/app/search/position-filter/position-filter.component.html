@@ -1,0 +1,12 @@
+<h3 class="filterCategorie">Positions</h3>
+<div class="filterButtonGroup">
+    <button class="filterButton" *ngFor="let forwardFilter of forwardPositionFilters" [ngClass]="{selected: forwardFilter.selected}"
+        (click)="managePositionFilters(forwardFilter)" mat-icon-button>{{forwardFilter.name}}
+    </button>
+</div>
+<div class="filterButtonGroup">
+    <button class="filterButton" *ngFor="let defenseFilter of defensePositionFilters" [ngClass]="{selected: defenseFilter.selected}"
+        (click)="managePositionFilters(defenseFilter)" mat-icon-button>{{defenseFilter.name}}
+    </button>
+</div>
+<button mat-raised-button color="accent" (click)="clear()">Déselectionner</button>

@@ -1,0 +1,43 @@
+@import "../../styles.scss";
+
+.search {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.search-bar {
+    margin-top: 16px;
+}
+
+.search-filters {
+    margin-top: -16px;
+}
+
+.filters-container {
+    display: flex;
+    align-items: stretch;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.position-filter {
+    flex-grow: 1;
+}
+
+.salary-filter {
+    flex-grow: 1;
+}
+
+.team-filter {
+    flex-grow: 1;
+}
+
+.stats-filter {
+    flex-grow: 1;
+}

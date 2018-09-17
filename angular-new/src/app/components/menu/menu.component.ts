@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from "@angular/router";
 import { AccountService } from "../../services/account.service";
 import { ViewEncapsulation } from "@angular/core";
@@ -12,12 +12,17 @@ import { ViewEncapsulation } from "@angular/core";
 export class MenuComponent implements OnInit {
   constructor(private router: Router, public accountService: AccountService) { }
 
-  isOpened = false;
+  isOpened: boolean;
+  @Output() openChanged = new EventEmitter<boolean>();
   navigate = route => this.router.navigate([route]);
 
   ngOnInit() {
     this.isOpened = false;
   }
 
-  toggle = () => this.isOpened = !this.isOpened;
+  toggle = () => {
+    const newValue = !this.isOpened;
+    this.isOpened = newValue;
+    this.openChanged.emit(newValue);
+  }
 }

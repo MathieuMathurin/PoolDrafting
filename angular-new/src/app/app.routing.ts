@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { LoginGuardService } from './services/login-guard.service';
-import { LoginComponent } from "./landing-page/login/login.component";
+import { SearchComponent } from "./search/search.component";
 // import { TeamComponent } from './team/team.component';
 // import { RulesComponent } from './rules/rules.component';
 
@@ -30,8 +30,8 @@ const appRoutes: Routes = [
             //     component: FilterComponent
             // },
             {
-                path: 'home',
-                component: LoginComponent
+                path: 'search',
+                component: SearchComponent
             },
             // {
             //     path: 'team',

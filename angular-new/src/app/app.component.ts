@@ -12,9 +12,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   isAuthenticated = false;
   teamName: string;
+  isNavigationOpen: boolean;
   private _subscriptions: Subject<{}>[] = [];
 
   ngOnInit() {
+    this.isNavigationOpen = false;
+
     this.isAuthenticated = this.accountService.isAuthenticated;
     this._subscriptions.push(this.accountService.authenticationChanges.subscribe(isAuthenticated => {
       this.isAuthenticated = isAuthenticated;
@@ -29,4 +32,6 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this._subscriptions.map(sub => sub.unsubscribe());
   }
+
+  onOpenChanged = isOpen => this.isNavigationOpen = isOpen;
 }

@@ -35,7 +35,7 @@ export class LoginComponent {
         const isSuccess = await this.accountService.login(this.userNameModel.userName, this.passwordModel.password);
 
         if (isSuccess) {
-            this.router.navigate(['/home']);
+            this.router.navigate(['/search']);
         } else {
             this.snackBar.open("Mauvais nom d'équipe ou mauvais mot de passe. Veuillez réessayer.", "OK", { duration: 3000 });
         }

@@ -3,14 +3,18 @@
         <app-drawer [teamName]="teamName"></app-drawer>
     </mat-drawer>
     <mat-drawer-content class="mainContent">
-        <app-menu class="navigation"></app-menu>
-        <div class="header">
-            <app-score-board></app-score-board>
-            <icon-menu class="mobileNavigation" (click)="drawer.open()"></icon-menu>
-        </div>
-        <div class="content">
-            <router-outlet></router-outlet>
+        <app-menu class="navigation" (openChanged)="onOpenChanged($event)"></app-menu>
+        <div class="content" [ngClass]="{'navigation-opened': isNavigationOpen}">
+            <div class="header">
+                <app-score-board></app-score-board>
+                <icon-menu class="mobileNavigation" (click)="drawer.open()"></icon-menu>
+            </div>
+            <div>
+                <router-outlet></router-outlet>
+            </div>
         </div>
     </mat-drawer-content>
 </mat-drawer-container>
-<router-outlet *ngIf="!isAuthenticated"></router-outlet>
+<div class="bottom-padding">
+    <router-outlet *ngIf="!isAuthenticated"></router-outlet>
+</div>

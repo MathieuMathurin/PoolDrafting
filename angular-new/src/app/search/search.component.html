@@ -1,0 +1,29 @@
+<div class="search viewContent">
+    <div class="search-bar unselectable">
+        <app-search-bar appearance="outline" label="Rechercher des joueurs" (valueChanged)="onSearchValueChanged($event)"
+            [isMaxWidth]="true"></app-search-bar>
+    </div>
+    <div class="search-filters unselectable">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <h3>Filtres</h3>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filters-container">
+                <div class="position-filter unselectable">
+                    <app-position-filter></app-position-filter>
+                </div>
+                <div class="salary-filter">
+                    <app-salary-filter></app-salary-filter>
+                </div>
+                <div class="team-filter">
+                    <app-team-filter></app-team-filter>
+                </div>
+                <div class="stats-filter">
+                    <app-stats-filter></app-stats-filter>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<h3>Équipe</h3>
+<div>
+    <mat-form-field>
+        <mat-select #select placeholder="Équipe" [(value)]="_value">
+            <mat-option *ngFor="let team of teams" [value]="team.Key">
+                {{team.Name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<button mat-raised-button color="accent" *ngIf="select.value" (click)="clear()">Déselectionner</button>

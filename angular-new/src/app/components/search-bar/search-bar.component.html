@@ -1,0 +1,5 @@
+<mat-form-field [ngClass]="{'max-width': isMaxWidth}" [appearance]="appearance">
+    <mat-label>{{label}}</mat-label>
+    <input matInput #searchBar [type]="type" autocomplete="off" (keyup)="debounce(searchBar.value)" [ngModel]="_value" />
+    <mat-icon matSuffix *ngIf="_value" (click)="onIconClick()" class="clear-icon">clear</mat-icon>
+</mat-form-field>

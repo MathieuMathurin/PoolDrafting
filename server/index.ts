@@ -9,7 +9,7 @@ import * as fs from "fs";
 
 import { router } from "./controllers";
 import { mongoClient } from "./mongoClient";
-import { authTokenMiddleware } from "./middlewares/authTokenMiddleWare";
+import { authTokenMiddleware } from "./middlewares";
 
 const app = express();
 
@@ -67,5 +67,5 @@ if(process.env.CERTPATH && process.env.CERTPASSWORD) {
         passphrase: process.env.CERTPASSWORD
     }, app).listen(443)
 } else {
-    http.createServer(app).listen(80);
+    http.createServer(app).listen(process.env.PORT || 80);
 }

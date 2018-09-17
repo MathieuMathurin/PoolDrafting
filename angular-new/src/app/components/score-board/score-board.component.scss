@@ -1,10 +1,32 @@
 @import "./scoreBoard.scss";
-@import "./neon.scss";
 @import "./indelible.scss";
 @import "../../../styles.scss";
 
+$red-color: #FF1177;
 .neon-red {
-    @include neon-red();
+    -webkit-transition: all 200ms;
+    -moz-transition: all 200ms;
+    -o-transition: all 200ms;
+    transition: all 200ms;
+}
+
+.low {
+    color: $red-color;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $red-color, 0 0 20px $red-color, 0 0 35px $red-color, 0 0 40px $red-color, 0 0 50px $red-color, 0 0 75px $red-color;
+}
+
+.max {
+    color: $red-color;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px $red-color, 0 0 40px $red-color, 0 0 70px $red-color, 0 0 80px $red-color, 0 0 100px $red-color, 0 0 150px $red-color;
+    
+    @include mobile() {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $red-color, 0 0 20px $red-color, 0 0 35px $red-color, 0 0 40px $red-color, 0 0 50px $red-color, 0 0 75px $red-color;
+    }
+}
+
+.off {
+    color: black;
+    text-shadow: none;
 }
 
 .background {
@@ -15,6 +37,10 @@
 .scoreboard {
     font-family: "ScoreBoard";
     font-size: 50px;
+
+    @include mobile() {
+        font-size: 32px;
+    }
 }
 
 .one-line {
@@ -30,7 +56,7 @@
 }
 
 .multi-line {
-    font-size: 100px;
+    font-size: 64px;
     margin: 0px;
     margin-bottom: 20px;
     font-family: "indelible";
@@ -40,13 +66,6 @@
 
     @include mobile() {
         display: initial;    
-        line-height: 100px;    
+        line-height: 80px;    
     }
-}
-
-.unselectable {
-    -webkit-user-select: none; /* Safari */        
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
 }
