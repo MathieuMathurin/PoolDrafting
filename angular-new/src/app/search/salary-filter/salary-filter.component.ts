@@ -20,9 +20,4 @@ export class SalaryFilterComponent {
     this._maximum = maxValue;
     this.filterChanged.emit({min: this._minimum, max: maxValue});
   }
-
-  clear = () => {
-    this._minimum = null;
-    this._maximum = null;
-  }
 }

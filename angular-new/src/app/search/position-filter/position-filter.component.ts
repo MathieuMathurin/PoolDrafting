@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-position-filter',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./position-filter.component.scss']
 })
 export class PositionFilterComponent implements OnInit {
-  activeFilters: { [key: string]: PositionFilter };
+  @Output() filterChanged = new EventEmitter<string[]>();
+
+  private _activeFilters: { [key: string]: PositionFilter };
 
   forwardPositionFilters: PositionFilter[] = [
     new PositionFilter("AG", "LW"),
@@ -19,16 +21,18 @@ export class PositionFilterComponent implements OnInit {
   ];
 
   ngOnInit() {
-    this.activeFilters = {};
+    this._activeFilters = {};
   }
 
   managePositionFilters(filter: PositionFilter) {
     filter.selected = !filter.selected;
     if (filter.selected) {
-      this.activeFilters[filter.name] = filter;
-    } else if (this.activeFilters[filter.name]) {
-      this.activeFilters[filter.name] = undefined;
+      this._activeFilters[filter.name] = filter;
+    } else if (this._activeFilters[filter.name]) {
+      delete this._activeFilters[filter.name];
     }
+
+    this.filterChanged.emit(Object.values(this._activeFilters).map(f => f.value));
   }
 
 }

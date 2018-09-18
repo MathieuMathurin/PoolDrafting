@@ -7,7 +7,8 @@ const url = "mongodb+srv://web-app-user:Qwerty1!@pooldraft-tikxc.mongodb.net/tes
 const dbName = "pool2018-2019";
 
 export const collectionNames = {
-    users: "users"
+    users: "users",
+    players: "players"
 };
 
 let _client: MongoClient = null;

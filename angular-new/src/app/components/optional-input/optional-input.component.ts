@@ -20,7 +20,7 @@ export class OptionalInputComponent implements OnInit {
     this.valueChanged.emit(value);
   }
 
-  private debounce = (value) => {
+  debounce = (value) => {
     const functionCall = this.emitValue;
     const debounceTime = 500;
 

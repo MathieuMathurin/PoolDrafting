@@ -27,7 +27,7 @@ export class SearchBarComponent implements OnInit {
     this.valueChanged.emit(value);
   }
 
-  private debounce = (value) => {
+  debounce = (value) => {
     const functionCall = this.emitValue;
     const debounceTime = 1000;
 

@@ -12,18 +12,24 @@
             </mat-expansion-panel-header>
             <div class="filters-container">
                 <div class="position-filter unselectable">
-                    <app-position-filter></app-position-filter>
+                    <app-position-filter (filterChanged)="onPositionFilterChanged($event)"></app-position-filter>
                 </div>
                 <div class="salary-filter">
                     <app-salary-filter></app-salary-filter>
                 </div>
                 <div class="team-filter">
-                    <app-team-filter></app-team-filter>
+                    <app-team-filter (filterChanged)="onTeamFilterChanged($event)"></app-team-filter>
                 </div>
-                <div class="stats-filter">
+                <!-- <div class="stats-filter">
                     <app-stats-filter></app-stats-filter>
-                </div>
+                </div> -->
             </div>
         </mat-expansion-panel>
     </div>
+    <ul *ngIf="!isSearching" class="search-results">
+        <li *ngFor="let player of searchResults" class="player-description">
+            <app-player-description [player]="player"></app-player-description>
+        </li>
+    </ul>
+    <mat-spinner class="viewContent spinner" *ngIf="isSearching"></mat-spinner>
 </div>

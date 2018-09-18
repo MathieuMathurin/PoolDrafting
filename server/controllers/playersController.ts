@@ -1,22 +1,44 @@
 import { Router } from "express";
 import { addFilter } from "./filterHelper";
+import { mongoClient, collectionNames } from "../mongoClient";
 
 export const router = Router();
 
+interface Player {
+    _id: string;
+    name: string;
+    position: string;
+    photoUrl: string;
+    salary: number;
+    predictions: any[];
+    team: any;
+}
+
+function parseQuery(query: any) {
+    let parsedQuery = {};
+    if (query.searchTerm) {
+        parsedQuery = {$text: {$search: query.searchTerm.trim()}};
+    }
+
+    if(query.positions) {
+        parsedQuery["position"] = query.positions instanceof Array ? {$in: query.positions} : {$in: [query.positions]};
+    }
+
+    if(query.team) {
+        parsedQuery["team.Key"] = query.team;
+    }
+
+    return parsedQuery;
+}
+
 /* GET 100 players sorted by prediction points */
-router.get('/players', function (req, res, next) {
-    var query = "q=IsSelected:false";
+router.get('/players', async (req, res, next) => {
+    const db = await mongoClient.getDb();
+    const query = parseQuery(req.query);
+    const players = await db.collection<Player>(collectionNames.players).find(query).limit(100).sort({"prediction.points": -1}).toArray();
 
-    query = addFilter(query, req.query);
-
-    // request(baseUrl + query + "&sort=Prediction.PTS:desc&size=100").then(function (data) {
-    //     data = JSON.parse(data);
-    //     if (data && data.hits && data.hits.hits) {
-    //         res.jsonp(data.hits.hits);
-    //     } else {
-    //         res.jsonp([]);
-    //     }
-    // });
+    res.setHeader('Cache-Control', 'no-cache');
+    return res.send(players);
 });
 
 /* GET players which name match and by filters */

@@ -1,0 +1,29 @@
+<mat-card>
+    <div class="playersSection">
+        <div class="playersDescription">
+            <span class="position extra-info big-font">{{player.position}}</span>
+            <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.photoUrl}}" />
+            <span class="extra-info">{{player.team.City}} {{player.team.Name}}</span>
+            <span>{{player.name}}</span>
+            <span class="points big-font" *ngIf="player.prediction && player.prediction.points">{{player.prediction.points}} <span>PTS</span></span>
+            <span class="points big-font" *ngIf="!player.prediction || !player.prediction.points">N/A</span>
+            <span class="salaire big-font extra-info" *ngIf="player.salary">{{player.salary}}<span>M $</span></span>
+            <span class="salaire big-font extra-info" *ngIf="!player.salary">N/A</span>
+        </div>
+        <mat-icon *ngIf="player.prediction && !expanded" (click)="toggle()">expand_more</mat-icon>
+        <mat-icon *ngIf="player.prediction && expanded" (click)="toggle()">expand_less</mat-icon>
+        <div *ngIf="player.prediction && expanded" (click)="toggle()">
+          <h3>Prédictions</h3>
+          <div class="player-details">
+              <span>Parties jouées: {{player.prediction.gamePlayed}}</span>
+              <span *ngIf="player.position === 'G'">Victoires: {{player.prediction.victories}}</span>
+              <span *ngIf="player.position === 'G'">Défaites: {{player.prediction.defeats}}</span>
+              <span *ngIf="player.position === 'G'">Défaites en prolongation: {{player.prediction.overtimeDefeats}}</span>
+              <span *ngIf="player.position === 'G'">Blanchissage: {{player.prediction.blanks}}</span>
+              <span *ngIf="player.position !== 'G'">Buts: {{player.prediction.goals}}</span>
+              <span *ngIf="player.position !== 'G'">Passes: {{player.prediction.passes}}</span>
+              <span>Point par match: {{player.prediction.pointPerMatch}}</span>
+          </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,35 @@
+@import "../../../styles.scss";
+
+.playersDescription {    
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    align-items: center;
+
+    .big-font {
+        font-size: 32px;
+    }
+
+    .extra-info {
+        @include desktop {
+            display: inherit;
+        }
+
+        @include tablet {
+            display: inherit;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    .position {
+        min-width: 50px;
+    }
+}
+
+.player-details {
+    display: flex;
+    justify-content: space-around;
+}

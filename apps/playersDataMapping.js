@@ -27,7 +27,8 @@ function mapAllDataToPlayers(teams, players, predictions) {
             weight: player.Weight,
             birtDate: player.BirtDate,
             photoUrl: player.photoUrl,
-            prediction: player.Prediction
+            prediction: player.Prediction,
+            photoUrl: player.PhotoUrl
         }
 
         return playerData;

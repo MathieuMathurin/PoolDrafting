@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-team-filter',
@@ -9,6 +9,7 @@ export class TeamFilterComponent implements OnInit {
 
   constructor() { }
 
+  @Output() filterChanged = new EventEmitter<string>();
   _value: string;
   teams = [
     {
@@ -329,6 +330,12 @@ export class TeamFilterComponent implements OnInit {
 
   ngOnInit() {
     this._value = "";
+  }
+
+  onValueChanged = $event => {
+    const value = $event.value;
+    this._value = value;
+    this.filterChanged.emit(value);
   }
 
   clear = () => {

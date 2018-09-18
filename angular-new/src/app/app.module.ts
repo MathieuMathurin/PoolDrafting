@@ -32,6 +32,7 @@ import { SalaryFilterComponent } from './search/salary-filter/salary-filter.comp
 import { TeamFilterComponent } from './search/team-filter/team-filter.component';
 import { StatsFilterComponent } from './search/stats-filter/stats-filter.component';
 import { OptionalInputComponent } from './components/optional-input/optional-input.component';
+import { PlayerDescriptionComponent } from './components/player-description/player-description.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { OptionalInputComponent } from './components/optional-input/optional-inp
     SalaryFilterComponent,
     TeamFilterComponent,
     StatsFilterComponent,
-    OptionalInputComponent
+    OptionalInputComponent,
+    PlayerDescriptionComponent
   ],
   imports: [
     BrowserModule,

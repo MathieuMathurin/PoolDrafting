@@ -100,31 +100,6 @@ $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
     font-size: 15px;
 }
 
-.points {
-    font-size: 30px;    
-    position: relative;
-    top: -10px;  
-}
-
-.points span {
-    font-size: 20px; 
-    color: #AAA;
-    display: block 
-}
-
-.salaire {
-    font-size: 30px;    
-    position: relative;
-    top: -10px;
-}
-
-.salaire span {
-font-size: 20px; 
-    color: #AAA; 
-    margin-left: 6px;
-    display: block;
-}
-
 .searchResult {
     margin-top: 8px;
     margin-bottom: 8px;
@@ -134,21 +109,11 @@ font-size: 20px;
     padding-top: 40px;
 }
 
-.playerDetails {
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 1px solid rgba(230, 230, 230, 0.6);
-}
-
 .summary { 
     position: relative;
     top: -30px;
     text-align: left;
     font-size: 15px;
-}
-
-.playerDetails p {
-    text-align: left;
 }
 
 .salary {
