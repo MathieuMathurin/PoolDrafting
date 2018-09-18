@@ -15,14 +15,14 @@
         <div *ngIf="player.prediction && expanded" (click)="toggle()">
           <h3>Prédictions</h3>
           <div class="player-details">
-              <span>Parties jouées: {{player.prediction.gamePlayed}}</span>
-              <span *ngIf="player.position === 'G'">Victoires: {{player.prediction.victories}}</span>
-              <span *ngIf="player.position === 'G'">Défaites: {{player.prediction.defeats}}</span>
-              <span *ngIf="player.position === 'G'">Défaites en prolongation: {{player.prediction.overtimeDefeats}}</span>
-              <span *ngIf="player.position === 'G'">Blanchissage: {{player.prediction.blanks}}</span>
-              <span *ngIf="player.position !== 'G'">Buts: {{player.prediction.goals}}</span>
-              <span *ngIf="player.position !== 'G'">Passes: {{player.prediction.passes}}</span>
-              <span>Point par match: {{player.prediction.pointPerMatch}}</span>
+              <span><strong>Parties jouées:</strong> {{player.prediction.gamePlayed}}</span>
+              <span *ngIf="player.position === 'G'"><strong>Victoires: </strong> {{player.prediction.victories}}</span>
+              <span *ngIf="player.position === 'G'"><strong>Défaites:</strong> {{player.prediction.defeats}}</span>
+              <span *ngIf="player.position === 'G'"><strong>Défaites en prolongation:</strong> {{player.prediction.overtimeDefeats}}</span>
+              <span *ngIf="player.position === 'G'"><strong>Blanchissage:</strong> {{player.prediction.blanks}}</span>
+              <span *ngIf="player.position !== 'G'"><strong>Buts:</strong> {{player.prediction.goals}}</span>
+              <span *ngIf="player.position !== 'G'"><strong>Passes:</strong> {{player.prediction.passes}}</span>
+              <span><strong>Point par match:</strong> {{player.prediction.pointPerMatch}}</span>
           </div>
         </div>
     </div>
