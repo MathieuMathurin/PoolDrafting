@@ -29,7 +29,32 @@
     }
 }
 
+.icon-toggle {
+    font-size: 32px;
+    
+    .middle {
+        vertical-align: middle;
+    }
+}
+
 .player-details {
+    display: flex;
+    justify-content: space-around;
+    
+    @include desktop {
+        flex-wrap: nowrap;
+    }
+
+    @include tablet {
+        flex-wrap: nowrap;
+    }
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+}
+
+.warning {
     display: flex;
     justify-content: space-around;
 }

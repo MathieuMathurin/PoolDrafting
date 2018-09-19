@@ -45,6 +45,7 @@
 .search-results {
     list-style-type: none;
     padding-left: 0px;
+    padding-bottom: 64px;
 }
 
 .player-description {
@@ -53,4 +54,8 @@
 
 .spinner {
     margin-top: 16px;
+}
+
+.add-player {
+    display: absolute;
 }

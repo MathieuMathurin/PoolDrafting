@@ -17,6 +17,7 @@ export class Player {
         goals?: number;
         passes?: number;
         pointPerMatch: string;
+        warning: string;
     };
     team: { Key: string, Name: string, City: string };
 }

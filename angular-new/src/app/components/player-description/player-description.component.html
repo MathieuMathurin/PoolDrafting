@@ -1,29 +1,62 @@
 <mat-card>
     <div class="playersSection">
+        <div class="warning" *ngIf="player.prediction && player.prediction.warning">
+            <mat-chip-list>
+                <mat-chip color="accent" selected>
+                    {{player.prediction.warning}}
+                </mat-chip>
+            </mat-chip-list>
+        </div>
         <div class="playersDescription">
             <span class="position extra-info big-font">{{player.position}}</span>
             <img class="img-responsive img-thumbnail playerPicture" style="float:left" src="{{player.photoUrl}}" />
             <span class="extra-info">{{player.team.City}} {{player.team.Name}}</span>
             <span>{{player.name}}</span>
-            <span class="points big-font" *ngIf="player.prediction && player.prediction.points">{{player.prediction.points}} <span>PTS</span></span>
+            <span class="points big-font" *ngIf="player.prediction && player.prediction.points">{{player.prediction.points}}<span>&nbsp;PTS</span></span>
             <span class="points big-font" *ngIf="!player.prediction || !player.prediction.points">N/A</span>
-            <span class="salaire big-font extra-info" *ngIf="player.salary">{{player.salary}}<span>M $</span></span>
+            <span class="salaire big-font extra-info" *ngIf="player.salary">{{player.salary / 1000000 | currency}}<span>&nbsp;M</span></span>
             <span class="salaire big-font extra-info" *ngIf="!player.salary">N/A</span>
         </div>
-        <mat-icon *ngIf="player.prediction && !expanded" (click)="toggle()">expand_more</mat-icon>
-        <mat-icon *ngIf="player.prediction && expanded" (click)="toggle()">expand_less</mat-icon>
+        <div class="icon-toggle unselectable" (click)="toggle()">
+            <mat-icon class="middle unselectable" *ngIf="player.prediction && !expanded" [inline]="true">expand_more</mat-icon>
+            <mat-icon class="middle unselectable" *ngIf="player.prediction && expanded" [inline]="true">expand_less</mat-icon>
+        </div>
         <div *ngIf="player.prediction && expanded" (click)="toggle()">
-          <h3>Prédictions</h3>
-          <div class="player-details">
-              <span><strong>Parties jouées:</strong> {{player.prediction.gamePlayed}}</span>
-              <span *ngIf="player.position === 'G'"><strong>Victoires: </strong> {{player.prediction.victories}}</span>
-              <span *ngIf="player.position === 'G'"><strong>Défaites:</strong> {{player.prediction.defeats}}</span>
-              <span *ngIf="player.position === 'G'"><strong>Défaites en prolongation:</strong> {{player.prediction.overtimeDefeats}}</span>
-              <span *ngIf="player.position === 'G'"><strong>Blanchissage:</strong> {{player.prediction.blanks}}</span>
-              <span *ngIf="player.position !== 'G'"><strong>Buts:</strong> {{player.prediction.goals}}</span>
-              <span *ngIf="player.position !== 'G'"><strong>Passes:</strong> {{player.prediction.passes}}</span>
-              <span><strong>Point par match:</strong> {{player.prediction.pointPerMatch}}</span>
-          </div>
+            <h3>Prédictions</h3>
+            <div class="player-details">
+                <div>
+                    <p><strong>Parties jouées:</strong></p>
+                    <p>{{player.prediction.gamePlayed}}</p>
+                </div>
+                <div *ngIf="player.position === 'G'">
+                    <p><strong>Victoires: </strong></p>
+                    <p> {{player.prediction.victories}}</p>
+                </div>
+                <div *ngIf="player.position === 'G'">
+                    <p><strong>Défaites:</strong></p>
+                    <p> {{player.prediction.defeats}}</p>
+                </div>
+                <div *ngIf="player.position === 'G'">
+                    <p><strong>Défaites en prolongation:</strong></p>
+                    <p>{{player.prediction.overtimeDefeats}}</p>
+                </div>
+                <div *ngIf="player.position === 'G'">
+                    <p><strong>Blanchissage:</strong></p>
+                    <p>{{player.prediction.blanks}}</p>
+                </div>
+                <div *ngIf="player.position !== 'G'">
+                    <p><strong>Buts:</strong></p>
+                    <p>{{player.prediction.goals}}</p>
+                </div>
+                <div *ngIf="player.position !== 'G'">
+                    <p><strong>Passes:</strong></p>
+                    <p> {{player.prediction.passes}}</p>
+                </div>
+                <div>
+                    <p><strong>Point par match:</strong></p>
+                    <p>{{player.prediction.pointPerMatch}}</p>
+                </div>
+            </div>
         </div>
     </div>
 </mat-card>

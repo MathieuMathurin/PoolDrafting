@@ -23,6 +23,18 @@
             "args": [
                 "${file}"
             ]
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Current ts file",
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${file}"
+            ]
+        },
     ]
 }

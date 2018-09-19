@@ -26,6 +26,11 @@
             </div>
         </mat-expansion-panel>
     </div>
+    <div class="add-player">
+        <button mat-fab color="primary">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
     <ul *ngIf="!isSearching" class="search-results">
         <li *ngFor="let player of searchResults" class="player-description">
             <app-player-description [player]="player"></app-player-description>

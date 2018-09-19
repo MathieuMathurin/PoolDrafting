@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MatInputModule, MatFormFieldModule, MatButtonModule, MatTabsModule, MatIconModule, MatSnackBarModule, MatSidenavModule, MatToolbarModule, MatDividerModule, MatCardModule, MatExpansionModule, MatSelectModule, MatProgressSpinnerModule } from "@angular/material";
+import { MatInputModule, MatFormFieldModule, MatButtonModule, MatTabsModule, MatIconModule, MatSnackBarModule, MatSidenavModule, MatToolbarModule, MatDividerModule, MatCardModule, MatExpansionModule, MatSelectModule, MatProgressSpinnerModule, MatChipsModule } from "@angular/material";
 
 const components = [
   MatButtonModule,
   MatCardModule,
+  MatChipsModule,
   MatDividerModule,
   MatExpansionModule,
   MatFormFieldModule,
