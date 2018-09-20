@@ -50,6 +50,7 @@
 
 .player-description {
     margin-bottom: 16px;
+    cursor: pointer;
 }
 
 .spinner {
@@ -57,5 +58,8 @@
 }
 
 .add-player {
-    display: absolute;
+    position: fixed;
+    z-index: 2;
+    right: 5%;
+    bottom: 2%;
 }

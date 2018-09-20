@@ -6,6 +6,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { LoginGuardService } from './services/login-guard.service';
 import { SearchComponent } from "./search/search.component";
+import { MyTeamComponent } from "./my-team/my-team.component";
 // import { TeamComponent } from './team/team.component';
 // import { RulesComponent } from './rules/rules.component';
 
@@ -33,10 +34,10 @@ const appRoutes: Routes = [
                 path: 'search',
                 component: SearchComponent
             },
-            // {
-            //     path: 'team',
-            //     component: TeamComponent
-            // },
+            {
+                path: 'myTeam',
+                component: MyTeamComponent
+            },
             // {
             //     path: 'rules',
             //     component: RulesComponent

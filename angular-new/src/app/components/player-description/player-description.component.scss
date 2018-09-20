@@ -1,5 +1,10 @@
 @import "../../../styles.scss";
 
+.selected {
+    background-color: map-get($app-primary, 600);
+    color: white;
+}
+
 .playersDescription {    
     display: flex;
     justify-content: space-around;

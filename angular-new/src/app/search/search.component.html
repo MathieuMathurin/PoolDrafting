@@ -15,7 +15,7 @@
                     <app-position-filter (filterChanged)="onPositionFilterChanged($event)"></app-position-filter>
                 </div>
                 <div class="salary-filter">
-                    <app-salary-filter></app-salary-filter>
+                    <app-salary-filter (filterChanged)="onSalaryFilterChanged($event)"></app-salary-filter>
                 </div>
                 <div class="team-filter">
                     <app-team-filter (filterChanged)="onTeamFilterChanged($event)"></app-team-filter>
@@ -26,15 +26,15 @@
             </div>
         </mat-expansion-panel>
     </div>
-    <div class="add-player">
-        <button mat-fab color="primary">
-            <mat-icon>add</mat-icon>
-        </button>
-    </div>
     <ul *ngIf="!isSearching" class="search-results">
-        <li *ngFor="let player of searchResults" class="player-description">
-            <app-player-description [player]="player"></app-player-description>
+        <li *ngFor="let player of searchResults" class="player-description" (click)="toggleSelect(player._id)">
+            <app-player-description [player]="player" [selected]="player._id === selectedPlayerId"></app-player-description>
         </li>
     </ul>
     <mat-spinner class="viewContent spinner" *ngIf="isSearching"></mat-spinner>
+    <div class="add-player">
+        <button mat-fab [disabled]="!isMyTurn" color="primary" (click)="draft()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
 </div>

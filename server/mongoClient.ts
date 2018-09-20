@@ -8,7 +8,8 @@ const dbName = "pool2018-2019";
 
 export const collectionNames = {
     users: "users",
-    players: "players"
+    players: "players",
+    pools: "pools"
 };
 
 let _client: MongoClient = null;

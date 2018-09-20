@@ -33,6 +33,7 @@ import { TeamFilterComponent } from './search/team-filter/team-filter.component'
 import { StatsFilterComponent } from './search/stats-filter/stats-filter.component';
 import { OptionalInputComponent } from './components/optional-input/optional-input.component';
 import { PlayerDescriptionComponent } from './components/player-description/player-description.component';
+import { MyTeamComponent } from './my-team/my-team.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { PlayerDescriptionComponent } from './components/player-description/play
     TeamFilterComponent,
     StatsFilterComponent,
     OptionalInputComponent,
-    PlayerDescriptionComponent
+    PlayerDescriptionComponent,
+    MyTeamComponent
   ],
   imports: [
     BrowserModule,

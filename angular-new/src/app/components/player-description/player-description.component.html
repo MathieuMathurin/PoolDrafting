@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [ngClass]="{'selected': selected}">
     <div class="playersSection">
         <div class="warning" *ngIf="player.prediction && player.prediction.warning">
             <mat-chip-list>
@@ -17,11 +17,11 @@
             <span class="salaire big-font extra-info" *ngIf="player.salary">{{player.salary / 1000000 | currency}}<span>&nbsp;M</span></span>
             <span class="salaire big-font extra-info" *ngIf="!player.salary">N/A</span>
         </div>
-        <div class="icon-toggle unselectable" (click)="toggle()">
+        <div class="icon-toggle unselectable" (click)="toggle($event)">
             <mat-icon class="middle unselectable" *ngIf="player.prediction && !expanded" [inline]="true">expand_more</mat-icon>
             <mat-icon class="middle unselectable" *ngIf="player.prediction && expanded" [inline]="true">expand_less</mat-icon>
         </div>
-        <div *ngIf="player.prediction && expanded" (click)="toggle()">
+        <div *ngIf="player.prediction && expanded" (click)="toggle($event)">
             <h3>Prédictions</h3>
             <div class="player-details">
                 <div>

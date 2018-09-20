@@ -8,6 +8,7 @@ import { Player } from "../../models/player";
 })
 export class PlayerDescriptionComponent implements OnInit {
   @Input() player: Player;
+  @Input() selected: boolean;
 
   expanded: boolean;
 
@@ -15,7 +16,8 @@ export class PlayerDescriptionComponent implements OnInit {
     this.expanded = false;
   }
 
-  toggle = () => {
+  toggle = ($event) => {
     this.expanded = !this.expanded;
+    $event.stopPropagation();
   }
 }
