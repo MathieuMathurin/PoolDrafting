@@ -66,4 +66,18 @@
             display: inline-block;
         }
     }
+
+    .points-summary {
+        @include desktop {
+            margin-left: initial;
+        }
+
+        @include tablet {
+            margin-left: initial;
+        }
+
+        @include mobile {
+            margin-left: 48px;
+        }
+    }
 }

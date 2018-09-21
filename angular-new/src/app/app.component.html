@@ -1,6 +1,6 @@
 <mat-drawer-container class="drawer-container" *ngIf="isAuthenticated" [class.drawer-opened]="drawer.opened">
     <mat-drawer #drawer class="drawer" mode="over">
-        <app-drawer [teamName]="teamName"></app-drawer>
+        <app-drawer [drawerRef]="drawer" [teamName]="teamName"></app-drawer>
     </mat-drawer>
     <mat-drawer-content class="mainContent">
         <app-menu class="navigation" (openChanged)="onOpenChanged($event)"></app-menu>

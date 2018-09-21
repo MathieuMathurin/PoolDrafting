@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 .menu-container {
     height: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
@@ -21,9 +23,19 @@
         display: none;
     }
 
+    .header {
+        svg {
+            fill: map-get($app-primary, 600);
+        }
+    }
+
     .footer {
         position: absolute;
         bottom: 0px;
+        
+        svg {
+            fill: map-get($app-accent, 600);
+        }
     }
 
     .link {
