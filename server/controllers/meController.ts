@@ -15,8 +15,8 @@ router.get("/me/pool", async (req, res) => {
     const poolData = await db.collection<PoolModel>(collectionNames.pools).findOne({_id: new ObjectId(poolId)});
     const pool = new Pool(poolData);
 
-    const { draftingPooler, round } = pool;
-    return res.send(JSON.stringify({ draftingPooler, round }))
+    const { draftingPooler, round, isPoolDone } = pool;
+    return res.send(JSON.stringify({ draftingPooler, round, isfinished: isPoolDone }))
 });
 
 router.get("/me/picks", async (req, res) => {

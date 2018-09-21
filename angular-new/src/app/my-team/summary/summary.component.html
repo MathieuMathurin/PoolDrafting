@@ -1,0 +1,43 @@
+<mat-card>
+  <div class="viewContent summaries-container">
+    <div class="players-summary">
+      <div class="summary-title">
+        Joueurs
+      </div>
+      <div class="summary-value">
+        <div class="filterButtonGroup">
+          <div *ngFor="let forwardInfo of getForwards()">
+            <button class="filterButton selected" mat-icon-button>
+              {{forwardInfo.name}}
+            </button>
+            <span class="position-count">{{forwardInfo.count}}</span>
+          </div>
+        </div>
+        <div class="filterButtonGroup">
+          <div *ngFor="let defenseInfo of getDefs()">
+            <button class="filterButton selected" mat-icon-button>
+              {{defenseInfo.name}}
+            </button>
+            <span class="position-count">{{defenseInfo.count}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="points-summary">
+      <div class="summary-title">
+        Points
+      </div>
+      <div class="summary-value">
+        {{getTotalPoints()}}
+      </div>
+    </div>
+    <div class="salary-summary">
+      <div class="summary-title">
+        Salaire
+      </div>
+      <div class="summary-value">
+        {{getTotalSalaryHit() | currency}} M
+      </div>
+    </div>
+  </div>
+</mat-card>

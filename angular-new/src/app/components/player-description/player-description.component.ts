@@ -11,6 +11,16 @@ export class PlayerDescriptionComponent implements OnInit {
   @Input() selected: boolean;
 
   expanded: boolean;
+  get position() {
+    switch (this.player.position) {
+      case "LW":
+        return "AG";
+      case "RW":
+        return "AD";
+      default:
+        return this.player.position;
+    }
+  }
 
   ngOnInit() {
     this.expanded = false;

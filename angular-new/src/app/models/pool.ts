@@ -6,4 +6,5 @@ export interface Pool {
     round: number;
     draftOrder: { poolerId: string, poolerName: string };
     roundState: { [key: string]: boolean };
+    isFinished: boolean;
 }

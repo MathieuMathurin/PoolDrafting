@@ -16,10 +16,7 @@ export interface PoolModel {
     admins: ObjectId[];
     maxRound: number;
     settings: {
-        forwards: number;
-        defenders: number;
-        goalies: number;
-        salaryCap: number;
+        turns: number;
     }
 }
 

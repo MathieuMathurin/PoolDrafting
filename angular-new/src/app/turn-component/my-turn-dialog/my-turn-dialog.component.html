@@ -1,0 +1,37 @@
+<mat-card class="viewContent" [ngSwitch]="templateNumber">
+  <mat-card-title>
+    <div>
+      Tour: {{data.round}}
+    </div>
+    <div>Aweille c'est ton tour!</div>
+  </mat-card-title>
+  <mat-card-content *ngSwitchCase=1>
+    <icon-puck-fire class="dialog-icon"></icon-puck-fire>
+    <div class="dialog-content">
+      Le prochain joueur que tu vas choisir va être en feu cette année! ...ou pas!
+    </div>
+  </mat-card-content>
+  <mat-card-content *ngSwitchCase=2>
+    <icon-trophy class="dialog-icon"></icon-trophy>
+    <div class="dialog-content">
+      Marco est pas là cette année... On a enfin une chance de gagner!
+    </div>
+  </mat-card-content>
+  <mat-card-content *ngSwitchCase=3>
+    <icon-timer class="dialog-icon"></icon-timer>
+    <div class="dialog-content">
+      C'est LOOOONNNNG
+    </div>
+  </mat-card-content>
+  <mat-card-content *ngSwitchCase=4>
+    <icon-tv class="dialog-icon"></icon-tv>
+    <div class="dialog-content">
+      Vite qu'on aille jouer à NHL
+    </div>
+  </mat-card-content>
+  <mat-dialog-actions>
+    <div class="viewContent">
+      <button mat-raised-button (click)="onOkClick()" color="accent">OK</button>
+    </div>
+  </mat-dialog-actions>
+</mat-card>

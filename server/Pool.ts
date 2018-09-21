@@ -44,6 +44,10 @@ export class Pool {
         }
     }
 
+    get isPoolDone() {
+        return this._pool.settings.turns === this._round;
+    }
+
     isPlayerAvailable = (playerId: ObjectId) => {
         return !this._pool.picks.some((pick, index, arr) => pick.player._id === playerId);
     }
@@ -77,7 +81,7 @@ export class Pool {
         this._round = greatestRound;
         this.initRoundState(greatestRound);
     
-        if(this.isRoundDone()) {
+        if(this.isRoundDone && !this.isPoolDone) {
             this._roundState = null;
             greatestRound += 1;
             this._round = greatestRound;
@@ -95,7 +99,7 @@ export class Pool {
         })
     }
 
-    private isRoundDone(): boolean {
+    private get isRoundDone() {
         return Object.values(this._roundState).every(hasPoolerDrafted => hasPoolerDrafted);
     }
 

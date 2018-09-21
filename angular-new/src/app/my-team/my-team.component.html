@@ -1,7 +1,15 @@
 <div class="viewContent">
+    <app-summary [myPicks]="myPicks"></app-summary>
     <ul class="my-players-result">
-        <li *ngFor="let player of myPlayers" class="player-description">
-          <app-player-description [player]="player"></app-player-description>
-      </li>
+        <li *ngFor="let pick of myPicks" class="player-description">
+            <div class="round-info">
+                <mat-chip-list>
+                    <mat-chip color="primary" selected>
+                        Round: {{pick.round}}
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+            <app-player-description [player]="pick.player"></app-player-description>
+        </li>
     </ul>
 </div>

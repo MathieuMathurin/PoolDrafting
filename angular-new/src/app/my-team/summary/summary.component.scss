@@ -1,0 +1,69 @@
+@import "../../../styles.scss";
+
+.summaries-container {
+    display: flex;
+    justify-content: space-around;
+
+    @include desktop {
+        flex-wrap: nowrap;
+    }
+
+    @include tablet {
+        flex-wrap: nowrap;
+    }
+
+    @include mobile {
+        flex-wrap: wrap;
+    }
+
+    & > * {
+        flex-grow: 1;
+        font-size: 32px;
+    }
+
+    @include desktop {
+        & > :not(:first-child) > .summary-value {
+            margin-top: 48px;
+        }
+    }
+
+    @include tablet {
+        & > :not(:first-child) > .summary-value {
+            margin-top: 48px;
+        }
+    }
+
+    @include mobile {
+        & > :not(:first-child) > .summary-value {
+            margin-top: initial;
+        }
+    }
+    
+    .filterButton {    
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        border: 1px solid black;
+        cursor: default;
+    }
+    
+    .filterButton.selected {
+        background-color: map-get($app-primary, 600);
+        color: white;
+    }
+    
+    .filterButtonGroup {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around
+    }
+
+    .summary-value {
+        color: map-get($app-primary, 600);
+
+        .position-count {
+            font-size: 24px;
+            margin-left: 16px;
+            display: inline-block;
+        }
+    }
+}

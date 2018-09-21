@@ -29,8 +29,7 @@ export class SearchComponent implements OnInit {
     this._salaries = {};
     this._team = "";
 
-    this.getPoolInfo();
-    window.setInterval(this.getPoolInfo, 10000);
+    this.meService.isMyTurn.subscribe(isMyTurn => this.isMyTurn = isMyTurn);
 
     this.search();
   }
@@ -87,9 +86,4 @@ export class SearchComponent implements OnInit {
 
     this.isSearching = false;
   }
-
-  private getPoolInfo = () => {
-    this.meService.getPoolState().then(pool =>  this.isMyTurn = this.accountService.userState.userId === pool.draftingPooler.poolerId).catch(err => this.isMyTurn = false);
-  }
-
 }

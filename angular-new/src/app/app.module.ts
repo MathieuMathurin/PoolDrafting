@@ -34,6 +34,13 @@ import { StatsFilterComponent } from './search/stats-filter/stats-filter.compone
 import { OptionalInputComponent } from './components/optional-input/optional-input.component';
 import { PlayerDescriptionComponent } from './components/player-description/player-description.component';
 import { MyTeamComponent } from './my-team/my-team.component';
+import { TurnComponentComponent } from './turn-component/turn-component.component';
+import { MyTurnDialogComponent } from './turn-component/my-turn-dialog/my-turn-dialog.component';
+import { PuckFireComponent } from './components/icons/puck-fire/puck-fire.component';
+import { TrophyComponent } from './components/icons/trophy/trophy.component';
+import { TimerComponent } from './components/icons/timer/timer.component';
+import { TvComponent } from './components/icons/tv/tv.component';
+import { SummaryComponent } from './my-team/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +69,17 @@ import { MyTeamComponent } from './my-team/my-team.component';
     StatsFilterComponent,
     OptionalInputComponent,
     PlayerDescriptionComponent,
-    MyTeamComponent
+    MyTeamComponent,
+    TurnComponentComponent,
+    MyTurnDialogComponent,
+    PuckFireComponent,
+    TrophyComponent,
+    TimerComponent,
+    TvComponent,
+    SummaryComponent
+  ],
+  entryComponents: [
+    MyTurnDialogComponent
   ],
   imports: [
     BrowserModule,

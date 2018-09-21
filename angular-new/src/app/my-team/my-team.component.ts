@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationStart } from "@angular/router";
 import { MeService } from "../services/me.service";
-import { Player } from "../models/player";
+import { Pick } from "../models/pick";
 
 @Component({
   selector: 'app-my-team',
@@ -9,10 +10,20 @@ import { Player } from "../models/player";
 })
 export class MyTeamComponent implements OnInit {
 
-  constructor(private me: MeService) { }
-  myPlayers: Player[];
+  constructor(private me: MeService, private router: Router) { }
+  myPicks: Pick[];
 
   ngOnInit() {
-    this.me.getMyPicks().then(myPicks => this.myPlayers = myPicks.map(pick => pick.player).reverse()).catch(err => this.myPlayers = []);
+    this.myPicks = [];
+    this.getMyPicks();
+  }
+
+  private getMyPicks = async () => {
+    try {
+      const myPicks = await this.me.getMyPicks();
+      this.myPicks = myPicks.reverse();
+    } catch (e) {
+      // do nothing since we don't want to loose the loaded data
+    }
   }
 }
