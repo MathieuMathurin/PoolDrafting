@@ -1,7 +1,7 @@
 <div class="viewContent">
     <app-summary [myPicks]="myPicks"></app-summary>
     <ul class="my-players-result">
-        <li *ngFor="let pick of myPicks" class="player-description">
+        <li *ngFor="let pick of myDraftPicks" class="player-description">
             <div class="round-info">
                 <mat-chip-list>
                     <mat-chip color="primary" selected>
@@ -11,5 +11,15 @@
             </div>
             <app-player-description [player]="pick.player"></app-player-description>
         </li>
+        <div class="round-info">
+            <mat-chip-list>
+                <mat-chip color="primary" selected>
+                    Pré-Draft
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <li *ngFor="let pick of myPreDraftPicks" class="player-description">
+                <app-player-description [player]="pick.player"></app-player-description>
+            </li>
     </ul>
 </div>
