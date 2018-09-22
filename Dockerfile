@@ -7,16 +7,16 @@ WORKDIR ./server
 RUN npm install
 
 WORKDIR ..
-ADD ./angular-new ./angular-new
+ADD ./angular ./angular
 
-WORKDIR ./angular-new
+WORKDIR ./angular
 
 RUN npm install
 RUN npm install -g @angular/cli
 RUN ng build --prod --build-optimizer
 
 WORKDIR ..
-COPY ./angular-new/dist/ ./server/dist
+COPY ./angular/dist/ ./server/dist
 
 EXPOSE 80
 

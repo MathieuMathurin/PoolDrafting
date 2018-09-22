@@ -21,7 +21,7 @@ app.use(authTokenMiddleware);
 
 app.use(router);
 
-const frontendRoot = "../angular-new/dist/pool-draft/";
+const frontendRoot = "../angular/dist/pool-draft/";
 app.use(express.static(path.join(__dirname, frontendRoot)));
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, `${frontendRoot}index.html`));
