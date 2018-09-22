@@ -1,25 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subject } from "rxjs";
 import { MatSnackBar } from "@angular/material";
 import { PlayerService } from "../services/player.service";
 import { Player } from '../models/player';
 import { MeService } from "../services/me.service";
-import { AccountService } from "../services/account.service";
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
-  constructor(private playerService: PlayerService, private meService: MeService, private accountService: AccountService, private snackBar: MatSnackBar) { }
+export class SearchComponent implements OnInit, OnDestroy {
+  constructor(private playerService: PlayerService, private meService: MeService, private snackBar: MatSnackBar) { }
   searchTerm: string;
   searchResults: Player[];
   isSearching: boolean;
   isMyTurn: boolean;
   selectedPlayerId: string;
   private _positions: string[];
-  private _salaries: {min?: number, max?: number};
+  private _salaries: { min?: number, max?: number };
   private _team: string;
+  private _myTurnSub: Subject<boolean>;
 
   ngOnInit() {
     this.searchTerm = "";
@@ -29,7 +30,9 @@ export class SearchComponent implements OnInit {
     this._salaries = {};
     this._team = "";
 
-    this.meService.isMyTurn.subscribe(isMyTurn => this.isMyTurn = isMyTurn);
+    this._myTurnSub = this.meService.isMyTurn.subscribe(isMyTurn => {
+      this.isMyTurn = isMyTurn;
+    });
 
     this.search();
   }
@@ -43,7 +46,7 @@ export class SearchComponent implements OnInit {
   onSalaryFilterChanged = async salaries => {
     this._salaries = salaries;
     await this.search();
-  };
+  }
 
   onTeamFilterChanged = async team => {
     this._team = team;
@@ -70,7 +73,7 @@ export class SearchComponent implements OnInit {
       this.snackBar.open(`${draftedPlayer.name} sélectionné!`, "OK", { duration: 3000 });
       await this.search();
     } else {
-      this.snackBar.open("Le joueur n'est plus disponible ou ce n'est pas votre tour", "OK", { duration: 3000 });
+      this.snackBar.open("Le joueur n'est plus disponible", "OK", { duration: 3000 });
       await this.search();
     }
   }
@@ -85,5 +88,9 @@ export class SearchComponent implements OnInit {
     }
 
     this.isSearching = false;
+  }
+
+  ngOnDestroy() {
+    this._myTurnSub.unsubscribe();
   }
 }

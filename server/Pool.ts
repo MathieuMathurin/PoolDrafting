@@ -14,16 +14,16 @@ export class Pool {
     }
 
     get draftingPooler() {
-        let draftingPooler: {poolerId: ObjectId, poolerName: string};
-        switch(this.round % 2) {
+        let draftingPooler: { poolerId: ObjectId, poolerName: string };
+        switch (this.round % 2) {
             // Reverse order
-            case 0: 
+            case 0:
                 draftingPooler = this.findFirstPoolerWhoDidNotDraftInReverseOrder()
-            break;
+                break;
             // Regular order
             case 1:
                 draftingPooler = this.findFirstPoolerWhoDidNotDraftInDraftOrder();
-            break;
+                break;
         }
 
         return draftingPooler;
@@ -34,22 +34,26 @@ export class Pool {
     }
 
     get draftOrder() {
-        switch(this.round % 2) {
+        switch (this.round % 2) {
             // Reverse Order
             case 0:
-            return this._draftOrder.reverse();
+                return this._draftOrder.reverse();
             // Regular Order
             case 1:
-            return this._draftOrder;
+                return this._draftOrder;
         }
     }
 
     get isPoolDone() {
-        return this._pool.settings.turns === this._round;
+        return this._pool.settings.turns === this._round && this.isRoundDone;
+    }
+
+    get isRoundDone() {
+        return Object.values(this._roundState).every(hasPoolerDrafted => hasPoolerDrafted);
     }
 
     isPlayerAvailable = (playerId: ObjectId) => {
-        return !this._pool.picks.some((pick, index, arr) => pick.player._id === playerId);
+        return !this._pool.picks.some((pick, index, arr) => pick.player._id.equals(playerId));
     }
 
     isPoolerAllowedToDraft = (poolerId: ObjectId) => {
@@ -57,31 +61,32 @@ export class Pool {
     }
 
     private _round: number = 0;
-    private _draftOrder: {poolerId: ObjectId, poolerName: string}[];
-    private _roundState: {[key: string]: boolean};
+    private _draftOrder: { poolerId: ObjectId, poolerName: string }[];
+    private _roundState: { [key: string]: boolean };
 
     private replayDraft(draftEvents: DraftEvent[]) {
-        if(!this._pool.started) {
+        if (!this._pool.started) {
             this._round = 0;
+            this._roundState = {};
             return;
         }
 
-        const roundsMap: {[key: number]: number} = [];
+        const roundsMap: { [key: number]: number } = [];
 
         draftEvents.map(event => event.round)
-        .forEach(round => {
-            if(!roundsMap[round]) {
-                roundsMap[round] = round;
-            }
-        });
+            .forEach(round => {
+                if (!roundsMap[round]) {
+                    roundsMap[round] = round;
+                }
+            });
 
         const rounds = Object.values(roundsMap);
 
         let greatestRound = rounds.reduce((greatest, round) => round > greatest ? round : greatest, rounds[0]) || 1;
         this._round = greatestRound;
         this.initRoundState(greatestRound);
-    
-        if(this.isRoundDone && !this.isPoolDone) {
+
+        if (!this.isPoolDone && this.isRoundDone) {
             this._roundState = null;
             greatestRound += 1;
             this._round = greatestRound;
@@ -99,16 +104,16 @@ export class Pool {
         })
     }
 
-    private get isRoundDone() {
-        return Object.values(this._roundState).every(hasPoolerDrafted => hasPoolerDrafted);
-    }
-
     private findFirstPoolerWhoDidNotDraftInDraftOrder() {
-        let draftingPooler: {poolerId: ObjectId, poolerName: string};
-        for(let i = 0; i < this._draftOrder.length; ++i) {
+        if (!this._pool.started) {
+            return;
+        }
+
+        let draftingPooler: { poolerId: ObjectId, poolerName: string };
+        for (let i = 0; i < this._draftOrder.length; ++i) {
             const pooler = this._draftOrder[i];
 
-            if(!this._roundState[pooler.poolerId.toHexString()]) {
+            if (!this._roundState[pooler.poolerId.toHexString()]) {
                 draftingPooler = pooler;
                 break;
             }
@@ -118,11 +123,15 @@ export class Pool {
     }
 
     private findFirstPoolerWhoDidNotDraftInReverseOrder() {
-        let draftingPooler: {poolerId: ObjectId, poolerName: string};
-        for(let i = this._draftOrder.length - 1; i >= 0; --i) {
+        if (!this._pool.started) {
+            return;
+        }
+
+        let draftingPooler: { poolerId: ObjectId, poolerName: string };
+        for (let i = this._draftOrder.length - 1; i >= 0; --i) {
             const pooler = this._draftOrder[i];
-            
-            if(!this._roundState[pooler.poolerId.toHexString()]) {
+
+            if (!this._roundState[pooler.poolerId.toHexString()]) {
                 draftingPooler = pooler;
                 break;
             }

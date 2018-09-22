@@ -9,12 +9,24 @@ import { AccountService } from "./account.service";
 })
 export class MeService {
   constructor(private http: HttpClient, private accountService: AccountService) {
-    this.getPoolState();
-    this._intevalId = window.setInterval(this.getPoolState, 10000);
-   }
+    if (this.accountService.isAuthenticated) {
+      this.getPoolState();
+      this._intervalId = window.setInterval(this.getPoolState, 5000);
+    }
+
+    this.accountService.authenticationChanges.subscribe(isAuthenticated => {
+      if (isAuthenticated) {
+        this.getPoolState();
+        this._intervalId = window.setInterval(this.getPoolState, 5000);
+      } else {
+        window.clearInterval(this._intervalId);
+      }
+    });
+  }
+
   isMyTurn = new EventEmitter<boolean>();
   poolChanged = new EventEmitter<Pool>();
-  private _intevalId: number;
+  private _intervalId: number;
 
   getPoolState = async () => {
     try {
@@ -23,9 +35,9 @@ export class MeService {
 
       if (pool.isFinished) {
         this.isMyTurn.emit(false);
-        window.clearInterval(this._intevalId);
+        window.clearInterval(this._intervalId);
       } else {
-        this.isMyTurn.emit(pool.draftingPooler.poolerId === this.accountService.userState.userId);
+        this.isMyTurn.emit(pool.round === 0 || pool.draftingPooler.poolerId === this.accountService.userState.userId);
       }
 
       this.poolChanged.emit(pool);

@@ -35,9 +35,9 @@ export class AccountService {
     this.router.navigate(["/signup"]);
   }
 
-  async signup(userName: string, password: string): Promise<boolean> {
+  async signup(userName: string, password: string, poolName: string): Promise<boolean> {
     try {
-      const response = await this.http.post("/poolers/signup", { user: { userName, password } }, { observe: "response", responseType: "text" }).toPromise();
+      const response = await this.http.post("/poolers/signup", { user: { userName, password, poolName } }, { observe: "response", responseType: "text" }).toPromise();
       const isAuthenticated = response.status === 201;
       if (isAuthenticated) {
         this.isAuthenticated = isAuthenticated;

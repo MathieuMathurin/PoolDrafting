@@ -5,15 +5,15 @@
   <div class="menu-contents">
     <div class="menu-item">
       <icon-player (click)="navigate('search')"></icon-player>
-      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('search')">Rechercher des joueurs</button>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('/search')">Rechercher des joueurs</button>
     </div>
     <div class="menu-item">
       <icon-locker-room (click)="navigate('myTeam')"></icon-locker-room>
-      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('myTeam')">Mon équipe</button>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('/myTeam')">Mon équipe</button>
     </div>
     <div class="menu-item">
       <icon-whistle (click)="navigate('rules')"></icon-whistle>
-      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('rules')">Règlements</button>
+      <button mat-button class="link" [ngClass]="{'hidden': !isOpened}" (click)="navigate('/rules')">Règlements</button>
     </div>
   </div>
   <div class="footer menu-item">

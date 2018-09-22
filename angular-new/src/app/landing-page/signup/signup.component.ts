@@ -11,10 +11,16 @@ import { MatSnackBar } from "@angular/material";
 })
 export class SignupComponent {
   constructor(private accountService: AccountService, private router: Router, private snackBar: MatSnackBar) {
+    this.poolNameModel = {};
     this.userNameModel = {};
     this.passwordModel = {};
     this.passwordConfirmationModel = {};
   }
+
+  private poolNameModel: {
+    poolName?: string,
+    isValid?: boolean
+  };
 
   private userNameModel: {
     userName?: string,
@@ -36,13 +42,16 @@ export class SignupComponent {
   };
 
   async signup(): Promise<void> {
-    const isSuccess = await this.accountService.signup(this.userNameModel.userName, this.passwordModel.password);
+    const isSuccess = await this.accountService.signup(this.userNameModel.userName, this.passwordModel.password, this.poolNameModel.poolName);
     if (isSuccess) {
       this.router.navigate(["/search"]);
     } else {
       this.snackBar.open("Votre équipe existe déjà. Veuillez-vous connecter.", "OK", { duration: 3000 });
     }
   }
+
+  onPoolNameChanged = poolName => this.poolNameModel.poolName = poolName;
+  onPoolNameStatusChanged = isValid => this.poolNameModel.isValid = isValid;
 
   onUserNameChanged = userName => this.userNameModel.userName = userName;
   onNameStatusChanged = isValid => this.userNameModel.isValid = isValid;
@@ -54,7 +63,7 @@ export class SignupComponent {
   onPasswordConfirmationStatusChanged = isValid => this.passwordConfirmationModel.isValid = isValid;
 
   isValid = () => {
-    const areFieldsValid = this.userNameModel.isValid && this.passwordModel.isValid && this.passwordConfirmationModel.isValid;
+    const areFieldsValid = this.poolNameModel.isValid && this.userNameModel.isValid && this.passwordModel.isValid && this.passwordConfirmationModel.isValid;
     const arePasswordEqual = this.passwordModel.password === this.passwordConfirmationModel.password;
 
     return areFieldsValid && arePasswordEqual;

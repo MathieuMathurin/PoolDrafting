@@ -2,6 +2,9 @@
     <form>
         <div>
             <div>
+                <app-input placeHolder="Nom du pool" [errorMessages]="errorMessages" (valueChanged)="onPoolNameChanged($event)" (statusChanged)="onPoolNameStatusChanged($event)"></app-input>
+            </div>
+            <div>
                 <app-input placeHolder="Nom d'équipe" [errorMessages]="errorMessages" (valueChanged)="onUserNameChanged($event)" (statusChanged)="onNameStatusChanged($event)"></app-input>
             </div>
             <div>

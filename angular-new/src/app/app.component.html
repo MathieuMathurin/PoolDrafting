@@ -1,21 +1,20 @@
-<mat-drawer-container class="drawer-container" *ngIf="isAuthenticated" [class.drawer-opened]="drawer.opened">
+<mat-drawer-container class="drawer-container" [class.drawer-opened]="drawer.opened">
     <mat-drawer #drawer class="drawer" mode="over">
-        <app-drawer [drawerRef]="drawer" [teamName]="teamName"></app-drawer>
+        <app-drawer *ngIf="isAuthenticated" [drawerRef]="drawer" [teamName]="teamName"></app-drawer>
     </mat-drawer>
     <mat-drawer-content class="mainContent">
-        <app-menu class="navigation" (openChanged)="onOpenChanged($event)"></app-menu>
+        <app-menu *ngIf="isAuthenticated" class="navigation" (openChanged)="onOpenChanged($event)"></app-menu>
         <div class="content" [ngClass]="{'navigation-opened': isNavigationOpen}">
-            <div class="header">
+            <div *ngIf="isAuthenticated" class="header">
                 <app-score-board></app-score-board>
                 <icon-menu class="mobileNavigation" (click)="drawer.open()"></icon-menu>
             </div>
             <div>
-                <app-turn-component></app-turn-component>
-                <router-outlet></router-outlet>
+                <app-turn-component *ngIf="isAuthenticated"></app-turn-component>
+                <div class="bottom-padding">
+                    <router-outlet></router-outlet>
+                </div>
             </div>
         </div>
     </mat-drawer-content>
 </mat-drawer-container>
-<div class="bottom-padding">
-    <router-outlet *ngIf="!isAuthenticated"></router-outlet>
-</div>

@@ -41,6 +41,8 @@ import { TrophyComponent } from './components/icons/trophy/trophy.component';
 import { TimerComponent } from './components/icons/timer/timer.component';
 import { TvComponent } from './components/icons/tv/tv.component';
 import { SummaryComponent } from './my-team/summary/summary.component';
+import { PoolFinishedDialogComponent } from './turn-component/pool-finished/pool-finished.component';
+import { StatsComponent } from './components/icons/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -76,10 +78,13 @@ import { SummaryComponent } from './my-team/summary/summary.component';
     TrophyComponent,
     TimerComponent,
     TvComponent,
-    SummaryComponent
+    SummaryComponent,
+    PoolFinishedDialogComponent,
+    StatsComponent
   ],
   entryComponents: [
-    MyTurnDialogComponent
+    MyTurnDialogComponent,
+    PoolFinishedDialogComponent
   ],
   imports: [
     BrowserModule,
